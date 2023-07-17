@@ -1,0 +1,20 @@
+{
+  "name": "gatsby",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The official Gatsby Cloud Sandbox Template by the CodeSandbox team",
+  "license": "Apache-2.0",
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "^5.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "keywords": []
+}

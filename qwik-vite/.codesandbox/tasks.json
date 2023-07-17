@@ -1,0 +1,78 @@
+{
+  // These tasks will run in order when initializing your CodeSandbox project.
+  "setupTasks": [
+    {
+      "name": "Install Dependencies",
+      "command": "npm install"
+    }
+  ],
+
+  // These tasks can be run from CodeSandbox. Running one will open a log in the app.
+  "tasks": {
+    "build": {
+      "name": "build",
+      "command": "npm run build",
+      "runAtStart": false
+    },
+    "build.client": {
+      "name": "build.client",
+      "command": "npm run build.client",
+      "runAtStart": false
+    },
+    "build.preview": {
+      "name": "build.preview",
+      "command": "npm run build.preview",
+      "runAtStart": false
+    },
+    "build.types": {
+      "name": "build.types",
+      "command": "npm run build.types",
+      "runAtStart": false
+    },
+    "deploy": {
+      "name": "deploy",
+      "command": "npm run deploy",
+      "runAtStart": false
+    },
+    "dev": {
+      "name": "dev",
+      "command": "npm run dev",
+      "runAtStart": true
+    },
+    "dev.debug": {
+      "name": "dev.debug",
+      "command": "npm run dev.debug",
+      "runAtStart": false
+    },
+    "fmt": {
+      "name": "fmt",
+      "command": "npm run fmt",
+      "runAtStart": false
+    },
+    "fmt.check": {
+      "name": "fmt.check",
+      "command": "npm run fmt.check",
+      "runAtStart": false
+    },
+    "lint": {
+      "name": "lint",
+      "command": "npm run lint",
+      "runAtStart": false
+    },
+    "preview": {
+      "name": "preview",
+      "command": "npm run preview",
+      "runAtStart": false
+    },
+    "start": {
+      "name": "start",
+      "command": "npm run start",
+      "runAtStart": false
+    },
+    "qwik": {
+      "name": "qwik",
+      "command": "npm run qwik",
+      "runAtStart": false
+    }
+  }
+}

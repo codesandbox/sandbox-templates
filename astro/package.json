@@ -1,0 +1,17 @@
+{
+  "name": "astro",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "devDependencies": {
+    "astro": "^2.6.1"
+  },
+  "keywords": [],
+  "description": "The official Astro Cloud Sandbox Template by the CodeSandbox team"
+}
