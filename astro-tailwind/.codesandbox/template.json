@@ -1,7 +1,7 @@
 {
-    "title": "Node.js",
-    "description": "The official Node.js template by the CodeSandbox team",
-    "iconUrl": "https://github.com/codesandbox/sandbox-templates/blob/main/node/.codesandbox/icon.png?raw=true",
-    "tags": ["node", "javascript"],
-    "published": true
-  }
+  "title": "Astro Tailwind Starter",
+  "description": "This is an Astro starter with Tailwind",
+  "iconUrl": "https://github.com/codesandbox/sandbox-templates/blob/main/astro-tailwind/.codesandbox/icon.png?raw=true",
+  "tags": ["astro", "javascript", "typescript", "tailwind", "tailwindcss"],
+  "published": true
+}
