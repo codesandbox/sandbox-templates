@@ -1,7 +1,11 @@
 {
-    "title": "Bun",
-    "description": "Quickly get started with Bun using this starter!",
-    "iconUrl": "https://github.com/codesandbox/sandbox-templates/blob/main/bun/.codesandbox/icon.svg?raw=true",
-    "tags": ["bun", "javascript", "typescript"],
-    "published": true
-  }
+  "title": "Bun",
+  "description": "Quickly get started with Bun using this starter!",
+  "iconUrl": "https://github.com/codesandbox/sandbox-templates/blob/main/bun/.codesandbox/icon.png?raw=true",
+  "tags": [
+    "bun",
+    "javascript",
+    "typescript"
+  ],
+  "published": true
+}

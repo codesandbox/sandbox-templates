@@ -1,7 +1,11 @@
 {
-    "title": "Node.js",
-    "description": "The official Node.js template by the CodeSandbox team",
-    "iconUrl": "https://github.com/codesandbox/sandbox-templates/blob/main/node/.codesandbox/icon.png?raw=true",
-    "tags": ["node", "javascript"],
-    "published": true
-  }
+  "title": "Deno",
+  "description": "Deno starter that uses CodeSandbox native Docker support",
+  "iconUrl": "https://github.com/codesandbox/sandbox-templates/blob/main/deno/.codesandbox/icon.png?raw=true",
+  "tags": [
+    "deno",
+    "javascript",
+    "typescript"
+  ],
+  "published": true
+}

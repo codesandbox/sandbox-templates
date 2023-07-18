@@ -1,7 +1,12 @@
 {
-    "title": "Node.js",
-    "description": "The official Node.js template by the CodeSandbox team",
-    "iconUrl": "https://github.com/codesandbox/sandbox-templates/blob/main/node/.codesandbox/icon.png?raw=true",
-    "tags": ["node", "javascript"],
-    "published": true
-  }
+  "title": "Nodebox Starter",
+  "description": "This is a template that shows you how Nodebox works with a sample Node code.",
+  "iconUrl": "https://github.com/codesandbox/sandbox-templates/blob/main/nodebox-starter/.codesandbox/icon.png?raw=true",
+  "tags": [
+    "node",
+    "javascript",
+    "nodebox",
+    "codesandbox"
+  ],
+  "published": true
+}
