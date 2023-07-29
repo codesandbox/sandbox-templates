@@ -21,9 +21,29 @@ const directories = new Set(
     .map((line) => line.substring(0, line.lastIndexOf("/"))),
 );
 
+let MESSAGE_TEMPLATE =
+  `This is a helpful bot that generates a list of affected sandboxes!
+
+## New Sandboxes
+
+`;
+
 for (let dir of directories) {
-  if (dir.startsWith(".") || dir.split("/").length > 2) {
+  if (
+    dir.startsWith(".") || dir.split("/").length > 2 || dir.trim().length === 0
+  ) {
     continue;
   }
-  console.log(dir);
+  const url = generateUrl(dir, currentBranch);
+  MESSAGE_TEMPLATE += `- [${dir}](${url})\n`;
 }
+
+function generateUrl(exampleName: string, branch: string) {
+  return `https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/${branch}/${exampleName}`;
+}
+
+console.log(MESSAGE_TEMPLATE);
+Deno.writeFileSync(
+  "./commit-message.txt",
+  new TextEncoder().encode(MESSAGE_TEMPLATE),
+);
