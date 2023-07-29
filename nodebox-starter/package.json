@@ -12,6 +12,6 @@
     "vite": "^4.4.7"
   },
   "dependencies": {
-    "@codesandbox/nodebox": "^0.1.6"
+    "@codesandbox/nodebox": "^0.1.8"
   }
 }
