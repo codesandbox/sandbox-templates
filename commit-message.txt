@@ -1,0 +1,5 @@
+This is a helpful bot that generates a list of changed templates!
+
+## New Sandboxes
+
+- [bun](https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/draft/eager-chebyshev/bun)

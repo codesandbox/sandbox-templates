@@ -22,7 +22,7 @@ const directories = new Set(
 );
 
 let MESSAGE_TEMPLATE =
-  `This is a helpful bot that generates a list of affected sandboxes!
+  `This is a helpful bot that generates a list of changed templates!
 
 ## New Sandboxes
 
