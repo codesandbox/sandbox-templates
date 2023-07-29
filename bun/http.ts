@@ -4,6 +4,6 @@ export default {
   port: 3000,
   fetch(request: Request) {
     console.log("Incoming", request);
-    return new Response("Hello World in CodeSandbox");
+    return new Response("Hello World with CodeSandbox");
   },
 };
