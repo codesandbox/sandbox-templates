@@ -22,5 +22,8 @@ const directories = new Set(
 );
 
 for (let dir of directories) {
+  if (dir.startsWith(".") || dir.split("/").length > 2) {
+    continue;
+  }
   console.log(dir);
 }
