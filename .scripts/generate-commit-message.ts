@@ -66,11 +66,23 @@ if (testSandbox) {
     const apiUrl = generateApiUrl(example.name, currentBranch);
     try {
       // Generate sandbox
-      const result = await fetch(apiUrl).then((x) => x.json());
+      const result = await fetch(apiUrl).then((x) => {
+        if (!x.ok) {
+          throw new Error("API request failed: " + x.status);
+        }
+
+        return x.json();
+      });
+
       const sandboxId: string = result.data.id;
 
       // Start the VM backing the sandbox
-      await fetch(generateEditorUrl(example.name, currentBranch));
+      const editorResponse = await fetch(
+        generateEditorUrl(example.name, currentBranch),
+      );
+      if (!editorResponse.ok) {
+        throw new Error("Editor request failed: " + editorResponse.status);
+      }
 
       const previewUrl = generateExamplePreviewUrl(sandboxId);
       console.log(
