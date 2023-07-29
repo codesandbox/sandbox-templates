@@ -108,7 +108,7 @@ examples.forEach((example) => {
   if (example.screenshotUrl) {
     MESSAGE_TEMPLATE += `![${example.name}](${example.screenshotUrl})
 `;
-  } else {
+  } else if (example.status === Status.SCREENSHOT_FAILED) {
     MESSAGE_TEMPLATE += "Screenshot generation failed\n";
   }
 
