@@ -1,6 +1,8 @@
 name: Generate Commit Message
 
-on: [push]
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
 
 jobs:
   build:
@@ -21,6 +23,6 @@ jobs:
     - name: PR comment with file
       uses: thollander/actions-comment-pull-request@v2
       with:
-        filePath: /.scripts/commit-message.txt
+        filePath: .scripts/commit-message.txt
         comment_tag: sandboxes
         create_if_not_exists: true
