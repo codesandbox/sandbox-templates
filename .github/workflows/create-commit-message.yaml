@@ -9,13 +9,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Check out repository
-      uses: actions/checkout@v3
-
     - name: Check out target branch
       uses: actions/checkout@v3
       with:
         ref: ${{ github.base_ref }}
+
+    - name: Check out repository
+      uses: actions/checkout@v3
 
     - name: Setup Deno
       uses: denoland/setup-deno@v1
@@ -28,6 +28,6 @@ jobs:
     - name: PR comment with file
       uses: thollander/actions-comment-pull-request@v2
       with:
-        filePath: .scripts/commit-message.txt
+        filePath: ${{ github.workspace }}/.scripts/commit-message.txt
         comment_tag: sandboxes
         create_if_not_exists: true
