@@ -9,14 +9,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Check out target branch
+    - name: Checkout PR head
       uses: actions/checkout@v3
+      with:
+        ref: ${{ github.event.pull_request.head.sha }}
+        repository: ${{ github.event.pull_request.head.repo.full_name }}
+        fetch-depth: 0
 
-    - name: Fetch base branch
-      run: git fetch --unshallow origin ${{ github.base_ref }}
+    # - name: Fetch base branch
+    #   run: git fetch --unshallow origin ${{ github.base_ref }}
 
-    - name: Fetch target branch
-      run: git fetch origin ${{ github.target_ref }}
+    # - name: Fetch target branch
+    #   run: git fetch origin ${{ github.target_ref }}
 
     - name: Setup Deno
       uses: denoland/setup-deno@v1
