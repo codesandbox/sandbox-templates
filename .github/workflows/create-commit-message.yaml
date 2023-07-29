@@ -16,6 +16,8 @@ jobs:
 
     - name: Check out repository
       uses: actions/checkout@v3
+      with:
+        clean: false # Keep the main branch in history
 
     - name: Setup Deno
       uses: denoland/setup-deno@v1
