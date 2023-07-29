@@ -26,7 +26,7 @@
     "@types/eslint": "8.21.3",
     "@types/node": "^18.15.3",
     "@typescript-eslint/eslint-plugin": "6.2.0",
-    "@typescript-eslint/parser": "5.56.0",
+    "@typescript-eslint/parser": "6.2.0",
     "eslint": "8.36.0",
     "eslint-plugin-qwik": "0.24.0",
     "prettier": "3.0.0",
