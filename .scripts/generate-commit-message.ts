@@ -10,7 +10,7 @@ const cmd = new Deno.Command("git", {
     "--no-commit-id",
     "--name-only",
     "--diff-filter=d",
-    `${targetBranch}..${currentBranch}`,
+    `origin/${targetBranch}..${currentBranch}`,
   ],
 });
 
