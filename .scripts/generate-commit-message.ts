@@ -77,7 +77,7 @@ if (testSandbox) {
         "Generated " + example.name + ", now generating screenshot...",
       );
       screenshotPromises.push(
-        waitForUrlToRespond(previewUrl, 60).then((succeeded) => {
+        waitForUrlToRespond(previewUrl, 120).then((succeeded) => {
           if (succeeded) {
             example.screenshotUrl =
               `https://codesandbox.io/api/v1/sandboxes/${sandboxId}/screenshot.png`;
