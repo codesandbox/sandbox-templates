@@ -1,4 +1,7 @@
-name: Generate Commit Message
+name: Generate Examples
+
+permissions:
+  issues: write
 
 on:
   pull_request:
