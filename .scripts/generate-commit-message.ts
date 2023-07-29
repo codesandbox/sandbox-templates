@@ -16,6 +16,8 @@ const cmd = new Deno.Command("git", {
 
 const output = (await cmd.output()).stdout;
 
+console.log("Git output: " + output);
+
 const directories = new Set(
   new TextDecoder()
     .decode(output)
