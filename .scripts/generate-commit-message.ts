@@ -2,7 +2,7 @@ import * as path from "https://deno.land/std@0.196.0/path/mod.ts";
 
 const targetBranch = Deno.args[0];
 const currentBranch = Deno.args[1];
-const testSandbox = Boolean(Deno.args[2]);
+const testSandbox = Deno.args[2] === "true";
 
 const cmd = new Deno.Command("git", {
   args: [
@@ -60,6 +60,7 @@ for (let dir of directories) {
 const screenshotPromises: Array<Promise<void>> = [];
 
 if (testSandbox) {
+  console.log("Testing examples...");
   for (const example of examples) {
     const apiUrl = generateApiUrl(example.name, currentBranch);
     try {
@@ -71,6 +72,9 @@ if (testSandbox) {
       await fetch(generateEditorUrl(example.name, currentBranch));
 
       const previewUrl = generateExamplePreviewUrl(sandboxId);
+      console.log(
+        "Generated " + example.name + ", now generating screenshot...",
+      );
       screenshotPromises.push(
         waitForUrlToRespond(previewUrl, 60).then((succeeded) => {
           if (succeeded) {
@@ -78,6 +82,7 @@ if (testSandbox) {
           }
         }),
       );
+
       example.status = Status.SUCCEEDED;
     } catch (e) {
       example.status = Status.FAILED;
