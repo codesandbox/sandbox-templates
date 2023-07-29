@@ -100,6 +100,7 @@ examples.forEach((example) => {
   <summary><a href="${url}"><code>/${example.name}</code></a> ${
     getStatusEmoji(example.status)
   }</summary>
+
 `;
 
   if (example.screenshotUrl) {
