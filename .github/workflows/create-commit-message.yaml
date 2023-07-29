@@ -1,7 +1,6 @@
 name: Generate Examples
 
 permissions:
-  issues: write
   pull-requests: write
 
 on:
