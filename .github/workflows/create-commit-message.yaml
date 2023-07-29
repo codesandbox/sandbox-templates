@@ -34,7 +34,7 @@ jobs:
         create_if_not_exists: true
 
     - name: Run Deno Script
-      run: deno run --allow-read --allow-write --unstable --allow-run .scripts/generate-commit-message.ts ${{ github.base_ref }} ${{ github.head_ref }} true
+      run: deno run --allow-read --allow-write --unstable --allow-net --allow-run .scripts/generate-commit-message.ts ${{ github.base_ref }} ${{ github.head_ref }} true
 
     - name: PR comment with file
       uses: thollander/actions-comment-pull-request@v2
