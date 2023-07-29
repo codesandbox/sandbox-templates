@@ -12,8 +12,11 @@ jobs:
     - name: Check out target branch
       uses: actions/checkout@v3
 
-    - name: 'Fetch base branch'
-      run: 'git fetch --unshallow origin ${{ github.base_ref }}'
+    - name: Fetch base branch
+      run: git fetch --unshallow origin ${{ github.base_ref }}
+
+    - name: Fetch target branch
+      run: git fetch --unshallow origin ${{ github.target_ref }}
 
     - name: Setup Deno
       uses: denoland/setup-deno@v1
