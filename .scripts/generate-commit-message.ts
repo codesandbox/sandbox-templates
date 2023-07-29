@@ -172,8 +172,11 @@ async function waitForUrlToRespond(
 ): Promise<boolean> {
   for (let i = 0; i < maxTimeSeconds; i++) {
     try {
-      const response = await fetch(url);
-      if (response.ok) {
+      const response = await fetch(url, {
+        redirect: "follow",
+      });
+
+      if (response.ok && response.status >= 200 && response.status < 400) {
         return true;
       }
     } catch (e) {
