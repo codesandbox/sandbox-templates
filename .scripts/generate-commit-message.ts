@@ -78,7 +78,8 @@ if (testSandbox) {
       screenshotPromises.push(
         waitForUrlToRespond(previewUrl, 60).then((succeeded) => {
           if (succeeded) {
-            example.screenshotUrl = previewUrl;
+            example.screenshotUrl =
+              `https://codesandbox.io/api/v1/sandboxes/${sandboxId}/screenshot.png`;
           }
         }),
       );
