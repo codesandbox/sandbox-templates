@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/codesandbox-app/static-template#readme",
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "nodemon": "^3.0.1"
   },
   "dependencies": {}
 }
