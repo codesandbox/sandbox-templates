@@ -85,6 +85,7 @@ if (testSandbox) {
 
       example.status = Status.SUCCEEDED;
     } catch (e) {
+      console.error(e);
       example.status = Status.FAILED;
     }
   }
