@@ -31,15 +31,24 @@ let MESSAGE_TEMPLATE =
 
 `;
 
+const examples: string[] = [];
 for (let dir of directories) {
   if (
-    dir.startsWith(".") || dir.split("/").length > 2 || dir.trim().length === 0
+    dir.startsWith(".") || dir.trim().length === 0
   ) {
     continue;
   }
-  const url = generateUrl(dir, currentBranch);
-  MESSAGE_TEMPLATE += `- [${dir}](${url})\n`;
+
+  const exampleName = dir.split("/")[0];
+  if (!examples.includes(exampleName)) {
+    examples.push(exampleName);
+  }
 }
+
+examples.forEach((example) => {
+  const url = generateUrl(example, currentBranch);
+  MESSAGE_TEMPLATE += `- [${example}](${url})\n`;
+});
 
 function generateUrl(exampleName: string, branch: string) {
   return `https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/${branch}/${exampleName}`;
