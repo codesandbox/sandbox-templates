@@ -97,7 +97,7 @@ await Promise.all(screenshotPromises);
 examples.forEach((example) => {
   const url = generateUrl(example.name, currentBranch);
   MESSAGE_TEMPLATE += `<details>
-  <summary><pre>/${example.name}</pre> ${
+  <summary><code>/${example.name}</code> ${
     getStatusEmoji(example.status)
   }</summary>
 
@@ -105,7 +105,7 @@ examples.forEach((example) => {
 `;
 
   if (example.screenshotUrl) {
-    MESSAGE_TEMPLATE += `- ![${example.screenshotUrl}](${example.name})
+    MESSAGE_TEMPLATE += `- ![${example.name}](${example.screenshotUrl})
 `;
   }
 
