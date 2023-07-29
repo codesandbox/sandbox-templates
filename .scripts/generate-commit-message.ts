@@ -35,6 +35,7 @@ let MESSAGE_TEMPLATE =
 enum Status {
   IN_PROGRESS,
   FAILED,
+  SCREENSHOT_FAILED,
   SUCCEEDED,
 }
 
@@ -80,11 +81,12 @@ if (testSandbox) {
           if (succeeded) {
             example.screenshotUrl =
               `https://codesandbox.io/api/v1/sandboxes/${sandboxId}/screenshot.png`;
+            example.status = Status.SUCCEEDED;
+          } else {
+            example.status = Status.SCREENSHOT_FAILED;
           }
         }),
       );
-
-      example.status = Status.SUCCEEDED;
     } catch (e) {
       console.error(e);
       example.status = Status.FAILED;
@@ -106,6 +108,8 @@ examples.forEach((example) => {
   if (example.screenshotUrl) {
     MESSAGE_TEMPLATE += `![${example.name}](${example.screenshotUrl})
 `;
+  } else {
+    MESSAGE_TEMPLATE += "Screenshot generation failed\n";
   }
 
   MESSAGE_TEMPLATE += "</details>";
@@ -122,6 +126,8 @@ function getStatusEmoji(status: Status) {
     return "🚧";
   } else if (status === Status.SUCCEEDED) {
     return "✅";
+  } else if (status === Status.SCREENSHOT_FAILED) {
+    return "❓";
   } else {
     return "❌";
   }
