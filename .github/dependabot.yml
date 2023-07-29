@@ -1,0 +1,98 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /angular
+    schedule:
+      interval: daily
+  - package-ecosystem: npm
+    directory: /astro
+    schedule:
+      interval: daily
+  - package-ecosystem: npm
+    directory: /astro-tailwind
+    schedule:
+      interval: daily
+  - package-ecosystem: npm
+    directory: /cloudflare-worker
+    schedule:
+      interval: daily
+  - package-ecosystem: npm
+    directory: /create-t3-app
+    schedule:
+      interval: daily
+  - package-ecosystem: npm
+    directory: /docusaurus
+    schedule:
+      interval: daily
+  - package-ecosystem: npm
+    directory: /gatsby
+    schedule:
+      interval: daily
+  - package-ecosystem: npm
+    directory: /nextjs
+    schedule:
+      interval: daily
+  - package-ecosystem: npm
+    directory: /nextjs-app-router
+    schedule:
+      interval: daily
+  - package-ecosystem: npm
+    directory: /node
+    schedule:
+      interval: daily
+  - package-ecosystem: npm
+    directory: /node-http-server
+    schedule:
+      interval: daily
+  - package-ecosystem: npm
+    directory: /nodebox-starter
+    schedule:
+      interval: daily
+  - package-ecosystem: npm
+    directory: /nuxt
+    schedule:
+      interval: daily
+  - package-ecosystem: pip
+    directory: /python
+    schedule:
+      interval: daily
+  - package-ecosystem: pip
+    directory: /python-flask-server
+    schedule:
+      interval: daily
+  - package-ecosystem: npm
+    directory: /qwik-vite
+    schedule:
+      interval: daily
+  - package-ecosystem: npm
+    directory: /react-vite-ts
+    schedule:
+      interval: daily
+  - package-ecosystem: npm
+    directory: /remix
+    schedule:
+      interval: daily
+  - package-ecosystem: cargo
+    directory: /rust
+    schedule:
+      interval: daily
+  - package-ecosystem: cargo
+    directory: /rust-poem-server
+    schedule:
+      interval: daily
+  - package-ecosystem: cargo
+    directory: /rust-serde
+    schedule:
+      interval: daily
+  - package-ecosystem: npm
+    directory: /solid-vite
+    schedule:
+      interval: daily
+  - package-ecosystem: npm
+    directory: /sveltekit
+    schedule:
+      interval: daily
+  - package-ecosystem: npm
+    directory: /vue-vite
+    schedule:
+      interval: daily
