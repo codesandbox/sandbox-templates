@@ -89,7 +89,7 @@ await Promise.all(screenshotPromises);
 
 examples.forEach((example) => {
   const url = generateUrl(example.name, currentBranch);
-  MESSAGE_TEMPLATE += `- [${example}](${url}) ${
+  MESSAGE_TEMPLATE += `- [${example.name}](${url}) ${
     getStatusEmoji(Status.IN_PROGRESS)
   }`;
 
