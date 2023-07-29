@@ -10,13 +10,11 @@ const cmd = new Deno.Command("git", {
     "--no-commit-id",
     "--name-only",
     "--diff-filter=d",
-    `origin/${targetBranch}..${currentBranch}`,
+    `origin/${targetBranch}..`,
   ],
 });
 
 const output = (await cmd.output()).stdout;
-
-console.log("Git output: " + output);
 
 const directories = new Set(
   new TextDecoder()
@@ -24,6 +22,7 @@ const directories = new Set(
     .split("\n")
     .map((line) => line.substring(0, line.lastIndexOf("/"))),
 );
+console.log({ directories });
 
 let MESSAGE_TEMPLATE =
   `This is a helpful bot that generates a list of changed templates!
