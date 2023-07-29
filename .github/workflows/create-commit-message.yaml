@@ -1,0 +1,19 @@
+name: Generate Commit Message
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v2
+
+    - name: Setup Deno
+      uses: denoland/setup-deno@v1
+      with:
+        deno-version: v1.x
+      
+    - name: Run Deno Script
+      run: deno run --allow-read --allow-write --unstable --allow-run .scripts/generate-commit-message ${{ github.base_ref }} ${{ github.head_ref }}
