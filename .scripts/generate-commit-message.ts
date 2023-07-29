@@ -1,3 +1,5 @@
+import * as path from "https://deno.land/std@0.196.0/path/mod.ts";
+
 const targetBranch = Deno.args[0];
 const currentBranch = Deno.args[1];
 
@@ -44,6 +46,9 @@ function generateUrl(exampleName: string, branch: string) {
 
 console.log(MESSAGE_TEMPLATE);
 Deno.writeFileSync(
-  "./commit-message.txt",
+  path.join(
+    path.dirname(path.fromFileUrl(Deno.mainModule)),
+    "commit-message.txt",
+  ),
   new TextEncoder().encode(MESSAGE_TEMPLATE),
 );
