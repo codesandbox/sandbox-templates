@@ -27,7 +27,7 @@ console.log({ directories });
 let MESSAGE_TEMPLATE =
   `This is a helpful bot that generates a list of changed templates!
 
-## New Sandboxes
+## Updated Examples
 
 `;
 
@@ -47,11 +47,18 @@ for (let dir of directories) {
 
 examples.forEach((example) => {
   const url = generateUrl(example, currentBranch);
-  MESSAGE_TEMPLATE += `- [${example}](${url})\n`;
+  MESSAGE_TEMPLATE += `- [${example}](${url}) 🚧\n`;
 });
+
+if (examples.length === 0) {
+  MESSAGE_TEMPLATE += "None!";
+}
 
 function generateUrl(exampleName: string, branch: string) {
   return `https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/${branch}/${exampleName}`;
+}
+function generateApiUrl(exampleName: string, branch: string) {
+  return `https://codesandbox.io/api/v1/sandboxes/github/codesandbox/sandbox-templates/tree/${branch}/${exampleName}`;
 }
 
 console.log(MESSAGE_TEMPLATE);
