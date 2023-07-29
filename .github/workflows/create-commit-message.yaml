@@ -1,0 +1,44 @@
+name: Generate Commit Message
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout PR head
+      uses: actions/checkout@v3
+
+    - name: Fetch base branch
+      run: git fetch --unshallow origin ${{ github.base_ref }}
+
+    - name: Fetch base branch
+      run: git fetch origin ${{ github.base_ref }}
+
+    - name: Setup Deno
+      uses: denoland/setup-deno@v1
+      with:
+        deno-version: v1.x
+      
+    - name: Run Deno Script
+      run: deno run --allow-read --allow-write --unstable --allow-run .scripts/generate-commit-message.ts ${{ github.base_ref }} ${{ github.head_ref }}
+
+    - name: PR comment with file
+      uses: thollander/actions-comment-pull-request@v2
+      with:
+        filePath: ${{ github.workspace }}/.scripts/commit-message.txt
+        comment_tag: sandboxes
+        create_if_not_exists: true
+
+    - name: Run Deno Script
+      run: deno run --allow-read --allow-write --unstable --allow-net --allow-run .scripts/generate-commit-message.ts ${{ github.base_ref }} ${{ github.head_ref }} true
+
+    - name: PR comment with file
+      uses: thollander/actions-comment-pull-request@v2
+      with:
+        filePath: ${{ github.workspace }}/.scripts/commit-message.txt
+        comment_tag: sandboxes
+        create_if_not_exists: true
