@@ -19,8 +19,8 @@ jobs:
     # - name: Fetch base branch
     #   run: git fetch --unshallow origin ${{ github.base_ref }}
 
-    # - name: Fetch target branch
-    #   run: git fetch origin ${{ github.target_ref }}
+    - name: Fetch base branch
+      run: git fetch origin ${{ github.base_ref }}
 
     - name: Setup Deno
       uses: denoland/setup-deno@v1
