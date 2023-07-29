@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^4.2.0"
+    "vite": "^4.4.7"
   },
   "dependencies": {
     "@codesandbox/nodebox": "^0.1.6"
