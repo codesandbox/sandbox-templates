@@ -33,7 +33,7 @@ const markdown = new Markdown();
 markdown.table([
   ["Title", "Description"],
 
-  sortedTemplates.map((
+  ...sortedTemplates.map((
     templateInfo,
   ) => [
     `![${templateInfo.title}](${templateInfo.iconUrl}) **${templateInfo.title}**`,
@@ -43,7 +43,7 @@ markdown.table([
 
 const newReadme = readmeContents.replace(
   /<!--TEMPLATES_START-->[\s\S]*<!--TEMPLATES_END-->/,
-  `<!--TEMPLATES_START-->${markdown.content}<!--TEMPLATES_END-->`,
+  `<!--TEMPLATES_START-->\n${markdown.content}\n<!--TEMPLATES_END-->`,
 );
 
 await Deno.writeFile(readmeLocation, new TextEncoder().encode(newReadme));
