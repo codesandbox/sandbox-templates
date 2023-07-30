@@ -35,7 +35,7 @@ const sortedTemplates = sortBy(
 
 const markdown = new Markdown();
 markdown.table([
-  ["Title", "Description", "Fork Count"],
+  ["Title", "Description", "Forks"],
 
   ...sortedTemplates.map((
     templateInfo,
