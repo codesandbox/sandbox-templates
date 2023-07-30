@@ -21,6 +21,8 @@ const templateInfos = await Promise.all([...templates].map(async (template) => {
     title: data.title as string,
     description: data.description as string,
     iconUrl: data.custom_template.icon_url as string,
+    editorUrl:
+      `https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/${template}`,
   };
 }));
 
@@ -36,7 +38,7 @@ markdown.table([
   ...sortedTemplates.map((
     templateInfo,
   ) => [
-    `<img src="${templateInfo.iconUrl}" alt="${templateInfo.title}" width="24"/> [**${templateInfo.title}**](https://google.com)`,
+    `<img src="${templateInfo.iconUrl}" alt="${templateInfo.title}" width="16"/> [**${templateInfo.title}**](${templateInfo.editorUrl})`,
     templateInfo.description,
   ]),
 ]);

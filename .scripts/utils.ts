@@ -7,7 +7,10 @@ export async function getTemplates(): Promise<Set<string>> {
   const templates = new Set<string>();
 
   for await (const folder of folders) {
-    if (folder.name.startsWith(".") || folder.name.trim() === "") {
+    if (
+      folder.name.startsWith(".") || folder.name.trim() === "" ||
+      !folder.isDirectory
+    ) {
       continue;
     }
     templates.add(folder.name);
