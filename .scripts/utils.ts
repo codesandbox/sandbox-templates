@@ -1,6 +1,8 @@
 import * as path from "https://deno.land/std@0.196.0/path/mod.ts";
 
-const root = path.dirname(path.dirname(path.fromFileUrl(Deno.mainModule)));
+export const root = path.dirname(
+  path.dirname(path.fromFileUrl(Deno.mainModule)),
+);
 
 export async function getTemplates(): Promise<Set<string>> {
   const folders = Deno.readDir(root);
