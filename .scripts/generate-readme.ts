@@ -34,14 +34,14 @@ const sortedTemplates = sortBy(
 
 const markdown = new Markdown();
 markdown.table([
-  ["Title", "Description", "Tags"],
+  ["Title", "Description", "Open"],
 
   ...sortedTemplates.map((
     templateInfo,
   ) => [
     `<img align="center" src="${templateInfo.iconUrl}" alt="${templateInfo.title}" width="16"/> [**${templateInfo.title}**](${templateInfo.editorUrl})`,
     templateInfo.description,
-    templateInfo.tags.join(", "),
+    `[Open Editor](${templateInfo.editorUrl})`,
   ]),
 ]);
 
