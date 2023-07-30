@@ -36,7 +36,7 @@ markdown.table([
   ...sortedTemplates.map((
     templateInfo,
   ) => [
-    `![${templateInfo.title}](${templateInfo.iconUrl}) **${templateInfo.title}**`,
+    `<img src="${templateInfo.iconUrl}" alt="${templateInfo.title}" width="24"/> [**${templateInfo.title}**](https://google.com)`,
     templateInfo.description,
   ]),
 ]);
