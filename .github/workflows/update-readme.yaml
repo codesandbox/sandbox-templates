@@ -20,7 +20,7 @@ jobs:
         deno-version: v1.x
       
     - name: Run Deno Script
-      run: deno run --allow-read --allow-write --unstable --allow-run .scripts/generate-readme.ts
+      run: deno run --allow-read --allow-write --allow-net .scripts/generate-readme.ts
 
     - name: Add & Commit
       uses: EndBug/add-and-commit@v9.1.3
