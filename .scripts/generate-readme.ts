@@ -38,7 +38,7 @@ markdown.table([
   ...sortedTemplates.map((
     templateInfo,
   ) => [
-    `<p align="center"><img src="${templateInfo.iconUrl}" alt="${templateInfo.title}" width="16"/> [**${templateInfo.title}**](${templateInfo.editorUrl})</p>`,
+    `<img align="center" src="${templateInfo.iconUrl}" alt="${templateInfo.title}" width="16"/> [**${templateInfo.title}**](${templateInfo.editorUrl})`,
     templateInfo.description,
   ]),
 ]);
