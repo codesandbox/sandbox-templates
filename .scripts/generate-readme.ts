@@ -35,16 +35,15 @@ const sortedTemplates = sortBy(
 
 const markdown = new Markdown();
 markdown.table([
-  ["Title", "Description", "Forks"],
+  ["Title", "Description"],
 
   ...sortedTemplates.map((
     templateInfo,
   ) => [
     `<img align="center" src="${templateInfo.iconUrl}" alt="${templateInfo.title}" width="16"/> [**${templateInfo.title}**](${templateInfo.editorUrl})`,
     templateInfo.description,
-    `${numberToSymbol(templateInfo.forkCount)}`,
   ]),
-]);
+], {});
 
 const newReadme = readmeContents.replace(
   /<!--TEMPLATES_START-->[\s\S]*<!--TEMPLATES_END-->/,
