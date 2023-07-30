@@ -24,6 +24,7 @@ const templateInfos = await Promise.all([...templates].map(async (template) => {
     tags: data.tags as string[],
     editorUrl:
       `https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/${template}`,
+    forkCount: data.fork_count as number,
   };
 }));
 
@@ -34,14 +35,14 @@ const sortedTemplates = sortBy(
 
 const markdown = new Markdown();
 markdown.table([
-  ["Title", "Description", "Open"],
+  ["Title", "Description", "Fork Count"],
 
   ...sortedTemplates.map((
     templateInfo,
   ) => [
     `<img align="center" src="${templateInfo.iconUrl}" alt="${templateInfo.title}" width="16"/> [**${templateInfo.title}**](${templateInfo.editorUrl})`,
     templateInfo.description,
-    `[Open Editor](${templateInfo.editorUrl})`,
+    `${numberToSymbol(templateInfo.forkCount)}`,
   ]),
 ]);
 
@@ -51,3 +52,18 @@ const newReadme = readmeContents.replace(
 );
 
 await Deno.writeFile(readmeLocation, new TextEncoder().encode(newReadme));
+
+/**
+ * Returns the number formatted to show the k and M symbols when necessary.
+ */
+function numberToSymbol(count: number): string {
+  if (count >= 1000000) {
+    return `${(count / 1000000).toFixed(1)}M`;
+  }
+
+  if (count >= 1000) {
+    return `${(count / 1000).toFixed(1)}k`;
+  }
+
+  return `${count}`;
+}
