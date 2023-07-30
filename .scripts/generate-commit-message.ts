@@ -93,6 +93,11 @@ if (testSandbox) {
           if (succeeded) {
             example.screenshotUrl =
               `https://codesandbox.io/api/v1/sandboxes/${sandboxId}/screenshot.png`;
+
+            // Prefetch the screenshot url, so it's generated when the user accesses
+            // the issue screenshot
+            fetch(example.screenshotUrl, { redirect: "follow" });
+
             example.status = Status.SUCCEEDED;
           } else {
             example.status = Status.SCREENSHOT_FAILED;
