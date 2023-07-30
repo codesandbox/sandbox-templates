@@ -8,6 +8,14 @@ updates:
       deps:
         patterns:
           - '*'
+  - package-ecosystem: docker
+    directory: /angular/.codesandbox
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
   - package-ecosystem: npm
     directory: /astro
     schedule:
@@ -24,8 +32,40 @@ updates:
       deps:
         patterns:
           - '*'
+  - package-ecosystem: docker
+    directory: /astro-tailwind/.codesandbox
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: docker
+    directory: /astro/.codesandbox
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: docker
+    directory: /bun/.codesandbox
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
   - package-ecosystem: npm
     directory: /cloudflare-worker
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: docker
+    directory: /cloudflare-worker/.codesandbox
     schedule:
       interval: daily
     groups:
@@ -40,6 +80,38 @@ updates:
       deps:
         patterns:
           - '*'
+  - package-ecosystem: docker
+    directory: /create-t3-app/.codesandbox
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: docker
+    directory: /deno-fresh/.codesandbox
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: docker
+    directory: /deno/.codesandbox
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: docker
+    directory: /docker/.codesandbox
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
   - package-ecosystem: npm
     directory: /docusaurus
     schedule:
@@ -48,8 +120,32 @@ updates:
       deps:
         patterns:
           - '*'
+  - package-ecosystem: docker
+    directory: /docusaurus/.codesandbox
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
   - package-ecosystem: npm
     directory: /gatsby
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: docker
+    directory: /gatsby/.codesandbox
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: docker
+    directory: /go/.codesandbox
     schedule:
       interval: daily
     groups:
@@ -72,6 +168,22 @@ updates:
       deps:
         patterns:
           - '*'
+  - package-ecosystem: docker
+    directory: /nextjs-app-router/.codesandbox
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: docker
+    directory: /nextjs/.codesandbox
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
   - package-ecosystem: npm
     directory: /node
     schedule:
@@ -82,6 +194,22 @@ updates:
           - '*'
   - package-ecosystem: npm
     directory: /node-http-server
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: docker
+    directory: /node-http-server/.codesandbox
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: docker
+    directory: /node/.codesandbox
     schedule:
       interval: daily
     groups:
@@ -120,8 +248,32 @@ updates:
       deps:
         patterns:
           - '*'
+  - package-ecosystem: docker
+    directory: /python-flask-server/.codesandbox
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: docker
+    directory: /python/.codesandbox
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
   - package-ecosystem: npm
     directory: /qwik-vite
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: docker
+    directory: /qwik-vite/.codesandbox
     schedule:
       interval: daily
     groups:
@@ -136,8 +288,24 @@ updates:
       deps:
         patterns:
           - '*'
+  - package-ecosystem: docker
+    directory: /react-vite-ts/.codesandbox
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
   - package-ecosystem: npm
     directory: /remix
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: docker
+    directory: /remix/.codesandbox
     schedule:
       interval: daily
     groups:
@@ -160,8 +328,32 @@ updates:
       deps:
         patterns:
           - '*'
+  - package-ecosystem: docker
+    directory: /rust-poem-server/.codesandbox
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
   - package-ecosystem: cargo
     directory: /rust-serde
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: docker
+    directory: /rust-serde/.codesandbox
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: docker
+    directory: /rust/.codesandbox
     schedule:
       interval: daily
     groups:
@@ -186,6 +378,14 @@ updates:
           - '*'
   - package-ecosystem: npm
     directory: /vue-vite
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: docker
+    directory: /vue-vite/.codesandbox
     schedule:
       interval: daily
     groups:

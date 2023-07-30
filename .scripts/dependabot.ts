@@ -1,7 +1,13 @@
 import * as yaml from "https://deno.land/std@0.196.0/yaml/mod.ts";
 import * as path from "https://deno.land/std@0.196.0/path/mod.ts";
 
-const supportedPackageManagers = [
+type PackageManagerDefinition = {
+  type: string;
+  possible: (examplePath: string) => Promise<boolean>;
+  directory?: string;
+};
+
+const supportedPackageManagers: PackageManagerDefinition[] = [
   {
     type: "npm",
     possible: (examplePath: string) =>
@@ -31,6 +37,12 @@ const supportedPackageManagers = [
     possible: (examplePath: string) =>
       exists(path.join(examplePath, "composer.json")),
   },
+  {
+    type: "docker",
+    possible: (examplePath: string) =>
+      exists(path.join(examplePath, ".codesandbox", "Dockerfile")),
+    directory: ".codesandbox",
+  },
 ];
 
 const dependabot: {
@@ -59,9 +71,13 @@ for (const dirEntry of Deno.readDirSync("../")) {
     const isPossible = await manager.possible(path.join("../", dirEntry.name));
 
     if (isPossible) {
+      let directory = path.join("/", dirEntry.name);
+      if (manager.directory) {
+        directory = path.join(directory, manager.directory);
+      }
       dependabot.updates.push({
         "package-ecosystem": manager.type,
-        directory: `/${dirEntry.name}`,
+        directory,
         schedule: {
           interval: "daily",
         },
