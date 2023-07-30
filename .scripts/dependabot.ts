@@ -41,6 +41,10 @@ const dependabot: {
     schedule: {
       interval: "daily" | "weekly" | "monthly";
     };
+    groups?: Record<
+      string,
+      { patterns: string[]; "exclude-patterns"?: string[] }
+    >;
   }>;
 } = {
   version: 2,
@@ -60,6 +64,12 @@ for (const dirEntry of Deno.readDirSync("../")) {
         directory: `/${dirEntry.name}`,
         schedule: {
           interval: "daily",
+        },
+        // Make sure that there is one PR for every example
+        groups: {
+          "deps": {
+            patterns: ["*"],
+          },
         },
       });
     }
