@@ -1,8 +1,8 @@
-import { getSyncedSandboxDetails } from './api.js';
-import { startSandbox } from './pitcher-manager.js';
-import { readdir, access } from 'node:fs/promises';
-import path from 'node:path';
-import { fileURLToPath } from "node:url";
+import { getSyncedSandboxDetails } from './api.ts';
+import { startSandbox } from './pitcher-manager.ts';
+import { access } from 'node:fs/promises';
+import * as path from "https://deno.land/std@0.196.0/path/mod.ts";
+import { getTemplates, root } from './utils.ts';
 
 const clusters = [
     'fc-eu-0',
@@ -13,7 +13,7 @@ const owner = 'codesandbox';
 const repo = 'sandbox-templates';
 const branch = 'main';
 
-async function prepareSandbox(dir) {
+async function prepareSandbox(dir: string) {
     const sandboxDetails = await getSyncedSandboxDetails(owner, repo, branch, dir);
     await Promise.all(clusters.map(async (clusterName) => {
         console.log(`Starting sandbox, Cluster:${clusterName} \t SandboxId:${sandboxDetails.id} \t Template: ${dir}`);
@@ -21,11 +21,11 @@ async function prepareSandbox(dir) {
     }));
 }
 
-async function getTemplateDirs(dirToSearchIn) {
-    const filesInTemplatesDir = await readdir(dirToSearchIn, { withFileTypes: true });
+async function getTemplateDirs() {
+    const filesInTemplatesDir = await getTemplates();
 
-    const stats = await Promise.all(filesInTemplatesDir.filter(file => file.isDirectory()).map(async (dir) => {
-        const templateJsonPath = path.join(dir.path, dir.name, '.codesandbox', 'template.json');
+    const stats = await Promise.all([...filesInTemplatesDir].map(async (template) => {
+        const templateJsonPath = path.join(root, template, '.codesandbox', 'template.json');
         let templateJsonExists = false;
 
         try {
@@ -36,7 +36,7 @@ async function getTemplateDirs(dirToSearchIn) {
         }
 
         return {
-            dir: dir.name,
+            dir: template,
             templateJsonExists
         }
     }));
@@ -46,8 +46,7 @@ async function getTemplateDirs(dirToSearchIn) {
 }
 
 async function start() {
-    const dirWithTempaltes = path.dirname(path.resolve(fileURLToPath(import.meta.url), '../'));
-    const templateDirsWithTemplateJson = await getTemplateDirs(dirWithTempaltes);
+    const templateDirsWithTemplateJson = await getTemplateDirs();
 
     for(const templateDir of templateDirsWithTemplateJson){
         await prepareSandbox(templateDir);

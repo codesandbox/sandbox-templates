@@ -1,0 +1,20 @@
+{
+  // These tasks will run in order when initializing your CodeSandbox project.
+  "setupTasks": [],
+
+  // These tasks can be run from CodeSandbox. Running one will open a log in the app.
+  "tasks": {
+    "deno run -A .scripts/index.ts": {
+      "name": "Preload sandboxes",
+      "command": "deno run -A .scripts/index.ts"
+    },
+    "generate readme": {
+      "name": "Generate README.md",
+      "command": "deno run -A .scripts/generate-readme.ts"
+    },
+    "generate dependabot": {
+      "name": "Generate Dependabot",
+      "command": "deno run -A .scripts/dependabot.ts"
+    }
+  }
+}
