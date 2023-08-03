@@ -157,10 +157,10 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.46.0.tgz#3f7802972e8b6fe3f88ed1aabc74ec596c456db6"
   integrity sha512-a8TLtmPi8xzPkCbp/OGFUo5yhRkHM2Ko9kOWP4znJr0WAhWyThaw3PnwX4vOTWOAMsV2uRt32PPDcEz63esSaA==
 
-"@fontsource/fira-mono@^5.0.5":
-  version "5.0.5"
-  resolved "https://registry.yarnpkg.com/@fontsource/fira-mono/-/fira-mono-5.0.5.tgz#c1752daacf4b94ab9dc40812b2e205c1620cd28d"
-  integrity sha512-R5HaONNjI8zzZgjATOrtDhhl58U19OslqNOanPpiHqXV8XWKmFqRF1hIekrWemLfpSTK1WO3wyNcFMZMwkKhlA==
+"@fontsource/fira-mono@^5.0.6":
+  version "5.0.6"
+  resolved "https://registry.yarnpkg.com/@fontsource/fira-mono/-/fira-mono-5.0.6.tgz#ab8d0bf70c683798624d6d918b9ed9a79aca390a"
+  integrity sha512-pS8vwPdXaczld69hVCILPNJPM8mpXcDGyR/zCIeUzK8BD994cLw/ypxf9MWnIqrpBivMIB0B5oDGnZZWK7t1Zg==
 
 "@humanwhocodes/config-array@^0.11.10":
   version "0.11.10"
