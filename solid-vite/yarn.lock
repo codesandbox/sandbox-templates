@@ -732,10 +732,10 @@ seroval@^0.5.0:
   resolved "https://registry.yarnpkg.com/seroval/-/seroval-0.5.1.tgz#e6d17365cdaaae7e50815c7e0bcd7102facdadf3"
   integrity sha512-ZfhQVB59hmIauJG5Ydynupy8KHyr5imGNtdDhbZG68Ufh1Ynkv9KOYOAABf71oVbQxJ8VkWnMHAjEHE7fWkH5g==
 
-solid-js@^1.7.8:
-  version "1.7.8"
-  resolved "https://registry.yarnpkg.com/solid-js/-/solid-js-1.7.8.tgz#6856983e3edbcc57b0e003e6fd0c741dd8865892"
-  integrity sha512-XHBWk1FvFd0JMKljko7FfhefJMTSgYEuVKcQ2a8hzRXfiuSJAGsrPPafqEo+f6l+e8Oe3cROSpIL6kbzjC1fjQ==
+solid-js@^1.7.9:
+  version "1.7.9"
+  resolved "https://registry.yarnpkg.com/solid-js/-/solid-js-1.7.9.tgz#eb666d1c0ab0322bf844b566edbf40557dee66c7"
+  integrity sha512-p1orXnauMQmwYULZtuPAXyKNRGEN2qh60kLX4YURa3jvulxAqjlh2kWEljXCtAVR6UZPC16NXdj9ASHcH383Fg==
   dependencies:
     csstype "^3.1.0"
     seroval "^0.5.0"
