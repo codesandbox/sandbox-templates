@@ -6,5 +6,5 @@ Add your [configuration](https://codesandbox.io/docs/projects/learn/setting-up/t
 
 ## Resources
 
-- [CodeSandbox — Docs](https://codesandbox.io/docs/projects)
+- [CodeSandbox — Docs](https://codesandbox.io/docs/learn)
 - [CodeSandbox — Discord](https://discord.gg/Ggarp3pX5H)

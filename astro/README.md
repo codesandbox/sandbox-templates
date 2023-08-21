@@ -43,7 +43,7 @@ All commands are run from the root of the project, from a terminal:
 
 ## 👀 Want to learn more?
 
-- [CodeSandbox Projects — Docs](https://docs.codesandbox.io)
+- [CodeSandbox — Docs](https://docs.codesandbox.io)
 - [CodeSandbox — Discord](https://discord.gg/Ggarp3pX5H)
 - [Astro — GitHub](https://github.com/withastro/astro)
 - [Astro — Docs](https://docs.astro.build)
