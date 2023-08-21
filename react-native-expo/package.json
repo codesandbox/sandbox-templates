@@ -1,0 +1,29 @@
+{
+  "name": "react-native-expo",
+  "version": "1.0.0",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "export EXPO_PACKAGER_PROXY_URL=https://${CSB_SANDBOX_ID}-8080.csb.app && expo start --port 8080",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "@expo/cli": "^0.6.2",
+    "expo": "~49.0.7",
+    "expo-status-bar": "~1.6.0",
+    "react": "18.2.0",
+    "react-native": "0.72.3",
+    "react-native-web": "~0.19.6",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "http-proxy-middleware": "^0.19.0",
+    "qs": "^6.5.2",
+    "xdl": "^51.4.0"
+  },
+  "private": true
+}
