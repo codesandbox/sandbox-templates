@@ -1,0 +1,12 @@
+{
+    "title": "Epic Stack",
+    "description": "This is the Epic Stack by Epic Web. A full-featured stack to quickly get started with your next web app.",
+    "iconUrl": "https://github.com/codesandbox/sandbox-templates/blob/main/epic-stack/.codesandbox/icon.png?raw=true",
+    "tags": [
+      "remix",
+      "javascript",
+      "typescript",
+      "react"
+    ],
+    "published": true
+  }
