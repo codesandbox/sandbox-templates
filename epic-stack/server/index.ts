@@ -101,7 +101,7 @@ app.use(
 	helmet({
 		referrerPolicy: { policy: 'same-origin' },
 		crossOriginEmbedderPolicy: false,
-		xFrameOptions: Boolean(process.env.CSB),
+		xFrameOptions: !process.env.CSB,
 		contentSecurityPolicy: {
 			// NOTE: Remove reportOnly when you're ready to enforce this CSP
 			reportOnly: true,
