@@ -1,0 +1,7 @@
+{
+  "title": "PHP Starter",
+  "description": "Quickly get started with PHP using this starter",
+  "iconUrl": "https://github.com/codesandbox/sandbox-templates/blob/main/php/.codesandbox/icon.png?raw=true",
+  "tags": ["php", "starter"],
+  "published": true
+}
