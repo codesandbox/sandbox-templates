@@ -281,6 +281,22 @@ updates:
         patterns:
           - '*'
   - package-ecosystem: npm
+    directory: /react-native-expo
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: docker
+    directory: /react-native-expo/.codesandbox
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: npm
     directory: /react-vite-ts
     schedule:
       interval: daily
@@ -370,6 +386,14 @@ updates:
           - '*'
   - package-ecosystem: npm
     directory: /sveltekit
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: docker
+    directory: /sveltekit/.codesandbox
     schedule:
       interval: daily
     groups:
