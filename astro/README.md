@@ -2,8 +2,6 @@
 
 [Configuration](https://codesandbox.io/docs/projects/learn/setting-up/tasks) has been added to optimize it for [CodeSandbox](https://codesandbox.io/p/dashboard).
 
-[![Edit in CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/github/codesandbox/codesandbox-template-astro/main)
-
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
 ## 🚀 Project Structure
@@ -35,7 +33,7 @@ All commands are run from the root of the project, from a terminal:
 | Command                | Action                                             |
 | :--------------------- | :------------------------------------------------- |
 | `npm install`          | Installs dependencies                              |
-| `npm run dev`          | Starts local dev server at `localhost:3000`        |
+| `npm run dev`          | Starts local dev server at `localhost:4321`        |
 | `npm run build`        | Build your production site to `./dist/`            |
 | `npm run preview`      | Preview your build locally, before deploying       |
 | `npm run astro ...`    | Run CLI commands like `astro add`, `astro preview` |
