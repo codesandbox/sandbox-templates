@@ -25,6 +25,22 @@ updates:
         patterns:
           - '*'
   - package-ecosystem: npm
+    directory: /astro-starlight
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: docker
+    directory: /astro-starlight/.codesandbox
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: npm
     directory: /astro-tailwind
     schedule:
       interval: daily
@@ -394,6 +410,22 @@ updates:
           - '*'
   - package-ecosystem: docker
     directory: /sveltekit/.codesandbox
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: npm
+    directory: /vite-ts
+    schedule:
+      interval: daily
+    groups:
+      deps:
+        patterns:
+          - '*'
+  - package-ecosystem: docker
+    directory: /vite-ts/.codesandbox
     schedule:
       interval: daily
     groups:
