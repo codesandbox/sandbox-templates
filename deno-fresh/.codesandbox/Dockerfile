@@ -1,4 +1,4 @@
-FROM denoland/deno:debian-1.36.4
+FROM denoland/deno:debian-1.37.0
 
 RUN apt update && apt install -y unzip
 RUN deno upgrade
