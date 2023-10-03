@@ -21,18 +21,18 @@
     "qwik": "qwik"
   },
   "devDependencies": {
-    "@builder.io/qwik": "^1.2.6",
-    "@builder.io/qwik-city": "^1.2.6",
-    "@types/eslint": "8.44.2",
-    "@types/node": "^20.5.0",
-    "@typescript-eslint/eslint-plugin": "6.3.0",
-    "@typescript-eslint/parser": "6.3.0",
-    "eslint": "8.47.0",
-    "eslint-plugin-qwik": "1.2.6",
-    "prettier": "3.0.1",
-    "typescript": "5.1.6",
-    "undici": "5.23.0",
+    "@builder.io/qwik": "^1.2.12",
+    "@builder.io/qwik-city": "^1.2.12",
+    "@types/eslint": "8.44.3",
+    "@types/node": "^20.8.2",
+    "@typescript-eslint/eslint-plugin": "6.7.4",
+    "@typescript-eslint/parser": "6.7.4",
+    "eslint": "8.50.0",
+    "eslint-plugin-qwik": "1.2.12",
+    "prettier": "3.0.3",
+    "typescript": "5.2.2",
+    "undici": "5.25.3",
     "vite": "4.4.9",
-    "vite-tsconfig-paths": "4.2.0"
+    "vite-tsconfig-paths": "4.2.1"
   }
 }
