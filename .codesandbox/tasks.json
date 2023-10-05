@@ -18,7 +18,7 @@
     },
     "restart all templates": {
       "name": "Restart all templates",
-      "command": "deno run -A .scripts/start-templates.ts --restart"
+      "command": "deno run -A .scripts/restart-all-templates.ts"
     }
   }
 }
