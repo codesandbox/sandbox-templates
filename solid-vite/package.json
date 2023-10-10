@@ -10,10 +10,10 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "solid-js": "^1.7.12"
+    "solid-js": "^1.8.0"
   },
   "devDependencies": {
-    "vite": "^4.4.9",
+    "vite": "^4.4.11",
     "vite-plugin-solid": "^2.7.0"
   }
 }
