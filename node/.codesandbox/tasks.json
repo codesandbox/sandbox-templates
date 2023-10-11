@@ -13,11 +13,6 @@
       "name": "start",
       "command": "yarn start",
       "runAtStart": true
-    },
-    "build": {
-      "name": "build",
-      "command": "yarn build",
-      "runAtStart": false
     }
   }
 }
