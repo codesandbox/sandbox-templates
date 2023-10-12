@@ -2,10 +2,10 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "NUXT_TELEMETRY_DISABLED=1 nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "NUXT_TELEMETRY_DISABLED=1 nuxt prepare"
   },
   "devDependencies": {
     "nuxt": "^3.7.4"
