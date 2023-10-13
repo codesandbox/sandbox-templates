@@ -1,0 +1,10 @@
+{
+  "title": "Elixir",
+  "description": "A quick starter for getting started with Elixir",
+  "iconUrl": "https://github.com/codesandbox/sandbox-templates/blob/main/elixir/.codesandbox/icon.png?raw=true",
+  "tags": [
+    "elixir",
+    "starter"
+  ],
+  "published": true
+}
