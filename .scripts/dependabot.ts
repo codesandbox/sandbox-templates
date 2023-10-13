@@ -40,8 +40,8 @@ const supportedPackageManagers: PackageManagerDefinition[] = [
   {
     type: "docker",
     possible: (examplePath: string) =>
-      exists(path.join(examplePath, ".codesandbox", "Dockerfile")),
-    directory: ".codesandbox",
+      exists(path.join(examplePath, ".devcontainer", "Dockerfile")),
+    directory: ".devcontainer",
   },
 ];
 
