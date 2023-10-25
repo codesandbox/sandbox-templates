@@ -6,7 +6,7 @@
   "tasks": {
     "Start": {
       "name": "Start",
-      "command": "bun run http.ts",
+      "command": "bun --hot run http.ts",
       "runAtStart": true
     }
   }
