@@ -1,9 +1,12 @@
-console.log("I'm running Bun!");
+console.info(`I'm running Bun ${Bun.version}`);
 
-export default {
+Bun.serve({
   port: 3000,
-  fetch(request: Request) {
-    console.log(`[${request.method}] ${request.url}`);
-    return new Response("Hello World from CodeSandbox");
+  fetch(request) {
+    console.info(`[${request.method}] ${request.url}`);
+
+    return new Response(
+      `Hello World from CodeSandbox running Bun ${Bun.version}`,
+    );
   },
-};
+});
