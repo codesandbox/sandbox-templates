@@ -1,22 +1,8 @@
-FROM debian:bullseye
-
-# common packages
-RUN apt-get update && \
-    apt-get install --no-install-recommends -y \
-    build-essential \
-    autoconf automake autotools-dev libtool xutils-dev \
-    ca-certificates curl file && \
-    rm -rf /var/lib/apt/lists/*
-
-# install toolchain
-RUN curl https://sh.rustup.rs -sSf | \
-    sh -s -- --default-toolchain stable -y
-
-ENV PATH=/root/.cargo/bin:$PATH
+FROM rust:1.73-bullseye
 
 # install cargo binstall to reduce image size
-WORKDIR /root/.cargo/bin
-RUN curl -L --output cargo-binstall.tgz https://github.com/cargo-bins/cargo-binstall/releases/download/v0.19.3/cargo-binstall-x86_64-unknown-linux-gnu.tgz && \
+WORKDIR /usr/local/cargo/bin
+RUN curl -L --output cargo-binstall.tgz https://github.com/cargo-bins/cargo-binstall/releases/download/v0.22.0/cargo-binstall-x86_64-unknown-linux-gnu.tgz && \
     tar -xvzf cargo-binstall.tgz && \
     chmod +x cargo-binstall && \
     rm cargo-binstall.tgz
