@@ -25,7 +25,7 @@
     "@builder.io/qwik-city": "^1.2.15",
     "@types/eslint": "8.44.6",
     "@types/node": "^20.8.9",
-    "@typescript-eslint/eslint-plugin": "6.9.1",
+    "@typescript-eslint/eslint-plugin": "6.10.0",
     "@typescript-eslint/parser": "6.9.1",
     "eslint": "8.52.0",
     "eslint-plugin-qwik": "1.2.15",
