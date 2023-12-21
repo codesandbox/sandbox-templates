@@ -1,5 +1,5 @@
 {
-  "name": "vite-typescript-starter",
+  "name": "my-vue-app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "typescript": "^5.0.2",
-    "vite": "^4.4.9"
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8"
   }
 }
