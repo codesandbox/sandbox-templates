@@ -5,7 +5,7 @@ This repo contains all sandbox templates maintained by CodeSandbox.
 Run the following command to automatically update all tempplates
 
 ```sh
-zx index.mjs 
+zx ./.scripts/update-templates.mjs 
 ```
 
 ## Templates
