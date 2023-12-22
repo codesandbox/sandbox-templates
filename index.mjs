@@ -1,8 +1,11 @@
 #!/usr/bin/env zx
 
 const VITE_TEMPLATES = {
-  "vue-vite": `npm create vite@latest {key} -- --template vue-ts`,
+  "qwik-vite": "npm create vite@latest {key} -- --template qwik-ts",
+  "react-vite-ts": "npm create vite@latest {key} -- --template react-ts",
+  "solid-vite": "npm create vite@latest {key} -- --template solid-ts",
   "vite-ts": "npm create vite@latest {key} -- --template vanilla-ts",
+  "vue-vite": "npm create vite@latest {key} -- --template vue-ts",
 };
 
 for (const [key, value] of Object.entries(VITE_TEMPLATES)) {
@@ -32,7 +35,7 @@ for (const [key, value] of Object.entries(VITE_TEMPLATES)) {
     chalk.yellow(`[4/${maxSteps}] ${key}:`),
     chalk.green(`Prettier`),
   );
-  $`prettier . --write`;
+  await $`prettier . --write`;
 
-  cd`..`;
+  cd("..");
 }

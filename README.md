@@ -2,6 +2,12 @@
 
 This repo contains all sandbox templates maintained by CodeSandbox.
 
+Run the following command to automatically update all tempplates
+
+```sh
+zx index.mjs 
+```
+
 ## Templates
 
 > This is list auto-generated from the templates in this repository.
