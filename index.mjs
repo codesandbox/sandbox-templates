@@ -20,4 +20,19 @@ for (const [key, value] of Object.entries(VITE_TEMPLATES)) {
   );
   const command = value.replace("{key}", key);
   await $([command]);
+
+  echo(
+    chalk.yellow(`[3/${maxSteps}] ${key}:`),
+    chalk.green(`Installing dependencies`),
+  );
+  cd(key);
+  await $`pnpm i`;
+
+  echo(
+    chalk.yellow(`[4/${maxSteps}] ${key}:`),
+    chalk.green(`Prettier`),
+  );
+  $`prettier . --write`;
+
+  cd`..`;
 }
