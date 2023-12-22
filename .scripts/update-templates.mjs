@@ -15,6 +15,12 @@ const VITE_TEMPLATES = {
   "solid-vite": "npm create vite@latest {key} -- --template solid-ts",
   "vite-ts": "npm create vite@latest {key} -- --template vanilla-ts",
   "vue-vite": "npm create vite@latest {key} -- --template vue-ts",
+
+  // Next.js
+  "nextjs":
+    `npx create-next-app {key} --ts --eslint --tailwind --no-src-dir --app --import-alias "@/*" --use-pnpm`,
+  "nextjs-app-router":
+    `npx create-next-app {key} --ts --eslint --no-tailwind --no-src-dir --app --import-alias "@/*" --use-pnpm`,
 };
 
 for (const [key, value] of Object.entries(VITE_TEMPLATES)) {
