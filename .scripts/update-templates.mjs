@@ -1,10 +1,15 @@
 #!/usr/bin/env zx
 
 const VITE_TEMPLATES = {
+  // Astro
   "astro":
     "npm create astro@latest {key} -- --template minimal --typescript strict --no-install --no-git --skip-houston",
+  "astro-starlight":
+    "npm create astro@latest {key} -- --template starlight --typescript strict --no-install --no-git --skip-houston",
   "astro-tailwind":
     "npm create astro@latest {key} -- --template with-tailwindcss --typescript strict --no-install --no-git --skip-houston",
+
+  // Vite
   "qwik-vite": "npm create vite@latest {key} -- --template qwik-ts",
   "react-vite-ts": "npm create vite@latest {key} -- --template react-ts",
   "solid-vite": "npm create vite@latest {key} -- --template solid-ts",
