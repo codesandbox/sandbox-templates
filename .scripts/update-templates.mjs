@@ -2,28 +2,28 @@
 
 const VITE_TEMPLATES = {
   // Astro
-  // "astro":
-  //   "npm create astro@latest {key} -- --template minimal --typescript strict --no-install --no-git --skip-houston",
-  // "astro-starlight":
-  //   "npm create astro@latest {key} -- --template starlight --typescript strict --no-install --no-git --skip-houston",
-  // "astro-tailwind":
-  //   "npm create astro@latest {key} -- --template with-tailwindcss --typescript strict --no-install --no-git --skip-houston",
+  "astro":
+    "npm create astro@latest {key} -- --template minimal --typescript strict --no-install --no-git --skip-houston",
+  "astro-starlight":
+    "npm create astro@latest {key} -- --template starlight --typescript strict --no-install --no-git --skip-houston",
+  "astro-tailwind":
+    "npm create astro@latest {key} -- --template with-tailwindcss --typescript strict --no-install --no-git --skip-houston",
 
-  // // Vite
-  // "qwik-vite": "npm create vite@latest {key} -- --template qwik-ts",
-  // "react-vite-ts": "npm create vite@latest {key} -- --template react-ts",
-  // "solid-vite": "npm create vite@latest {key} -- --template solid-ts",
-  // "vite-ts": "npm create vite@latest {key} -- --template vanilla-ts",
-  // "vue-vite": "npm create vite@latest {key} -- --template vue-ts",
+  // Vite
+  "qwik-vite": "npm create vite@latest {key} -- --template qwik-ts",
+  "react-vite-ts": "npm create vite@latest {key} -- --template react-ts",
+  "solid-vite": "npm create vite@latest {key} -- --template solid-ts",
+  "vite-ts": "npm create vite@latest {key} -- --template vanilla-ts",
+  "vue-vite": "npm create vite@latest {key} -- --template vue-ts",
 
   // // Next.js
-  // "nextjs":
-  //   `npx create-next-app {key} --ts --eslint --tailwind --no-src-dir --app --import-alias "@/*" --use-pnpm`,
-  // "nextjs-app-router":
-  //   `npx create-next-app {key} --ts --eslint --no-tailwind --no-src-dir --app --import-alias "@/*" --use-pnpm`,
+  "nextjs":
+    `npx create-next-app {key} --ts --eslint --tailwind --no-src-dir --app --import-alias "@/*" --use-pnpm`,
+  "nextjs-app-router":
+    `npx create-next-app {key} --ts --eslint --no-tailwind --no-src-dir --app --import-alias "@/*" --use-pnpm`,
 
   // Nuxt.js
-  // "nuxt": `npx nuxi@latest init {key}`,
+  "nuxt": `npx nuxi@latest init {key}`,
 
   // Remix
   "remix": `npx create-remix@latest {key}`,
