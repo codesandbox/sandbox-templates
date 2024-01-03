@@ -1,13 +1,17 @@
 {
+  "name": "nuxt",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "NUXT_TELEMETRY_DISABLED=1 nuxt dev",
+    "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "NUXT_TELEMETRY_DISABLED=1 nuxt prepare"
+    "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "nuxt": "^3.8.1"
+    "nuxt": "^3.9.0",
+    "vue": "^3.4.3",
+    "vue-router": "^4.2.5"
   }
 }
