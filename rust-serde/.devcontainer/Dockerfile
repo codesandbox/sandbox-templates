@@ -1,4 +1,4 @@
-FROM rust:1.73-bullseye
+FROM rust:1.75-bullseye
 
 # install cargo binstall to reduce image size
 WORKDIR /usr/local/cargo/bin
