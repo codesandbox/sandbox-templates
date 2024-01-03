@@ -23,7 +23,10 @@ const VITE_TEMPLATES = {
   //   `npx create-next-app {key} --ts --eslint --no-tailwind --no-src-dir --app --import-alias "@/*" --use-pnpm`,
 
   // Nuxt.js
-  "nuxt": `npx nuxi@latest init {key}`,
+  // "nuxt": `npx nuxi@latest init {key}`,
+
+  // Remix
+  "remix": `npx create-remix@latest {key}`,
 };
 
 for (const [key, value] of Object.entries(VITE_TEMPLATES)) {
@@ -62,6 +65,12 @@ for (const [key, value] of Object.entries(VITE_TEMPLATES)) {
     chalk.green(`Prettier`),
   );
   await $`prettier . --write`;
+
+  echo(
+    chalk.yellow(`[5/${maxSteps}] ${key}:`),
+    chalk.green(`Rename package.json#name`),
+  );
+  await $`npm pkg set 'name'=${key}`;
 
   cd("..");
 }
