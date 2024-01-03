@@ -1,6 +1,6 @@
 {
   "title": "Python",
-  "description": "Example of using Python inside CodeSandbox",
+  "description": "The starter template of Python for CodeSandbox",
   "iconUrl": "https://github.com/codesandbox/sandbox-templates/blob/main/python/.codesandbox/icon.png?raw=true",
   "tags": [
     "python",
