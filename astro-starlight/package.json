@@ -1,5 +1,5 @@
 {
-  "name": "astro-starlight-tmp",
+  "name": "astro-starlight",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -10,7 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/starlight": "^0.15.1",
+    "@astrojs/starlight": "^0.15.2",
     "astro": "^4.0.1",
     "sharp": "^0.32.5"
   }

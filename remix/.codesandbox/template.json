@@ -2,11 +2,6 @@
   "title": "Remix",
   "description": "The official Remix Cloud Sandbox Template by the CodeSandbox team",
   "iconUrl": "https://github.com/codesandbox/sandbox-templates/blob/main/remix/.codesandbox/icon.png?raw=true",
-  "tags": [
-    "react",
-    "remix",
-    "javascript",
-    "typescript"
-  ],
+  "tags": ["react", "remix", "javascript", "typescript"],
   "published": true
 }
