@@ -4,6 +4,10 @@
     {
       "name": "Install Dependencies",
       "command": "yarn install"
+    },
+    {
+      "name": "Run migrations",
+      "command": "npx tsx db/migrate"
     }
   ],
 
@@ -17,9 +21,7 @@
         "port": 3000
       },
       "restartOn": {
-        "files": [
-          "./yarn.lock"
-        ],
+        "files": ["./yarn.lock"],
         "branch": false,
         "resume": false
       }
@@ -40,12 +42,14 @@
       "name": "Install Dependencies",
       "command": "yarn install",
       "restartOn": {
-        "files": [
-          "./package.json"
-        ],
+        "files": ["./package.json"],
         "branch": false,
         "resume": false
       }
+    },
+    "migrate": {
+      "name": "Run migrations",
+      "command": "npx tsx db/migrate"
     }
   }
 }
