@@ -7,7 +7,7 @@
     },
     {
       "name": "Run migrations",
-      "command": "npx tsx db/migrate"
+      "command": "npx --yes tsx db/migrate"
     }
   ],
 
