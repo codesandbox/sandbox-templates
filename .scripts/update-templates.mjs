@@ -31,6 +31,10 @@ const VITE_TEMPLATES = {
 
   // Remix
   "remix": `npx create-remix@latest {key}`,
+
+  // Rust + Axum
+  "rust-axum":
+    `npx degit https://github.com/tokio-rs/axum.git/examples/hello-world {key}`,
 };
 
 const templatesToUpdate = process.argv.slice(2);
@@ -71,24 +75,27 @@ for (const [key, value] of Object.entries(VITE_TEMPLATES)) {
   // await $`mv ${key}/tmp/.gitignore ${key} `;
   await $`rm -rf ${key}/tmp`;
 
-  echo(
-    chalk.yellow(`[3/${maxSteps}] ${key}:`),
-    chalk.green(`Installing dependencies`),
-  );
-  cd(key);
-  await $`pnpm i`;
+  const isJavaScript = fs.existsSync(`${key}/package.json`);
+  if (isJavaScript) {
+    echo(
+      chalk.yellow(`[3/${maxSteps}] ${key}:`),
+      chalk.green(`Installing dependencies`),
+    );
+    cd(key);
+    await $`pnpm i`;
 
-  echo(
-    chalk.yellow(`[4/${maxSteps}] ${key}:`),
-    chalk.green(`Prettier`),
-  );
-  await $`prettier . --write`;
+    echo(
+      chalk.yellow(`[4/${maxSteps}] ${key}:`),
+      chalk.green(`Prettier`),
+    );
+    await $`prettier . --write`;
 
-  echo(
-    chalk.yellow(`[5/${maxSteps}] ${key}:`),
-    chalk.green(`Rename package.json#name`),
-  );
-  await $`npm pkg set 'name'=${key}`;
+    echo(
+      chalk.yellow(`[5/${maxSteps}] ${key}:`),
+      chalk.green(`Rename package.json#name`),
+    );
+    await $`npm pkg set 'name'=${key}`;
+  }
 
   cd("..");
 }
