@@ -1,6 +1,4 @@
 {
   "name": "Devcontainer",
-  "build": {
-    "dockerfile": "./Dockerfile"
-  }
+  "image": "mcr.microsoft.com/devcontainers/rust:1-bookworm"
 }
