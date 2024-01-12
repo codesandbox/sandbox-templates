@@ -1,8 +1,16 @@
 import { getSyncedSandboxDetails } from "./api.ts";
-import { startSandbox, shutdownSandbox } from "./pitcher-manager.ts";
+import {
+  hibernateSandbox,
+  shutdownSandbox,
+  startSandbox,
+} from "./pitcher-manager.ts";
 import { getTemplates } from "./utils.ts";
 
-const clusters = ["fc-eu-0", "fc-us-0"];
+const clusters = [
+  "fc-eu-0",
+  "fc-eu-2",
+  "fc-us-0",
+];
 
 const owner = "codesandbox";
 const repo = "sandbox-templates";
@@ -13,26 +21,24 @@ async function restartTemplate(template: string) {
     owner,
     repo,
     branch,
-    template
+    template,
   );
   await Promise.all(
     clusters.map(async (clusterName) => {
       console.log(
-        `Restarting sandbox, Cluster:${clusterName} \t SandboxId:${
-          sandboxDetails.id
-        } \t Template: ${template}`
+        `Restarting sandbox, Cluster:${clusterName} \t SandboxId:${sandboxDetails.id} \t Template: ${template}`,
       );
 
       // Start sandbox so that shutdown works later (eg: start from hibernation)
       await startSandbox(clusterName, sandboxDetails.id);
       await shutdownSandbox(clusterName, sandboxDetails.id);
       await startSandbox(clusterName, sandboxDetails.id);
-    })
+      await hibernateSandbox(clusterName, sandboxDetails.id);
+    }),
   );
 }
 const templates = await getTemplates();
 
 for (const template of templates) {
   await restartTemplate(template);
-  break;
 }
