@@ -25,12 +25,34 @@ const VITE_TEMPLATES = {
   // Nuxt.js
   "nuxt": `npx nuxi@latest init {key}`,
 
+  // Nuxt.js on Edge + Drizzle
+  "nuxt-todos-edge":
+    "npx degit https://github.com/Atinux/nuxt-todos-edge.git {key}",
+
   // Remix
   "remix": `npx create-remix@latest {key}`,
+
+  // Rust + Axum
+  "rust-axum":
+    `npx degit https://github.com/tokio-rs/axum.git/examples/hello-world {key}`,
 };
 
+const templatesToUpdate = process.argv.slice(3);
+
 for (const [key, value] of Object.entries(VITE_TEMPLATES)) {
+  if (templatesToUpdate.length > 0 && !templatesToUpdate.includes(key)) {
+    continue;
+  }
+
   const maxSteps = 5;
+
+  if (!fs.existsSync(key)) {
+    echo(
+      chalk.yellow(`[0/${maxSteps}] ${key}:`),
+      chalk.green(`Creating folder`),
+    );
+    await $`mkdir ${key}`;
+  }
 
   echo(
     chalk.yellow(`[1/${maxSteps}] ${key}:`),
@@ -53,24 +75,37 @@ for (const [key, value] of Object.entries(VITE_TEMPLATES)) {
   // await $`mv ${key}/tmp/.gitignore ${key} `;
   await $`rm -rf ${key}/tmp`;
 
-  echo(
-    chalk.yellow(`[3/${maxSteps}] ${key}:`),
-    chalk.green(`Installing dependencies`),
-  );
-  cd(key);
-  await $`pnpm i`;
+  const isJavaScript = fs.existsSync(`${key}/package.json`);
+  if (isJavaScript) {
+    echo(
+      chalk.yellow(`[3/${maxSteps}] ${key}:`),
+      chalk.green(`Installing dependencies`),
+    );
+    cd(key);
+    await $`pnpm i`;
 
-  echo(
-    chalk.yellow(`[4/${maxSteps}] ${key}:`),
-    chalk.green(`Prettier`),
-  );
-  await $`prettier . --write`;
+    echo(
+      chalk.yellow(`[4/${maxSteps}] ${key}:`),
+      chalk.green(`Prettier`),
+    );
+    await $`prettier . --write`;
 
-  echo(
-    chalk.yellow(`[5/${maxSteps}] ${key}:`),
-    chalk.green(`Rename package.json#name`),
-  );
-  await $`npm pkg set 'name'=${key}`;
+    echo(
+      chalk.yellow(`[5/${maxSteps}] ${key}:`),
+      chalk.green(`Rename package.json#name`),
+    );
+    await $`npm pkg set 'name'=${key}`;
+  }
+
+  const isRust = fs.existsSync(`${key}/Cargo.toml`);
+  if (isRust) {
+    cd(key);
+    // Replace some local dependencies with crates.io
+    if (key === "rust-axum") {
+      await $`cargo remove axum`;
+      await $`cargo add axum`;
+    }
+  }
 
   cd("..");
 }
