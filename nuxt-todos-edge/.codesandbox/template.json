@@ -1,0 +1,7 @@
+{
+  "title": "Nuxt Todos on the Edge",
+  "description": "Perfect starter for building a Nuxt.js application for the edge with Drizzle and SQLite",
+  "iconUrl": "https://github.com/codesandbox/sandbox-templates/blob/main/nuxt/.codesandbox/icon.png?raw=true",
+  "tags": ["javascript", "typescript", "vue", "nuxt", "drizzle", "sqlite"],
+  "published": true
+}
