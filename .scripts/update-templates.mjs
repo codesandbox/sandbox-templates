@@ -25,12 +25,30 @@ const VITE_TEMPLATES = {
   // Nuxt.js
   "nuxt": `npx nuxi@latest init {key}`,
 
+  // Nuxt.js on Edge + Drizzle
+  "nuxt-todos-edge":
+    "npx degit https://github.com/Atinux/nuxt-todos-edge.git {key}",
+
   // Remix
   "remix": `npx create-remix@latest {key}`,
 };
 
+const templatesToUpdate = process.argv.slice(2);
+
 for (const [key, value] of Object.entries(VITE_TEMPLATES)) {
+  if (templatesToUpdate.length > 0 && !templatesToUpdate.includes(key)) {
+    continue;
+  }
+
   const maxSteps = 5;
+
+  if (!fs.existsSync(key)) {
+    echo(
+      chalk.yellow(`[0/${maxSteps}] ${key}:`),
+      chalk.green(`Creating folder`),
+    );
+    await $`mkdir ${key}`;
+  }
 
   echo(
     chalk.yellow(`[1/${maxSteps}] ${key}:`),
