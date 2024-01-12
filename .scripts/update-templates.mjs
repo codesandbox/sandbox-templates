@@ -37,7 +37,7 @@ const VITE_TEMPLATES = {
     `npx degit https://github.com/tokio-rs/axum.git/examples/hello-world {key}`,
 };
 
-const templatesToUpdate = process.argv.slice(2);
+const templatesToUpdate = process.argv.slice(3);
 
 for (const [key, value] of Object.entries(VITE_TEMPLATES)) {
   if (templatesToUpdate.length > 0 && !templatesToUpdate.includes(key)) {
@@ -95,6 +95,16 @@ for (const [key, value] of Object.entries(VITE_TEMPLATES)) {
       chalk.green(`Rename package.json#name`),
     );
     await $`npm pkg set 'name'=${key}`;
+  }
+
+  const isRust = fs.existsSync(`${key}/Cargo.toml`);
+  if (isRust) {
+    cd(key);
+    // Replace some local dependencies with crates.io
+    if (key === "rust-axum") {
+      await $`cargo remove axum`;
+      await $`cargo add axum`;
+    }
   }
 
   cd("..");
