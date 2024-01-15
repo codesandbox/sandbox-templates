@@ -1,4 +1,4 @@
-# Python Starter
+# Selenium Starter
 
 Quickly get started with [Selenium](https://www.selenium.dev/) using this starter! 
 
