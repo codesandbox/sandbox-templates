@@ -1,1 +1,1 @@
-Flask==2.3.3
+selenium=4.16.0
