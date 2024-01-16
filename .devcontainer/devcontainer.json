@@ -9,6 +9,7 @@
     }
   },
   "features": {
-    "ghcr.io/devcontainers-contrib/features/deno:1": {}
+    "ghcr.io/devcontainers-contrib/features/deno:1": {},
+    "ghcr.io/devcontainers/features/rust:1": {}
   }
 }
