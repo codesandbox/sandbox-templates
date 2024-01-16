@@ -1,0 +1,32 @@
+{
+  "name": "workspace",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbo",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "generate": "drizzle-kit generate:pg"
+  },
+  "dependencies": {
+    "@types/node": "20.10.1",
+    "@types/react": "18.2.39",
+    "@types/react-dom": "18.2.17",
+    "autoprefixer": "10.4.16",
+    "drizzle-orm": "^0.29.3",
+    "eslint": "8.54.0",
+    "eslint-config-next": "^14.0.3",
+    "next": "^14.0.3",
+    "postcss": "8.4.31",
+    "postgres": "^3.4.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tailwindcss": "3.3.5",
+    "typescript": "5.3.2"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.20.10",
+    "pg": "^8.11.3"
+  }
+}
