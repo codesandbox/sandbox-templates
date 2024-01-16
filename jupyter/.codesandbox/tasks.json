@@ -6,7 +6,7 @@
   "tasks": {
     "Jupyter Notebook": {
       "name": "Jupyter Notebook",
-      "command": "jupyter notebook --ip='*' --NotebookApp.token='' --NotebookApp.password='' --NotebookApp.webbrowser_open_new=0 --NotebookApp.allow_remote_access=True  --ServerApp.disable_check_xsrf=True --NotebookApp.default_url='/notebooks/CodeSandbox.ipynb' --allow-root",
+      "command": "jupyter notebook --ip='*' --NotebookApp.token='' --NotebookApp.password='' --NotebookApp.webbrowser_open_new=0 --NotebookApp.allow_remote_access=True  --ServerApp.disable_check_xsrf=True --NotebookApp.default_url='/notebooks/CodeSandbox.ipynb' --allow-root --NotebookApp.tornado_settings='{\"headers\":{\"Content-Security-Policy\": \"frame-ancestors *;\"}}' ",
       "runAtStart": true,
       "restartOn": {
         "branch": false
