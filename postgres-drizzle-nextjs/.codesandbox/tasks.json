@@ -1,0 +1,55 @@
+{
+  // These tasks will run in order when initializing your CodeSandbox project.
+  "setupTasks": [
+    {
+      "name": "Install Dependencies",
+      "command": "yarn install"
+    },
+    {
+      "name": "Run migrations",
+      "command": "npx --yes tsx db/migrate"
+    }
+  ],
+
+  // These tasks can be run from CodeSandbox. Running one will open a log in the app.
+  "tasks": {
+    "dev": {
+      "name": "Start Dev Server",
+      "command": "yarn dev",
+      "runAtStart": true,
+      "preview": {
+        "port": 3000
+      },
+      "restartOn": {
+        "files": ["./yarn.lock"],
+        "branch": false,
+        "resume": false
+      }
+    },
+    "build": {
+      "name": "Build",
+      "command": "yarn build"
+    },
+    "start": {
+      "name": "Start Server",
+      "command": "yarn start"
+    },
+    "lint": {
+      "name": "Lint",
+      "command": "yarn lint"
+    },
+    "install": {
+      "name": "Install Dependencies",
+      "command": "yarn install",
+      "restartOn": {
+        "files": ["./package.json"],
+        "branch": false,
+        "resume": false
+      }
+    },
+    "migrate": {
+      "name": "Run migrations",
+      "command": "npx tsx db/migrate"
+    }
+  }
+}

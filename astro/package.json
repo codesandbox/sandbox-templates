@@ -1,16 +1,15 @@
 {
   "name": "astro",
+  "type": "module",
   "version": "0.0.1",
-  "private": true,
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^3.0.8"
-  },
-  "description": "The official Astro Cloud Sandbox Template by the CodeSandbox team"
+    "astro": "^4.1.2"
+  }
 }
