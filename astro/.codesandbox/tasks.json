@@ -3,7 +3,7 @@
   "setupTasks": [
     {
       "name": "Install Dependencies",
-      "command": "npm install"
+      "command": "pnpm install"
     }
   ],
 
@@ -11,7 +11,7 @@
   "tasks": {
     "dev": {
       "name": "Start Dev Server",
-      "command": "npm run dev",
+      "command": "pnpm run dev",
       "runAtStart": true,
       "preview": {
         "port": 4321
@@ -19,12 +19,12 @@
     },
     "build": {
       "name": "Build",
-      "command": "npm run build",
+      "command": "pnpm run build",
       "runAtStart": false
     },
     "install": {
       "name": "Install Dependencies",
-      "command": "npm install",
+      "command": "pnpm install",
       "restartOn": {
         "files": ["package-lock.json"],
         "branch": false
