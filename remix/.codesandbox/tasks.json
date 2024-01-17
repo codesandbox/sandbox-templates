@@ -3,7 +3,7 @@
   "setupTasks": [
     {
       "name": "Install Dependencies",
-      "command": "npm install"
+      "command": "pnpm install"
     }
   ],
 
@@ -11,12 +11,12 @@
   "tasks": {
     "build": {
       "name": "build",
-      "command": "npm run build",
+      "command": "pnpm run build",
       "runAtStart": false
     },
     "dev": {
       "name": "dev",
-      "command": "npm run dev",
+      "command": "pnpm run dev",
       "runAtStart": true,
       "preview": {
         "port": 3000
@@ -24,12 +24,12 @@
     },
     "start": {
       "name": "start",
-      "command": "npm run start",
+      "command": "pnpm run start",
       "runAtStart": false
     },
     "typecheck": {
       "name": "typecheck",
-      "command": "npm run typecheck",
+      "command": "pnpm run typecheck",
       "runAtStart": false
     }
   }

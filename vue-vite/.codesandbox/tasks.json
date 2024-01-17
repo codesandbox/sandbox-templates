@@ -3,15 +3,15 @@
   "setupTasks": [
     {
       "name": "Install Dependencies",
-      "command": "npm install"
+      "command": "pnpm install"
     }
   ],
 
   // These tasks can be run from CodeSandbox. Running one will open a log in the app.
   "tasks": {
-    "npm run dev": {
+    "pnpm run dev": {
       "name": "Vite Dev",
-      "command": "npm run dev",
+      "command": "pnpm run dev",
       "runAtStart": true
     }
   }
