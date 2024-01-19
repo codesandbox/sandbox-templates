@@ -7,11 +7,8 @@ Quickly get started with [OpenAI API](hhttps://platform.openai.com/docs/api-refe
 
 ## Getting Started
 
-First off, don't forget to add your OpenAI API credentials to [.env](./.env)
+First off, you have to set your OpenAI API credentials in order to use this template. You can simply set the `OPENAI_API_KEY` environment variable using the [devbox environment variables UI](https://codesandbox.io/docs/learn/environment/secrets). Alternatively also you can use [.env](./.env) to add your OpenAI API credentials.
 
-```
-OPENAI_API_KEY=
-```
 
 You can get your OpenAI API key from https://platform.openai.com/account/api-keys. Regarding setting up the API key and how to use it you can find help on https://help.openai.com/en/articles/4936850-where-do-i-find-my-api-key.
 

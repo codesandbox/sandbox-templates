@@ -1,10 +1,9 @@
 from openai import OpenAI
 from dotenv import load_dotenv
-
-load_dotenv()
-
-
+import os
 if __name__ == "__main__":
+    #If env var is not set fallback to dotfile
+    os.environ.get('OPENAI_API_KEY', load_dotenv())
     client = OpenAI()
 
     response = client.chat.completions.create(
