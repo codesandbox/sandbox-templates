@@ -1,0 +1,24 @@
+{
+  // These tasks will run in order when initializing your CodeSandbox project.
+  "setupTasks": ["pip install -r requirements.txt"],
+
+  // These tasks can be run from CodeSandbox. Running one will open a log in the app.
+  "tasks": {
+    "Jupyter Notebook": {
+      "name": "Jupyter Notebook",
+      "command": "jupyter notebook --ip='*' --NotebookApp.token='' --NotebookApp.password='' --NotebookApp.webbrowser_open_new=0 --NotebookApp.allow_remote_access=True  --ServerApp.disable_check_xsrf=True --NotebookApp.default_url='/notebooks/CodeSandbox.ipynb' --allow-root --NotebookApp.tornado_settings='{\"headers\":{\"Content-Security-Policy\": \"frame-ancestors *;\"}}' ",
+      "runAtStart": true,
+      "restartOn": {
+        "branch": false
+      }
+    },
+    "Jupyter Lab": {
+      "name": "Jupyter Lab",
+      "command": "jupyter lab --ip='*' --NotebookApp.token='' --NotebookApp.password='' --NotebookApp.allow_remote_access=True  --ServerApp.disable_check_xsrf=True --allow-root",
+      "runAtStart": false,
+      "restartOn": {
+        "branch": false
+      }
+    }
+  }
+}
