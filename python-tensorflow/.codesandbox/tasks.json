@@ -1,0 +1,16 @@
+{
+  // These tasks will run in order when initializing your CodeSandbox project.
+  "setupTasks": ["pip install -r requirements.txt"],
+
+  // These tasks can be run from CodeSandbox. Running one will open a log in the app.
+  "tasks": {
+    "Jupyter Lab": {
+      "name": "Jupyter Lab",
+      "command": "jupyter lab --ip='*' --NotebookApp.token='' --NotebookApp.password='' --NotebookApp.allow_remote_access=True  --ServerApp.disable_check_xsrf=True --LabApp.default_url=/notebooks/Tensorflow.ipynb --allow-root",
+      "runAtStart": true,
+      "restartOn": {
+        "branch": false
+      }
+    }
+  }
+}
