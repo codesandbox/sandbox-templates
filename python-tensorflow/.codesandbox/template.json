@@ -1,5 +1,5 @@
 {
-  "title": "Jupyter",
+  "title": "Tensorflow",
   "description": "This is a starter for Tensorflow and Keras. Tensorflow is an end-to-end machine learning and AI platform. It can be used across a range of tasks but has a particular focus on training and inference of deep neural networks.",
   "iconUrl": "https://github.com/codesandbox/sandbox-templates/blob/main/python-tensorflow/.codesandbox/icon.png?raw=true",
   "tags": [
