@@ -3,9 +3,14 @@ import { getTemplates } from "./utils.ts";
 import { sortBy } from "https://deno.land/std@0.196.0/collections/sort_by.ts";
 import { Markdown } from "https://deno.land/x/deno_markdown/mod.ts";
 
+const basePath = path.dirname(path.dirname(path.fromFileUrl(Deno.mainModule)));
 const readmeLocation = path.join(
-  path.dirname(path.dirname(path.fromFileUrl(Deno.mainModule))),
+  basePath,
   "README.md",
+);
+const templateLocation = path.join(
+  basePath,
+  "templates.json",
 );
 const decoder = new TextDecoder("utf-8");
 const readmeContents = decoder.decode(await Deno.readFile(readmeLocation));
@@ -25,6 +30,10 @@ const templateInfos = await Promise.all([...templates].map(async (template) => {
     editorUrl:
       `https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/${template}`,
     forkCount: data.fork_count as number,
+    viewCount: data.view_count as number,
+    likeCount: data.like_count as number,
+    author: data.author,
+    git: data.git,
   };
 }));
 
@@ -51,6 +60,28 @@ const newReadme = readmeContents.replace(
 );
 
 await Deno.writeFile(readmeLocation, new TextEncoder().encode(newReadme));
+
+const dataJson = JSON.stringify(
+  sortedTemplates.map((templateInfo) => ({
+    title: templateInfo.title,
+    description: templateInfo.description,
+    iconUrl: templateInfo.iconUrl,
+    tags: templateInfo.tags,
+    editorUrl: templateInfo.editorUrl,
+    forkCount: templateInfo.forkCount,
+    viewCount: templateInfo.viewCount,
+    likeCount: templateInfo.likeCount,
+    author: templateInfo.author,
+    git: data.git,
+  })),
+  null,
+  2,
+);
+
+await Deno.writeTextFile(
+  templateLocation,
+  dataJson,
+);
 
 /**
  * Returns the number formatted to show the k and M symbols when necessary.
