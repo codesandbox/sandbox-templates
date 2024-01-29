@@ -23,6 +23,7 @@ const templateInfos = await Promise.all([...templates].map(async (template) => {
   const { data } = await fetch(url).then((x) => x.json());
 
   return {
+    id: data.id as string,
     title: data.title as string,
     description: data.description as string,
     iconUrl: data.custom_template.icon_url as string,
@@ -63,6 +64,7 @@ await Deno.writeFile(readmeLocation, new TextEncoder().encode(newReadme));
 
 const dataJson = JSON.stringify(
   sortedTemplates.map((templateInfo) => ({
+    id: templateInfo.id,
     title: templateInfo.title,
     description: templateInfo.description,
     iconUrl: templateInfo.iconUrl,
@@ -72,7 +74,7 @@ const dataJson = JSON.stringify(
     viewCount: templateInfo.viewCount,
     likeCount: templateInfo.likeCount,
     author: templateInfo.author,
-    git: data.git,
+    git: templateInfo.git,
   })),
   null,
   2,
