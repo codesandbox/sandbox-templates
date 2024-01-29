@@ -3,7 +3,7 @@ name: Generate Files
 on:
   push:
     paths-ignore:
-      - 'template.json'
+      - 'templates.json'
       - 'README.md'
     branches:
       - main
