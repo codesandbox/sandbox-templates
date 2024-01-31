@@ -8,6 +8,20 @@ Run the following command to automatically update all templates
 zx ./.scripts/update-templates.mjs 
 ```
 
+## Sandbox Templates
+
+We have 4 official Sandbox templates:
+
+- **[React](https://codesandbox.io/p/sandbox/react-new)**
+- **[React Typescript](https://codesandbox.io/p/sandbox/react-typescript-react-ts)**
+- **[Vanilla Typescript](https://codesandbox.io/p/sandbox/vanilla-typescript-vanilla-ts
+)**
+- **HTML + CSS** ([GitHub](https://github.com/codesandbox-app/static-template))
+
+When converting a Sandbox to a Devbox we use the [Sandbox Migration](./sandbox-migration/) template, which has all dependencies of our Sandbox templates installed.
+
+When updating any dependencies, make sure we keep them in sync or conversion will take longer.
+
 ## Templates
 
 > This is list auto-generated from the templates in this repository.
