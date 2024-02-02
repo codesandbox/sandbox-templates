@@ -24,4 +24,4 @@ jobs:
         deno-version: v1.x
       
     - name: Run Deno Script
-      run: deno run --allow-read --allow-net --allow-write --unstable --allow-run .scripts/restart-all-templates.ts ${{ inputs.template }}
+      run: deno run --allow-read --allow-net --allow-write --allow-env --unstable --allow-run .scripts/restart-all-templates.ts ${{ inputs.template }}
