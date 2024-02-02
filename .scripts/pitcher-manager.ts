@@ -2,7 +2,7 @@ import { getSyncedSandboxDetails } from "./api.ts";
 
 export async function startSandbox(clusterName: string, sandboxId: string) {
   const response = await fetch(
-    `https://codesandbox.io/api/beta/sandboxes/branches/${sandboxId}/instance?pitcherManagerURL=https://${clusterName}.pitcher.csb.dev/api/v1`,
+    `https://codesandbox.io/api/beta/sandboxes/branches/${sandboxId}/instance?pitcherManagerURL=https://${clusterName}.pitcher.csb.app/api/v1`,
     {
       method: "POST",
       headers: {
@@ -22,7 +22,7 @@ export async function startSandbox(clusterName: string, sandboxId: string) {
 
 export async function shutdownSandbox(clusterName: string, sandboxId: string) {
   const response = await fetch(
-    `https://codesandbox.io/api/beta/sandboxes/branches/${sandboxId}/instance?pitcherManagerURL=https://${clusterName}.pitcher.csb.dev/api/v1`,
+    `https://codesandbox.io/api/beta/sandboxes/branches/${sandboxId}/instance?pitcherManagerURL=https://${clusterName}.pitcher.csb.app/api/v1`,
     {
       method: "DELETE",
       headers: {
