@@ -1,6 +1,10 @@
 {
   // These tasks will run in order when initializing your CodeSandbox project.
-  "setupTasks": [
+  "setupTasks": [ 
+    {
+      "name": "Copy .env.example to .env",
+      "command": "cp .env.example .env"
+    },
     {
       "name": "Install Dependencies",
       "command": "pnpm install"
