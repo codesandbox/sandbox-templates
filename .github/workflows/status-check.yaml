@@ -4,6 +4,10 @@ on:
   schedule:
     # * is a special character in YAML so you have to quote this string
     - cron:  '0 10,19 * * *'
+  workflow_run:
+    workflows: [Regenerate Template Snapshot]
+    types:
+      - completed
 
 jobs:
   build:
@@ -12,7 +16,6 @@ jobs:
     steps:
     - name: Checkout PR head
       uses: actions/checkout@v3
-
 
     - name: Setup Deno
       uses: denoland/setup-deno@v1
