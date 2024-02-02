@@ -8,6 +8,9 @@ on:
     branches:
       - main
 
+env:
+  CODESANDBOX_API_TOKEN: ${{ secrets.CODESANDBOX_API_TOKEN }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
