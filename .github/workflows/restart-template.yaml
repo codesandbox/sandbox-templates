@@ -1,0 +1,27 @@
+name: Restart Template
+
+on:
+  workflow_dispatch:
+    inputs:
+      template:
+        description: 'Enter the folder name for the template (empty to restart all templates)'
+        required: false
+        type: string
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout head
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 2
+
+    - name: Setup Deno
+      uses: denoland/setup-deno@v1
+      with:
+        deno-version: v1.x
+      
+    - name: Run Deno Script
+      run: deno run --allow-read --allow-net --allow-write --allow-env --unstable --allow-run .scripts/restart-all-templates.ts ${{ inputs.template }}
