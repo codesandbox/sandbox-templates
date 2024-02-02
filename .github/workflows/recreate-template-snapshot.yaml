@@ -22,7 +22,7 @@ jobs:
         deno-version: v1.x
       
     - name: Run Deno Script
-      run: deno run --allow-read --allow-write --unstable --allow-run .scripts/restart-changed-template.ts
+      run: deno run --allow-read --allow-write --unstable --allow-run .scripts/restart-changed-templates.ts
 
     - name: PR comment with file
       uses: thollander/actions-comment-pull-request@v2
