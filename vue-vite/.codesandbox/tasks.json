@@ -12,7 +12,10 @@
     "pnpm run dev": {
       "name": "Vite Dev",
       "command": "pnpm run dev",
-      "runAtStart": true
+      "runAtStart": true,
+      "preview": {
+        "port": 5173
+      }
     }
   }
 }
