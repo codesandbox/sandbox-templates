@@ -23,20 +23,3 @@ jobs:
       
     - name: Run Deno Script
       run: deno run --allow-read --allow-write --unstable --allow-run .scripts/restart-changed-templates.ts
-
-    - name: PR comment with file
-      uses: thollander/actions-comment-pull-request@v2
-      with:
-        filePath: ${{ github.workspace }}/.scripts/commit-message.txt
-        comment_tag: sandboxes
-        create_if_not_exists: true
-
-    - name: Run Deno Script
-      run: deno run --allow-read --allow-write --unstable --allow-net --allow-run .scripts/generate-commit-message.ts ${{ github.base_ref }} ${{ github.head_ref }} true
-
-    - name: PR comment with file
-      uses: thollander/actions-comment-pull-request@v2
-      with:
-        filePath: ${{ github.workspace }}/.scripts/commit-message.txt
-        comment_tag: sandboxes
-        create_if_not_exists: true
