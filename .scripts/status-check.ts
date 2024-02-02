@@ -36,16 +36,14 @@ const templateInfo: TemplateInfo[] = await Promise.all(
 
 console.log(templateInfo);
 
+type PortStatus = {
+  url: string;
+  status: "succeeded" | "failed";
+  error?: string;
+};
 type Status = {
   folder: string;
-  ports: Record<
-    number,
-    Array<{
-      url: string;
-      status: "succeeded" | "failed";
-      error?: string;
-    }>
-  >;
+  ports: Record<number, PortStatus[]>;
 };
 
 const owner = "codesandbox";
@@ -79,11 +77,19 @@ for (const { folder, ports } of templateInfo) {
         try {
           const response = await fetch(url);
 
-          return {
-            url,
-            status: response.status === 200 ? "succeeded" : "failed",
-            error: response.status === 200 ? undefined : response.statusText,
-          };
+          const status: PortStatus =
+            response.status === 200
+              ? {
+                  url,
+                  status: "succeeded",
+                }
+              : {
+                  url,
+                  status: "failed",
+                  error: response.statusText,
+                };
+
+          return status;
         } catch (_e) {
           return { url, status: "failed" };
         }

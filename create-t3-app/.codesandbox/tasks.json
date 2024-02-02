@@ -12,7 +12,10 @@
     "dev": {
       "name": "dev",
       "command": "pnpm dev",
-      "runAtStart": true
+      "runAtStart": true,
+      "preview": {
+        "port": 3000
+      }
     },
     "build": {
       "name": "build",
