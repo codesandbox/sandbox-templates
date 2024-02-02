@@ -27,6 +27,15 @@ export async function shutdownSandbox(clusterName: string, sandboxId: string) {
 
 const clusters = ["fc-eu-0", "fc-eu-2", "fc-us-0"];
 
+export function getClusterPreviewUrls(
+  templateName: string,
+  port: number
+): string[] {
+  return clusters.map(
+    (cluster) => `https://${templateName}-${port}.${cluster}.pitcher.csb.app`
+  );
+}
+
 const owner = "codesandbox";
 const repo = "sandbox-templates";
 const branch = "main";
