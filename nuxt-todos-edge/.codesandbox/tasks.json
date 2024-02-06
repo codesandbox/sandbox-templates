@@ -3,11 +3,11 @@
   "setupTasks": [
     {
       "name": "Install Dependencies",
-      "command": "pnpm install"
+      "command": "npm install"
     },
     {
       "name": "Migrate",
-      "command": "pnpm migrate"
+      "command": "npm run migrate"
     }
   ],
 
@@ -15,7 +15,7 @@
   "tasks": {
     "dev": {
       "name": "dev",
-      "command": "pnpm dev",
+      "command": "npm run dev",
       "runAtStart": true,
       "preview": {
         "port": 3000
@@ -23,23 +23,23 @@
     },
     "build": {
       "name": "build",
-      "command": "pnpm build"
+      "command": "npm run build"
     },
     "preview": {
       "name": "preview",
-      "command": "pnpm preview"
+      "command": "npm run preview"
     },
     "migrate": {
       "name": "migrate",
-      "command": "pnpm migrate"
+      "command": "npm run migrate"
     },
     "lint": {
       "name": "lint",
-      "command": "pnpm lint"
+      "command": "npm run lint"
     },
     "postinstall": {
       "name": "postinstall",
-      "command": "pnpm postinstall"
+      "command": "npm run postinstall"
     }
   }
 }
