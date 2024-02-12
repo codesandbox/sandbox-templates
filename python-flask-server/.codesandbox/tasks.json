@@ -7,7 +7,10 @@
     "start": {
       "name": "start",
       "command": "python main.py",
-      "runAtStart": true
+      "runAtStart": true,
+      "preview": {
+        "port": 5000
+      }
     }
   }
 }

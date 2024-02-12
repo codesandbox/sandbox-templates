@@ -1,13 +1,21 @@
 {
   // These tasks will run in order when initializing your CodeSandbox project.
-  "setupTasks": ["rm -f deno.lock"],
+  "setupTasks": [
+    {
+      "name": "Delete deno.lock",
+      "command": "rm -f deno.lock"
+    }
+  ],
 
   // These tasks can be run from CodeSandbox. Running one will open a log in the app.
   "tasks": {
     "start": {
       "name": "start",
       "command": "deno task start",
-      "runAtStart": true
+      "runAtStart": true,
+      "preview": {
+        "port": 8000
+      }
     }
   }
 }
