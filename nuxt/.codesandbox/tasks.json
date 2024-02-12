@@ -1,6 +1,13 @@
 {
   // These tasks will run in order when initializing your CodeSandbox project.
   "setupTasks": [
+    // For some reason, Nuxt throws a syntax error after multiple installs,
+    // we're discussing with the Nuxt team how that could happen. For now, we
+    // always do a clean node_modules installation.
+    {
+      "name": "Remove Dependencies",
+      "command": "rm -rf node_modules"
+    },
     {
       "name": "Install Dependencies",
       "command": "npm install"
