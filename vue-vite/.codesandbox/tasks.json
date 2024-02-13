@@ -3,7 +3,7 @@
   "setupTasks": [
     {
       "name": "Install Dependencies",
-      "command": "pnpm install"
+      "command": "pnpm install --force"
     }
   ],
 
@@ -12,7 +12,10 @@
     "pnpm run dev": {
       "name": "Vite Dev",
       "command": "pnpm run dev",
-      "runAtStart": true
+      "runAtStart": true,
+      "preview": {
+        "port": 5173
+      }
     }
   }
 }

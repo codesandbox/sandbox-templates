@@ -1,0 +1,33 @@
+{
+  // These tasks will run in order when initializing your CodeSandbox project.
+  "setupTasks": ["pip install -r requirements.txt"],
+
+  // These tasks can be run from CodeSandbox. Running one will open a log in the app.
+  "tasks": {
+    "openai_explain_code": {
+      "name": "OpenAI explain code",
+      "command": "python examples/openai_explain_code.py",
+      "runAtStart": false
+    },
+    "openai_fix_python_bug": {
+      "name": "OpenAI fix a Python bug",
+      "command": "python examples/openai_fix_python_bug.py",
+      "runAtStart": false
+    },
+    "openai_function_from_specs": {
+      "name": "OpenAI Python function from specification",
+      "command": "python examples/openai_function_from_specs.py",
+      "runAtStart": false
+    },
+    "openai_grammar_correction": {
+      "name": "OpenAI grammar correction",
+      "command": "python examples/openai_grammar_correction.py",
+      "runAtStart": false
+    },
+    "openai_natural_lang_to_sql": {
+      "name": "OpenAI natural language to sql",
+      "command": "python examples/openai_natural_lang_to_sql.py",
+      "runAtStart": false
+    }
+  }
+}

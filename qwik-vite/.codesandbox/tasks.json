@@ -11,68 +11,59 @@
   "tasks": {
     "build": {
       "name": "build",
-      "command": "pnpm run build",
-      "runAtStart": false
+      "command": "pnpm run build"
     },
     "build.client": {
       "name": "build.client",
-      "command": "pnpm run build.client",
-      "runAtStart": false
+      "command": "pnpm run build.client"
     },
     "build.preview": {
       "name": "build.preview",
-      "command": "pnpm run build.preview",
-      "runAtStart": false
+      "command": "pnpm run build.preview"
     },
     "build.types": {
       "name": "build.types",
-      "command": "pnpm run build.types",
-      "runAtStart": false
+      "command": "pnpm run build.types"
     },
     "deploy": {
       "name": "deploy",
-      "command": "pnpm run deploy",
-      "runAtStart": false
+      "command": "pnpm run deploy"
     },
     "dev": {
       "name": "dev",
       "command": "pnpm run dev",
-      "runAtStart": true
+      "runAtStart": true,
+      "preview": {
+        "port": 5173
+      }
     },
     "dev.debug": {
       "name": "dev.debug",
-      "command": "pnpm run dev.debug",
-      "runAtStart": false
+      "command": "pnpm run dev.debug"
     },
     "fmt": {
       "name": "fmt",
-      "command": "pnpm run fmt",
-      "runAtStart": false
+      "command": "pnpm run fmt"
     },
     "fmt.check": {
       "name": "fmt.check",
-      "command": "pnpm run fmt.check",
-      "runAtStart": false
+      "command": "pnpm run fmt.check"
     },
     "lint": {
       "name": "lint",
-      "command": "pnpm run lint",
-      "runAtStart": false
+      "command": "pnpm run lint"
     },
     "preview": {
       "name": "preview",
-      "command": "pnpm run preview",
-      "runAtStart": false
+      "command": "pnpm run preview"
     },
     "start": {
       "name": "start",
-      "command": "pnpm run start",
-      "runAtStart": false
+      "command": "pnpm run start"
     },
     "qwik": {
       "name": "qwik",
-      "command": "pnpm run qwik",
-      "runAtStart": false
+      "command": "pnpm run qwik"
     }
   }
 }
