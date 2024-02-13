@@ -10,7 +10,7 @@
   "keywords": [],
   "author": "Ives van Hoorne",
   "devDependencies": {
-    "@types/node": "^20.11.16",
+    "@types/node": "^20.11.17",
     "nodemon": "^3.0.3"
   },
   "dependencies": {}
