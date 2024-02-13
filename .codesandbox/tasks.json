@@ -8,9 +8,9 @@
       "name": "Preload sandboxes",
       "command": "deno run -A .scripts/index.ts"
     },
-    "generate readme": {
-      "name": "Generate README.md",
-      "command": "deno run -A .scripts/generate-readme.ts"
+    "generate files": {
+      "name": "Generate Files",
+      "command": "deno run -A .scripts/generate-files.ts"
     },
     "generate dependabot": {
       "name": "Generate Dependabot",

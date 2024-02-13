@@ -1,13 +1,20 @@
 {
   // These tasks will run in order when initializing your CodeSandbox project.
   "setupTasks": [
+    // For some reason, Nuxt throws a syntax error after multiple installs,
+    // we're discussing with the Nuxt team how that could happen. For now, we
+    // always do a clean node_modules installation.
+    {
+      "name": "Remove Dependencies",
+      "command": "rm -rf node_modules"
+    },
     {
       "name": "Install Dependencies",
-      "command": "pnpm install"
+      "command": "npm install"
     },
     {
       "name": "Migrate",
-      "command": "pnpm migrate"
+      "command": "npm run migrate"
     }
   ],
 
@@ -15,7 +22,7 @@
   "tasks": {
     "dev": {
       "name": "dev",
-      "command": "pnpm dev",
+      "command": "npm run dev",
       "runAtStart": true,
       "preview": {
         "port": 3000
@@ -23,23 +30,23 @@
     },
     "build": {
       "name": "build",
-      "command": "pnpm build"
+      "command": "npm run build"
     },
     "preview": {
       "name": "preview",
-      "command": "pnpm preview"
+      "command": "npm run preview"
     },
     "migrate": {
       "name": "migrate",
-      "command": "pnpm migrate"
+      "command": "npm run migrate"
     },
     "lint": {
       "name": "lint",
-      "command": "pnpm lint"
+      "command": "npm run lint"
     },
     "postinstall": {
       "name": "postinstall",
-      "command": "pnpm postinstall"
+      "command": "npm run postinstall"
     }
   }
 }

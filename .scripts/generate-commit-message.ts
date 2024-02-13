@@ -21,12 +21,11 @@ const directories = new Set(
   new TextDecoder()
     .decode(output)
     .split("\n")
-    .map((line) => line.substring(0, line.lastIndexOf("/"))),
+    .map((line) => line.substring(0, line.lastIndexOf("/")))
 );
 console.log({ directories });
 
-let MESSAGE_TEMPLATE =
-  `This is a helpful bot that generates a list of changed templates!
+let MESSAGE_TEMPLATE = `This is a helpful bot that generates a list of changed templates!
 
 ## Updated Examples
 
@@ -39,13 +38,13 @@ enum Status {
   SUCCEEDED,
 }
 
-const examples: Array<
-  { name: string; status: Status; screenshotUrl?: string }
-> = [];
-for (let dir of directories) {
-  if (
-    dir.startsWith(".") || dir.trim().length === 0
-  ) {
+const examples: Array<{
+  name: string;
+  status: Status;
+  screenshotUrl?: string;
+}> = [];
+for (const dir of directories) {
+  if (dir.startsWith(".") || dir.trim().length === 0) {
     continue;
   }
 
@@ -78,7 +77,7 @@ if (testSandbox) {
 
       // Start the VM backing the sandbox
       const editorResponse = await fetch(
-        generateEditorUrl(example.name, currentBranch),
+        generateEditorUrl(example.name, currentBranch)
       );
       if (!editorResponse.ok) {
         throw new Error("Editor request failed: " + editorResponse.status);
@@ -86,13 +85,12 @@ if (testSandbox) {
 
       const previewUrl = generateExamplePreviewUrl(sandboxId);
       console.log(
-        "Generated " + example.name + ", now generating screenshot...",
+        "Generated " + example.name + ", now generating screenshot..."
       );
       screenshotPromises.push(
         waitForUrlToRespond(previewUrl, 120).then((succeeded) => {
           if (succeeded) {
-            example.screenshotUrl =
-              `https://codesandbox.io/api/v1/sandboxes/${sandboxId}/screenshot.png`;
+            example.screenshotUrl = `https://codesandbox.io/api/v1/sandboxes/${sandboxId}/screenshot.png`;
 
             // Prefetch the screenshot url, so it's generated when the user accesses
             // the issue screenshot
@@ -102,7 +100,7 @@ if (testSandbox) {
           } else {
             example.status = Status.SCREENSHOT_FAILED;
           }
-        }),
+        })
       );
     } catch (e) {
       console.error(e);
@@ -116,9 +114,9 @@ await Promise.all(screenshotPromises);
 examples.forEach((example) => {
   const url = generateUrl(example.name, currentBranch);
   MESSAGE_TEMPLATE += `<details>
-  <summary><a href="${url}"><code>/${example.name}</code></a> ${
-    getStatusEmoji(example.status)
-  }</summary>
+  <summary><a href="${url}"><code>/${example.name}</code></a> ${getStatusEmoji(
+    example.status
+  )}</summary>
 
 `;
 
@@ -173,7 +171,7 @@ function sleep(ms: number): Promise<void> {
 
 async function waitForUrlToRespond(
   url: string,
-  maxTimeSeconds: number,
+  maxTimeSeconds: number
 ): Promise<boolean> {
   for (let i = 0; i < maxTimeSeconds; i++) {
     try {
@@ -184,7 +182,8 @@ async function waitForUrlToRespond(
       if (response.ok && response.status >= 200 && response.status < 400) {
         return true;
       }
-    } catch (e) {
+    } catch (_e) {
+      // Ignore if the request fails
     }
 
     await sleep(1000);
@@ -197,7 +196,7 @@ console.log(MESSAGE_TEMPLATE);
 Deno.writeFileSync(
   path.join(
     path.dirname(path.fromFileUrl(Deno.mainModule)),
-    "commit-message.txt",
+    "commit-message.txt"
   ),
-  new TextEncoder().encode(MESSAGE_TEMPLATE),
+  new TextEncoder().encode(MESSAGE_TEMPLATE)
 );

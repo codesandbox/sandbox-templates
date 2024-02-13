@@ -1,0 +1,34 @@
+name: Check Status of Templates
+
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '0 10,19 * * *'
+  workflow_run:
+    workflows: [Regenerate Template Snapshot]
+    types:
+      - completed
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout PR head
+      uses: actions/checkout@v3
+
+    - name: Setup Deno
+      uses: denoland/setup-deno@v1
+      with:
+        deno-version: v1.x
+      
+    - name: Run Deno Script
+      run: deno run --allow-read --allow-write --allow-net .scripts/status-check.ts
+
+    - name: Send PagerDuty alert on failure
+      if: ${{ failure() }}
+      uses: miparnisari/action-pagerduty-alert@0.3.2
+      with:
+        pagerduty-integration-key: '${{ secrets.PAGERDUTY_INTEGRATION_KEY }}'
+        pagerduty-dedup-key: github_workflow_failed
+        incident-summary: 'Some templates are not responding successfully on their preview URLs'

@@ -1,0 +1,61 @@
+{
+  // These tasks will run in order when initializing your CodeSandbox project.
+  "setupTasks": [
+    {
+      "name": "Install Dependencies",
+      "command": "pnpm install"
+    }
+  ],
+
+  // These tasks can be run from CodeSandbox. Running one will open a log in the app.
+  "tasks": {
+    "docusaurus": {
+      "name": "docusaurus",
+      "command": "pnpm docusaurus",
+      "runAtStart": false
+    },
+    "start": {
+      "name": "start",
+      "command": "pnpm start",
+      "runAtStart": true,
+      "preview": {
+        "port": 3000
+      }
+    },
+    "build": {
+      "name": "build",
+      "command": "pnpm build",
+      "runAtStart": false
+    },
+    "swizzle": {
+      "name": "swizzle",
+      "command": "pnpm swizzle",
+      "runAtStart": false
+    },
+    "deploy": {
+      "name": "deploy",
+      "command": "pnpm deploy",
+      "runAtStart": false
+    },
+    "clear": {
+      "name": "clear",
+      "command": "pnpm clear",
+      "runAtStart": false
+    },
+    "serve": {
+      "name": "serve",
+      "command": "pnpm serve",
+      "runAtStart": false
+    },
+    "write-translations": {
+      "name": "write-translations",
+      "command": "pnpm write-translations",
+      "runAtStart": false
+    },
+    "write-heading-ids": {
+      "name": "write-heading-ids",
+      "command": "pnpm write-heading-ids",
+      "runAtStart": false
+    }
+  }
+}

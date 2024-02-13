@@ -1,6 +1,4 @@
 {
   "name": "Devcontainer",
-  "build": {
-    "dockerfile": "./Dockerfile"
-  }
+  "image": "mcr.microsoft.com/devcontainers/go:1.21-bookworm"
 }
