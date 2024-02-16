@@ -10,7 +10,7 @@
     "generate": "drizzle-kit generate:pg"
   },
   "dependencies": {
-    "@types/node": "20.11.17",
+    "@types/node": "20.11.19",
     "@types/react": "18.2.55",
     "@types/react-dom": "18.2.19",
     "autoprefixer": "10.4.17",
