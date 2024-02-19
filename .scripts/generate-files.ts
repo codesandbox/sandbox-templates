@@ -42,7 +42,10 @@ const sortedTemplates = sortBy(
 const markdown = new Markdown();
 markdown.table(
   [
-    ["Title", "Description"],
+    [
+      "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;",
+      "Description",
+    ],
 
     ...sortedTemplates.map((templateInfo) => [
       `<img align="center" src="${templateInfo.iconUrl}" alt="${templateInfo.title}" width="16"/> [**${templateInfo.title}**](${templateInfo.editorUrl})`,
