@@ -8,11 +8,12 @@ const readmeLocation = path.join(basePath, "README.md");
 const templateLocation = path.join(basePath, "templates.json");
 const decoder = new TextDecoder("utf-8");
 const readmeContents = decoder.decode(await Deno.readFile(readmeLocation));
-const templates = await getTemplates();
+const templates = await getTemplates(true);
 
 const templateInfos = await Promise.all(
   [...templates].map(async (template) => {
-    const url = `https://codesandbox.io/api/v1/sandboxes/github/codesandbox/sandbox-templates/tree/main/${template}`;
+    const url =
+      `https://codesandbox.io/api/v1/sandboxes/github/codesandbox/sandbox-templates/tree/main/${template}`;
 
     const { data } = await fetch(url).then((x) => x.json());
 
@@ -22,36 +23,41 @@ const templateInfos = await Promise.all(
       description: data.description as string,
       iconUrl: data.custom_template.icon_url as string,
       tags: data.tags as string[],
-      editorUrl: `https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/${template}`,
+      editorUrl:
+        `https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/${template}`,
       forkCount: data.fork_count as number,
       viewCount: data.view_count as number,
       likeCount: data.like_count as number,
       author: data.author,
       git: data.git,
     };
-  })
+  }),
 );
 
-const sortedTemplates = sortBy(templateInfos, (t) =>
-  t.title.toLocaleLowerCase()
+const sortedTemplates = sortBy(
+  templateInfos,
+  (t) => t.title.toLocaleLowerCase(),
 );
 
 const markdown = new Markdown();
 markdown.table(
   [
-    ["Title", "Description"],
+    [
+      "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;",
+      "Description",
+    ],
 
     ...sortedTemplates.map((templateInfo) => [
       `<img align="center" src="${templateInfo.iconUrl}" alt="${templateInfo.title}" width="16"/> [**${templateInfo.title}**](${templateInfo.editorUrl})`,
       templateInfo.description,
     ]),
   ],
-  {}
+  {},
 );
 
 const newReadme = readmeContents.replace(
   /<!--TEMPLATES_START-->[\s\S]*<!--TEMPLATES_END-->/,
-  `<!--TEMPLATES_START-->\n${markdown.content}\n<!--TEMPLATES_END-->`
+  `<!--TEMPLATES_START-->\n${markdown.content}\n<!--TEMPLATES_END-->`,
 );
 
 await Deno.writeFile(readmeLocation, new TextEncoder().encode(newReadme));
@@ -71,7 +77,7 @@ const dataJson = JSON.stringify(
     git: templateInfo.git,
   })),
   null,
-  2
+  2,
 );
 
 await Deno.writeTextFile(templateLocation, dataJson);
