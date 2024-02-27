@@ -10,12 +10,12 @@
     "generate": "drizzle-kit generate:pg"
   },
   "dependencies": {
-    "@types/node": "20.11.17",
-    "@types/react": "18.2.55",
+    "@types/node": "20.11.20",
+    "@types/react": "18.2.59",
     "@types/react-dom": "18.2.19",
     "autoprefixer": "10.4.17",
-    "drizzle-orm": "^0.29.3",
-    "eslint": "8.56.0",
+    "drizzle-orm": "^0.29.4",
+    "eslint": "8.57.0",
     "eslint-config-next": "^14.1.0",
     "next": "^14.1.0",
     "postcss": "8.4.35",
