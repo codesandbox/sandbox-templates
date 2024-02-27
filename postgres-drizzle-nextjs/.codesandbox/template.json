@@ -1,6 +1,6 @@
 {
-  "title": "Postgres & Next.js using Drizzle ORM",
-  "description": "A starter of using Drizzle-ORM together with Postgres & Next.js",
+  "title": "Next.js + Postgres",
+  "description": "The perfect starter for a full-stack application using Next.js, Postgres and Drizzle-ORM.",
   "iconUrl": "https://github.com/codesandbox/sandbox-templates/blob/main/nextjs/.codesandbox/icon.png?raw=true",
   "tags": [
     "nextjs",
