@@ -35,6 +35,8 @@ const VITE_TEMPLATES = {
   // Rust + Axum
   "rust-axum":
     `npx degit https://github.com/tokio-rs/axum.git/examples/hello-world {key}`,
+
+  "hono-next": `npm create hono@latest {key}`,
 };
 
 const templatesToUpdate = process.argv.slice(3);
