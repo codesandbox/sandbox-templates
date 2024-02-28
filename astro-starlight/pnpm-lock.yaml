@@ -6,11 +6,11 @@ settings:
 
 dependencies:
   '@astrojs/starlight':
-    specifier: ^0.19.1
-    version: 0.19.1(astro@4.4.2)
+    specifier: ^0.20.1
+    version: 0.20.1(astro@4.4.5)
   astro:
-    specifier: ^4.4.2
-    version: 4.4.2
+    specifier: ^4.4.5
+    version: 4.4.5
   sharp:
     specifier: ^0.33.2
     version: 0.33.2
@@ -21,8 +21,8 @@ packages:
     resolution: {integrity: sha512-lFMjJTrFL3j7L9yBxwYfCq2k6qqwHyzuUl/XBnif78PWTJYyL/dfowQHWE3sp6U6ZzqWiiIZnpTMO96zhkjwtg==}
     engines: {node: '>=6.0.0'}
     dependencies:
-      '@jridgewell/gen-mapping': 0.3.3
-      '@jridgewell/trace-mapping': 0.3.22
+      '@jridgewell/gen-mapping': 0.3.4
+      '@jridgewell/trace-mapping': 0.3.23
     dev: false
 
   /@astrojs/compiler@2.6.0:
@@ -54,7 +54,7 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/mdx@2.1.1(astro@4.4.2):
+  /@astrojs/mdx@2.1.1(astro@4.4.5):
     resolution: {integrity: sha512-AgGFdE7HOGmoFooGvMSatkA9FiSKwyVW7ImHot/bXJ6uAbFfu6iG2ht18Cf1pT22Hda/6iSCGWusFvBv0/EnKQ==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
@@ -63,7 +63,7 @@ packages:
       '@astrojs/markdown-remark': 4.2.1
       '@mdx-js/mdx': 3.0.1
       acorn: 8.11.3
-      astro: 4.4.2
+      astro: 4.4.5
       es-module-lexer: 1.4.1
       estree-util-visit: 2.0.0
       github-slugger: 2.0.0
@@ -94,18 +94,18 @@ packages:
       zod: 3.22.4
     dev: false
 
-  /@astrojs/starlight@0.19.1(astro@4.4.2):
-    resolution: {integrity: sha512-HcrgWAdOJRVRhiOf4TySzpCek/6N56jq5Iz0ahDTE5Fv2tHHA2cLIRAOvVF+iPNVZa349hqv6QSCmzUHA2JK4Q==}
+  /@astrojs/starlight@0.20.1(astro@4.4.5):
+    resolution: {integrity: sha512-MRkX937Q50H6Ly2QnYn+VmG2O+RjsdZl4gAXpfknWpDcxhB8pdUdddgTVAKfrc0czlhm9kzd/sF05CRB9nakqQ==}
     peerDependencies:
       astro: ^4.2.7
     dependencies:
-      '@astrojs/mdx': 2.1.1(astro@4.4.2)
+      '@astrojs/mdx': 2.1.1(astro@4.4.5)
       '@astrojs/sitemap': 3.1.1
       '@pagefind/default-ui': 1.0.4
       '@types/hast': 3.0.4
       '@types/mdast': 4.0.3
-      astro: 4.4.2
-      astro-expressive-code: 0.32.4(astro@4.4.2)
+      astro: 4.4.5
+      astro-expressive-code: 0.33.4(astro@4.4.5)
       bcp-47: 2.1.0
       hast-util-select: 6.0.2
       hastscript: 8.0.0
@@ -178,8 +178,8 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/types': 7.23.9
-      '@jridgewell/gen-mapping': 0.3.3
-      '@jridgewell/trace-mapping': 0.3.22
+      '@jridgewell/gen-mapping': 0.3.4
+      '@jridgewell/trace-mapping': 0.3.23
       jsesc: 2.5.2
     dev: false
 
@@ -584,8 +584,8 @@ packages:
     dev: false
     optional: true
 
-  /@expressive-code/core@0.32.4:
-    resolution: {integrity: sha512-S0OwgZCy29OCcwFUBTLDrShUovIUWZcQn3EvSoKsGfzf/wTisK7XqZ1uH0Y7Mlof3Hf9uJMjOhJZvxTLtQUdSQ==}
+  /@expressive-code/core@0.33.4:
+    resolution: {integrity: sha512-IywACrwcR/7cIPBQ1qG/RsgvNp85/CAX6okxR0Niztrd7rh4IcEhAsz51jX/NPNnhU9yPynTT+mLdM1URqrnvw==}
     dependencies:
       '@ctrl/tinycolor': 3.6.1
       hast-util-to-html: 8.0.4
@@ -594,24 +594,24 @@ packages:
       postcss-nested: 6.0.1(postcss@8.4.35)
     dev: false
 
-  /@expressive-code/plugin-frames@0.32.4:
-    resolution: {integrity: sha512-XOQrLqlVEy5JbqsBhDcSJQinceQ5j/Z8cE0/27Lnlcj4oXRdiQNjMVtstC/xZUeWEbm+FI9ZZP4Z9yihol61Aw==}
+  /@expressive-code/plugin-frames@0.33.4:
+    resolution: {integrity: sha512-6HE5f8dAPjzmhs7yZJHVyH+w/UwVpktjlTvrUumrytHo6hidGlkB5lptWJlSAd9JXzev5BQEb4xrqQ0xQqO5+A==}
     dependencies:
-      '@expressive-code/core': 0.32.4
+      '@expressive-code/core': 0.33.4
       hastscript: 7.2.0
     dev: false
 
-  /@expressive-code/plugin-shiki@0.32.4:
-    resolution: {integrity: sha512-zZzTXFFTpG+fmBG6C+4KzIyh1nFPdn4gLJ8E9LhBVufmRkn3gZplkE99lulfillsKyUZTRw3+dC3xYZWEZKzPw==}
+  /@expressive-code/plugin-shiki@0.33.4:
+    resolution: {integrity: sha512-XnDchHqCGk046hgQnu83t9+SDrRjsvpvUEBiI0wl4RljVDr1E0yllx0y6C1yEuKfFfasib6BxX/PkItgQdi/0Q==}
     dependencies:
-      '@expressive-code/core': 0.32.4
-      shikiji: 0.8.7
+      '@expressive-code/core': 0.33.4
+      shiki: 1.1.7
     dev: false
 
-  /@expressive-code/plugin-text-markers@0.32.4:
-    resolution: {integrity: sha512-lFlo3uwTp7vUmfXtLPn2aXs0CPFqdFvKiR3y8gtNzmBeYWPqVahF4RFUCN9ZpztCmXp5V8p2ADvNHzoNwCBwzA==}
+  /@expressive-code/plugin-text-markers@0.33.4:
+    resolution: {integrity: sha512-hl3E+8iZJMYGDaKsN4bOPOEBb9QeFjg+zQkOJRtjJgsmIYmaZpoQTzTg/JMduE8PLNsD30nAMwG/AbjN/klwZQ==}
     dependencies:
-      '@expressive-code/core': 0.32.4
+      '@expressive-code/core': 0.33.4
       hastscript: 7.2.0
       unist-util-visit-parents: 5.1.3
     dev: false
@@ -804,13 +804,13 @@ packages:
     dev: false
     optional: true
 
-  /@jridgewell/gen-mapping@0.3.3:
-    resolution: {integrity: sha512-HLhSWOLRi875zjjMG/r+Nv0oCW8umGb0BgEhyX3dDX3egwZtB8PqLnjz3yedt8R5StBrzcg4aBpnh8UA9D1BoQ==}
+  /@jridgewell/gen-mapping@0.3.4:
+    resolution: {integrity: sha512-Oud2QPM5dHviZNn4y/WhhYKSXksv+1xLEIsNrAbGcFzUN3ubqWRFT5gwPchNc5NuzILOU4tPBDTZ4VwhL8Y7cw==}
     engines: {node: '>=6.0.0'}
     dependencies:
       '@jridgewell/set-array': 1.1.2
       '@jridgewell/sourcemap-codec': 1.4.15
-      '@jridgewell/trace-mapping': 0.3.22
+      '@jridgewell/trace-mapping': 0.3.23
     dev: false
 
   /@jridgewell/resolve-uri@3.1.2:
@@ -827,8 +827,8 @@ packages:
     resolution: {integrity: sha512-eF2rxCRulEKXHTRiDrDy6erMYWqNw4LPdQ8UQA4huuxaQsVeRPFl2oM8oDGxMFhJUWZf9McpLtJasDDZb/Bpeg==}
     dev: false
 
-  /@jridgewell/trace-mapping@0.3.22:
-    resolution: {integrity: sha512-Wf963MzWtA2sjrNt+g18IAln9lKnlRp+K2eH4jjIoF1wYeq3aMREpG09xhlhdzS0EjwU7qmUJYangWa+151vZw==}
+  /@jridgewell/trace-mapping@0.3.23:
+    resolution: {integrity: sha512-9/4foRoUKp8s96tSkh8DlAAc5A0Ty8vLXld+l9gjKKY6ckwI8G15f0hskGmuLZu78ZlGa1vtsfOa+lnB4vG6Jg==}
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.4.15
@@ -838,7 +838,7 @@ packages:
     resolution: {integrity: sha512-eIQ4QTrOWyL3LWEe/bu6Taqzq2HQvHcyTMaOrI95P2/LmJE7AsfPfgJGuFLPVqBUE1BC1rik3VIhU+s9u72arA==}
     dependencies:
       '@types/estree': 1.0.5
-      '@types/estree-jsx': 1.0.4
+      '@types/estree-jsx': 1.0.5
       '@types/hast': 3.0.4
       '@types/mdx': 2.0.11
       collapse-white-space: 2.1.0
@@ -1037,6 +1037,10 @@ packages:
     dev: false
     optional: true
 
+  /@shikijs/core@1.1.7:
+    resolution: {integrity: sha512-gTYLUIuD1UbZp/11qozD3fWpUTuMqPSf3svDMMrL0UmlGU7D9dPw/V1FonwAorCUJBltaaESxq90jrSjQyGixg==}
+    dev: false
+
   /@types/acorn@4.0.6:
     resolution: {integrity: sha512-veQTnWP+1D/xbxVrPC3zHnCZRjSrKfhbMUlEA43iMZLu7EsnTtkJklIuwrCPbOi8YkvDQAiW05VQQFvvz9oieQ==}
     dependencies:
@@ -1078,8 +1082,8 @@ packages:
       '@types/ms': 0.7.34
     dev: false
 
-  /@types/estree-jsx@1.0.4:
-    resolution: {integrity: sha512-5idy3hvI9lAMqsyilBM+N+boaCf1MgoefbDxN6KEO5aK17TOHwFAYT9sjxzeKAiIWRUBgLxmZ9mPcnzZXtTcRQ==}
+  /@types/estree-jsx@1.0.5:
+    resolution: {integrity: sha512-52CcUVNFyfb1A2ALocQw/Dd1BQFNmSdkuC3BkZ6iqhdMfQz7JWOFRuJFloOzjk+6WijU56m9oKXFAXc7o3Towg==}
     dependencies:
       '@types/estree': 1.0.5
     dev: false
@@ -1225,18 +1229,18 @@ packages:
     hasBin: true
     dev: false
 
-  /astro-expressive-code@0.32.4(astro@4.4.2):
-    resolution: {integrity: sha512-/Kq8wLMz0X2gbLWGmPryqEdFV/om/GROsoLtPFqLrLCRD5CpwxXAW185BIGZKf4iYsyJim1vvcpQm5Y9hV5B1g==}
+  /astro-expressive-code@0.33.4(astro@4.4.5):
+    resolution: {integrity: sha512-PtXLjd89WBA1WsDYlt3V1LZs9Pa8FFoXilaGDSyfxtbYJ2OPHjWh2JJvCiXmfXmY3HkPJ2oW9Jjo6om5vUlVcg==}
     peerDependencies:
       astro: ^3.3.0 || ^4.0.0-beta
     dependencies:
-      astro: 4.4.2
+      astro: 4.4.5
       hast-util-to-html: 8.0.4
-      remark-expressive-code: 0.32.4
+      remark-expressive-code: 0.33.4
     dev: false
 
-  /astro@4.4.2:
-    resolution: {integrity: sha512-r1djG61ABvZ9n73vaTW6nTKnMvWY1LQhPpBtzoA2OI2RAk/ptzsqK9ozkAG1qXO2bW3NLJi6pfMxxpngNAALyQ==}
+  /astro@4.4.5:
+    resolution: {integrity: sha512-ccat42P5qr281JExywVsK/BLeKgwSL+oLxJP195s4Wvj3nL32djw+WNJNctuDDTJ5XWgvPdHZjBtSDNO5OgagQ==}
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
     dependencies:
@@ -1287,7 +1291,7 @@ packages:
       p-limit: 5.0.0
       p-queue: 8.0.1
       path-to-regexp: 6.2.1
-      preferred-pm: 3.1.2
+      preferred-pm: 3.1.3
       prompts: 2.4.2
       rehype: 13.0.1
       resolve: 1.22.8
@@ -1340,8 +1344,8 @@ packages:
     dev: false
     optional: true
 
-  /bare-fs@2.1.5:
-    resolution: {integrity: sha512-5t0nlecX+N2uJqdxe9d18A98cp2u9BETelbjKpiVgQqzzmVNFYWEAjQHqS+2Khgto1vcwhik9cXucaj5ve2WWA==}
+  /bare-fs@2.2.0:
+    resolution: {integrity: sha512-+VhW202E9eTVGkX7p+TNXtZC4RTzj9JfJW7PtfIbZ7mIQ/QT9uOafQTx7lx2n9ERmWsXvLHF4hStAFn4gl2mQw==}
     requiresBuild: true
     dependencies:
       bare-events: 2.2.0
@@ -1438,8 +1442,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001589
-      electron-to-chromium: 1.4.679
+      caniuse-lite: 1.0.30001591
+      electron-to-chromium: 1.4.685
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.23.0)
     dev: false
@@ -1465,8 +1469,8 @@ packages:
     engines: {node: '>=14.16'}
     dev: false
 
-  /caniuse-lite@1.0.30001589:
-    resolution: {integrity: sha512-vNQWS6kI+q6sBlHbh71IIeC+sRwK2N3EDySc/updIGhIee2x5z00J4c1242/5/d6EpEMdOnk/m+6tuk4/tcsqg==}
+  /caniuse-lite@1.0.30001591:
+    resolution: {integrity: sha512-PCzRMei/vXjJyL5mJtzNiUCKP59dm8Apqc3PH8gJkMnMXZGox93RbE76jHsmLwmIo6/3nsYIpJtx0O7u5PqFuQ==}
     dev: false
 
   /ccount@2.0.1:
@@ -1716,8 +1720,8 @@ packages:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
     dev: false
 
-  /electron-to-chromium@1.4.679:
-    resolution: {integrity: sha512-NhQMsz5k0d6m9z3qAxnsOR/ebal4NAGsrNVRwcDo4Kc/zQ7KdsTKZUxZoygHcVRb0QDW3waEDIcE3isZ79RP6g==}
+  /electron-to-chromium@1.4.685:
+    resolution: {integrity: sha512-yDYeobbTEe4TNooEzOQO6xFqg9XnAkVy2Lod1C1B2it8u47JNLYvl9nLDWBamqUakWB8Jc1hhS1uHUNYTNQdfw==}
     dev: false
 
   /emoji-regex@10.3.0:
@@ -1810,7 +1814,7 @@ packages:
   /estree-util-build-jsx@3.0.1:
     resolution: {integrity: sha512-8U5eiL6BTrPxp/CHbs2yMgP8ftMhR5ww1eIKoWRMlqvltHF8fZn5LRDvTKuxD3DUn+shRbLGqXemcP51oFCsGQ==}
     dependencies:
-      '@types/estree-jsx': 1.0.4
+      '@types/estree-jsx': 1.0.5
       devlop: 1.1.0
       estree-util-is-identifier-name: 3.0.0
       estree-walker: 3.0.3
@@ -1823,7 +1827,7 @@ packages:
   /estree-util-to-js@2.0.0:
     resolution: {integrity: sha512-WDF+xj5rRWmD5tj6bIqRi6CkLIXbbNQUcxQHzGysQzvHmdYG2G7p/Tf0J0gpxGgkeMZNTIjT/AoSvC9Xehcgdg==}
     dependencies:
-      '@types/estree-jsx': 1.0.4
+      '@types/estree-jsx': 1.0.5
       astring: 1.8.6
       source-map: 0.7.4
     dev: false
@@ -1831,7 +1835,7 @@ packages:
   /estree-util-visit@2.0.0:
     resolution: {integrity: sha512-m5KgiH85xAhhW8Wta0vShLcUvOsh3LLPI2YVwcbio1l7E09NTLL1EyMZFM1OyWowoH0skScNbhOPl4kcBgzTww==}
     dependencies:
-      '@types/estree-jsx': 1.0.4
+      '@types/estree-jsx': 1.0.5
       '@types/unist': 3.0.2
     dev: false
 
@@ -1854,7 +1858,7 @@ packages:
       human-signals: 5.0.0
       is-stream: 3.0.0
       merge-stream: 2.0.0
-      npm-run-path: 5.2.0
+      npm-run-path: 5.3.0
       onetime: 6.0.0
       signal-exit: 4.1.0
       strip-final-newline: 3.0.0
@@ -1867,13 +1871,13 @@ packages:
     dev: false
     optional: true
 
-  /expressive-code@0.32.4:
-    resolution: {integrity: sha512-r+yUP2JV181tVR2EyYked7lT2W8bvL9o7xpdKU6q60FMU7Wh/DbGtH0jg+WmDxKK1C57iXF9chbBv+BsDPlUEQ==}
+  /expressive-code@0.33.4:
+    resolution: {integrity: sha512-vb6DLHjG+jbLJGTvOUhxagsru7oUiBrQEsL9+hcWJvlxIqQ5mRFqjamQS9kCIhXXbfYWiYI7/wfTGxQxuHxsZQ==}
     dependencies:
-      '@expressive-code/core': 0.32.4
-      '@expressive-code/plugin-frames': 0.32.4
-      '@expressive-code/plugin-shiki': 0.32.4
-      '@expressive-code/plugin-text-markers': 0.32.4
+      '@expressive-code/core': 0.33.4
+      '@expressive-code/plugin-frames': 0.33.4
+      '@expressive-code/plugin-shiki': 0.33.4
+      '@expressive-code/plugin-text-markers': 0.33.4
     dev: false
 
   /extend-shallow@2.0.1:
@@ -2139,7 +2143,7 @@ packages:
     resolution: {integrity: sha512-lfX5g6hqVh9kjS/B9E2gSkvHH4SZNiQFiqWS0x9fENzEl+8W12RqdRxX6d/Cwxi30tPQs3bIO+aolQJNp1bIyw==}
     dependencies:
       '@types/estree': 1.0.5
-      '@types/estree-jsx': 1.0.4
+      '@types/estree-jsx': 1.0.5
       '@types/hast': 3.0.4
       comma-separated-tokens: 2.0.3
       devlop: 1.1.0
@@ -2672,7 +2676,7 @@ packages:
   /mdast-util-mdx-expression@2.0.0:
     resolution: {integrity: sha512-fGCu8eWdKUKNu5mohVGkhBXCXGnOTLuFqOvGMvdikr+J1w7lDJgxThOKpwRWzzbyXAU2hhSwsmssOY4yTokluw==}
     dependencies:
-      '@types/estree-jsx': 1.0.4
+      '@types/estree-jsx': 1.0.5
       '@types/hast': 3.0.4
       '@types/mdast': 4.0.3
       devlop: 1.1.0
@@ -2685,7 +2689,7 @@ packages:
   /mdast-util-mdx-jsx@3.1.0:
     resolution: {integrity: sha512-A8AJHlR7/wPQ3+Jre1+1rq040fX9A4Q1jG8JxmSNp/PLPHg80A6475wxTp3KzHpApFH6yWxFotHrJQA3dXP6/w==}
     dependencies:
-      '@types/estree-jsx': 1.0.4
+      '@types/estree-jsx': 1.0.5
       '@types/hast': 3.0.4
       '@types/mdast': 4.0.3
       '@types/unist': 3.0.2
@@ -2717,7 +2721,7 @@ packages:
   /mdast-util-mdxjs-esm@2.0.1:
     resolution: {integrity: sha512-EcmOpxsZ96CvlP03NghtH1EsLtr0n9Tm4lPUJUBccV9RwUOneqSycg19n5HGzCf+10LozMRSObtVr3ee1WoHtg==}
     dependencies:
-      '@types/estree-jsx': 1.0.4
+      '@types/estree-jsx': 1.0.5
       '@types/hast': 3.0.4
       '@types/mdast': 4.0.3
       devlop: 1.1.0
@@ -3200,8 +3204,8 @@ packages:
       '@types/nlcst': 1.0.4
     dev: false
 
-  /node-abi@3.55.0:
-    resolution: {integrity: sha512-uPEjtyh2tFEvWYt4Jw7McOD5FPcHkcxm/tHZc5PWaDB3JYq0rGFUbgaAK+CT5pYpQddBfsZVWI08OwoRfdfbcQ==}
+  /node-abi@3.56.0:
+    resolution: {integrity: sha512-fZjdhDOeRcaS+rcpve7XuwHBmktS1nS1gzgghwKUQQ8nTy2FdSDr6ZT8k6YhvlJeHmmQMYiT/IH9hfco5zeW2Q==}
     engines: {node: '>=10'}
     requiresBuild: true
     dependencies:
@@ -3228,8 +3232,8 @@ packages:
     resolution: {integrity: sha512-5PDmaAsVfnWUgTUbJ3ERwn7u79Z0dYxN9ErxCpVJJqe2RK0PJ3z+iFUxuqjwtlDDegXvtWoxD/3Fzxox7tFGWA==}
     dev: false
 
-  /npm-run-path@5.2.0:
-    resolution: {integrity: sha512-W4/tgAXFqFA0iL7fk0+uQ3g7wkL8xJmx3XdK0VGb4cHW//eZTtKGvFBBoRKVTpY7n6ze4NL9ly7rgXcHufqXKg==}
+  /npm-run-path@5.3.0:
+    resolution: {integrity: sha512-ppwTtiJZq0O/ai0z7yfudtBpWIoxM8yE6nHi1X47eFR2EWORqfbu6CnPlNsjeN683eT0qG6H/Pyf9fCcvjnnnQ==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
       path-key: 4.0.0
@@ -3464,7 +3468,7 @@ packages:
       minimist: 1.2.8
       mkdirp-classic: 0.5.3
       napi-build-utils: 1.0.2
-      node-abi: 3.55.0
+      node-abi: 3.56.0
       pump: 3.0.0
       rc: 1.2.8
       simple-get: 4.0.1
@@ -3473,8 +3477,8 @@ packages:
     dev: false
     optional: true
 
-  /preferred-pm@3.1.2:
-    resolution: {integrity: sha512-nk7dKrcW8hfCZ4H6klWcdRknBOXWzNQByJ0oJyX97BOupsYD+FzLS4hflgEu/uPUEHZCuRfMxzCBsuWd7OzT8Q==}
+  /preferred-pm@3.1.3:
+    resolution: {integrity: sha512-MkXsENfftWSRpzCzImcp4FRsCc3y1opwB73CfCNWyzMqArju2CrlMHlqB7VexKiPEOjGMbttv1r9fSCn5S610w==}
     engines: {node: '>=10'}
     dependencies:
       find-up: 5.0.0
@@ -3591,10 +3595,10 @@ packages:
       - supports-color
     dev: false
 
-  /remark-expressive-code@0.32.4:
-    resolution: {integrity: sha512-khV7fVBpVDOyz9EXU+6MFwLj7BtY3DLVlNMMJYQcfp9ksLMxG/i83rIJbMUZCRof9bDBmFFlrF0VDvqJ0/MNeQ==}
+  /remark-expressive-code@0.33.4:
+    resolution: {integrity: sha512-ucGzDknAY6LJKkcNSaYh9N0SEr1LDA0shageM1xa+4fu/o+7g6R1/ApF7d2c+cj1ERLvaF4OaUa87n5baY+MDA==}
     dependencies:
-      expressive-code: 0.32.4
+      expressive-code: 0.33.4
       hast-util-to-html: 8.0.4
       unist-util-visit: 4.1.2
     dev: false
@@ -3840,14 +3844,14 @@ packages:
     engines: {node: '>=8'}
     dev: false
 
-  /shikiji-core@0.9.19:
-    resolution: {integrity: sha512-AFJu/vcNT21t0e6YrfadZ+9q86gvPum6iywRyt1OtIPjPFe25RQnYJyxHQPMLKCCWA992TPxmEmbNcOZCAJclw==}
+  /shiki@1.1.7:
+    resolution: {integrity: sha512-9kUTMjZtcPH3i7vHunA6EraTPpPOITYTdA5uMrvsJRexktqP0s7P3s9HVK80b4pP42FRVe03D7fT3NmJv2yYhw==}
+    dependencies:
+      '@shikijs/core': 1.1.7
     dev: false
 
-  /shikiji@0.8.7:
-    resolution: {integrity: sha512-j5usxwI0yHkDTHOuhuSJl9+wT5CNYeYO82dJMSJBlJ/NYT5SIebGcPoL6y9QOyH15wGrJC4LOP2nz5k8mUDGRQ==}
-    dependencies:
-      hast-util-to-html: 9.0.0
+  /shikiji-core@0.9.19:
+    resolution: {integrity: sha512-AFJu/vcNT21t0e6YrfadZ+9q86gvPum6iywRyt1OtIPjPFe25RQnYJyxHQPMLKCCWA992TPxmEmbNcOZCAJclw==}
     dev: false
 
   /shikiji@0.9.19:
@@ -4065,7 +4069,7 @@ packages:
       pump: 3.0.0
       tar-stream: 3.1.7
     optionalDependencies:
-      bare-fs: 2.1.5
+      bare-fs: 2.2.0
       bare-path: 2.1.0
     dev: false
     optional: true
