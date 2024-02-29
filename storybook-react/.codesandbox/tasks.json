@@ -9,20 +9,20 @@
 
   // These tasks can be run from CodeSandbox. Running one will open a log in the app.
   "tasks": {
-    "dev": {
-      "name": "dev",
-      "command": "pnpm dev",
-      "runAtStart": true,
-      "preview": {
-        "port": 5173
-      }
-    },
     "storybook": {
       "name": "storybook",
       "command": "pnpm storybook",
       "runAtStart": true,
       "preview": {
         "port": 6006
+      }
+    },
+    "dev": {
+      "name": "dev",
+      "command": "pnpm dev",
+      "runAtStart": true,
+      "preview": {
+        "port": 5173
       }
     },
     "build": {
