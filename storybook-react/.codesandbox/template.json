@@ -1,0 +1,7 @@
+{
+  "title": "Storybook (React)",
+  "description": "An example of running Storybook on CodeSandbox",
+  "iconUrl": "https://github.com/codesandbox/sandbox-templates/blob/main/storybook/.codesandbox/icon.png?raw=true",
+  "tags": ["react", "storybook", "vite", "javascript", "typescript"],
+  "published": true
+}

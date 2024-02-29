@@ -37,6 +37,8 @@ const VITE_TEMPLATES = {
     `npx degit https://github.com/tokio-rs/axum.git/examples/hello-world {key}`,
 
   "hono-next": `npm create hono@latest {key}`,
+
+  "storybook-react": `npx degit chromaui/intro-storybook-react-template {key}`,
 };
 
 const templatesToUpdate = process.argv.slice(3);
