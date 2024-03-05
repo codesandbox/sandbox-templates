@@ -31,6 +31,10 @@
       "name": "help",
       "command": "ng help",
       "runAtStart": false
+    },
+    "install": {
+      "name": "install dependencies",
+      "command": "npm install"
     }
   }
 }

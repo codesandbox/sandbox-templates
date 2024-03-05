@@ -31,6 +31,10 @@
       "name": "web",
       "command": "npm run web",
       "runAtStart": false
+    },
+    "install": {
+      "name": "install dependencies",
+      "command": "pnpm install"
     }
   }
 }

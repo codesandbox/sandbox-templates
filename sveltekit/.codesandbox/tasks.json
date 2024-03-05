@@ -46,6 +46,10 @@
       "name": "format",
       "command": "yarn format",
       "runAtStart": false
+    },
+    "install": {
+      "name": "install dependencies",
+      "command": "yarn install"
     }
   }
 }

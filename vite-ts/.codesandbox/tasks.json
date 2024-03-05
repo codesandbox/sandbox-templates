@@ -26,6 +26,10 @@
       "name": "preview",
       "command": "pnpm preview",
       "runAtStart": false
+    },
+    "install": {
+      "name": "install dependencies",
+      "command": "pnpm install"
     }
   }
 }

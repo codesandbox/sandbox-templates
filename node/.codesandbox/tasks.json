@@ -13,6 +13,10 @@
       "name": "start",
       "command": "yarn start",
       "runAtStart": true
+    },
+    "install": {
+      "name": "install dependencies",
+      "command": "yarn install"
     }
   }
 }

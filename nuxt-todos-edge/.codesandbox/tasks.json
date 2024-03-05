@@ -47,6 +47,10 @@
     "postinstall": {
       "name": "postinstall",
       "command": "npm run postinstall"
+    },
+    "install": {
+      "name": "install dependencies",
+      "command": "npm install"
     }
   }
 }

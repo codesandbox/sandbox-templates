@@ -26,6 +26,10 @@
       "name": "preview",
       "command": "yarn preview",
       "runAtStart": false
+    },
+    "install": {
+      "name": "install dependencies",
+      "command": "yarn install"
     }
   }
 }

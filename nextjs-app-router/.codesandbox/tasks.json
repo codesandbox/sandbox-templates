@@ -31,6 +31,10 @@
       "name": "lint",
       "command": "pnpm run lint",
       "runAtStart": false
+    },
+    "install": {
+      "name": "install dependencies",
+      "command": "pnpm install"
     }
   }
 }
