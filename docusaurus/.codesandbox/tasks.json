@@ -56,6 +56,10 @@
       "name": "write-heading-ids",
       "command": "pnpm write-heading-ids",
       "runAtStart": false
+    },
+    "install": {
+      "name": "install dependencies",
+      "command": "pnpm install"
     }
   }
 }

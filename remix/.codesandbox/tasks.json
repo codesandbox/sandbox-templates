@@ -31,6 +31,10 @@
       "name": "typecheck",
       "command": "pnpm run typecheck",
       "runAtStart": false
+    },
+    "install": {
+      "name": "install dependencies",
+      "command": "pnpm install"
     }
   }
 }

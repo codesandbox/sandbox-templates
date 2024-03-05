@@ -36,6 +36,10 @@
       "name": "clean",
       "command": "yarn clean",
       "runAtStart": false
+    },
+    "install": {
+      "name": "install dependencies",
+      "command": "yarn install"
     }
   }
 }

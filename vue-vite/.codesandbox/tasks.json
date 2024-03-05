@@ -16,6 +16,10 @@
       "preview": {
         "port": 5173
       }
+    },
+    "install": {
+      "name": "install dependencies",
+      "command": "pnpm install"
     }
   }
 }

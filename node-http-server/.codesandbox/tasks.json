@@ -16,6 +16,10 @@
       "preview": {
         "port": 8080
       }
+    },
+    "install": {
+      "name": "install dependencies",
+      "command": "yarn install"
     }
   }
 }
