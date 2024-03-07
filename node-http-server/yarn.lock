@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@types/node@^20.11.16":
-  version "20.11.16"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.11.16.tgz#4411f79411514eb8e2926f036c86c9f0e4ec6708"
-  integrity sha512-gKb0enTmRCzXSSUJDq6/sPcqrfCv2mkkG6Jt/clpn5eiCbKTY+SgZUxo+p8ZKMof5dCp9vHQUAB7wOUTod22wQ==
+"@types/node@^20.11.25":
+  version "20.11.25"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.11.25.tgz#0f50d62f274e54dd7a49f7704cc16bfbcccaf49f"
+  integrity sha512-TBHyJxk2b7HceLVGFcpAUjsa5zIdsPWlR6XHfyGzd0SFu+/NFgQgMAl96MSDZgQDvJAvV6BKsFOrt6zIL09JDw==
   dependencies:
     undici-types "~5.26.4"
 
@@ -146,10 +146,10 @@ ms@2.1.2:
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
   integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
 
-nodemon@^3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/nodemon/-/nodemon-3.0.3.tgz#244a62d1c690eece3f6165c6cdb0db03ebd80b76"
-  integrity sha512-7jH/NXbFPxVaMwmBCC2B9F/V6X1VkEdNgx3iu9jji8WxWcvhMWkmhNWhI5077zknOnZnBzba9hZP6bCPJLSReQ==
+nodemon@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/nodemon/-/nodemon-3.1.0.tgz#ff7394f2450eb6a5e96fe4180acd5176b29799c9"
+  integrity sha512-xqlktYlDMCepBJd43ZQhjWwMw2obW/JRvkrLxq5RCNcuDDX1DbcPT+qT1IlIIdf+DhnWs90JpTMe+Y5KxOchvA==
   dependencies:
     chokidar "^3.5.2"
     debug "^4"
