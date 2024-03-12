@@ -12,9 +12,14 @@ if (template) {
   let doneCount = 0;
   for (const template of templates) {
     console.log(
-      `Restarting template: ${template} (${doneCount + 1}/${templates.size})`
+      `Restarting template: ${template} (${doneCount + 1}/${templates.size})`,
     );
-    await restartTemplate(template);
+    try {
+      await restartTemplate(template);
+    } catch (e) {
+      console.error(e);
+      // But continue with other templates
+    }
     doneCount++;
   }
 }

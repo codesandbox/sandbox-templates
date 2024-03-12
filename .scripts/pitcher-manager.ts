@@ -1,5 +1,9 @@
 import { getSyncedSandboxDetails } from "./api.ts";
 
+function sleep(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 export async function startSandbox(clusterName: string, sandboxId: string) {
   const response = await fetch(
     `https://codesandbox.io/api/beta/sandboxes/branches/${sandboxId}/instance?pitcherManagerURL=https://${clusterName}.pitcher.csb.app/api/v1`,
@@ -68,21 +72,30 @@ export async function restartTemplate(templateFolderName: string) {
         `Restarting sandbox Cluster:${clusterName} \t SandboxId:${sandboxDetails.id} \t Template: ${templateFolderName}`,
       );
 
-      try {
-        // Start sandbox so that shutdown works later (eg: start from hibernation)
-        await startSandbox(clusterName, sandboxDetails.id);
-        await shutdownSandbox(clusterName, sandboxDetails.id);
-        await startSandbox(clusterName, sandboxDetails.id);
-        console.log(
-          "\x1b[32m%s\x1b[0m",
-          `Restarted sandbox Cluster:${clusterName} \t SandboxId:${sandboxDetails.id} \t Template: ${templateFolderName}`,
-        );
-      } catch (e) {
-        console.log(
-          "\x1b[31m%s\x1b[0m",
-          `Failed to restart sandbox Cluster:${clusterName} \t SandboxId:${sandboxDetails.id} \t Template: ${templateFolderName}`,
-        );
-        throw e;
+      const TRIES = 3;
+
+      for (let i = 0; i < TRIES; i++) {
+        try {
+          // Start sandbox so that shutdown works later (eg: start from hibernation)
+          await startSandbox(clusterName, sandboxDetails.id);
+          await shutdownSandbox(clusterName, sandboxDetails.id);
+          await startSandbox(clusterName, sandboxDetails.id);
+          console.log(
+            "\x1b[32m%s\x1b[0m",
+            `Restarted sandbox Cluster:${clusterName} \t SandboxId:${sandboxDetails.id} \t Template: ${templateFolderName}`,
+          );
+        } catch (e) {
+          console.log(
+            "\x1b[31m%s\x1b[0m",
+            `Failed to restart sandbox Cluster:${clusterName} \t SandboxId:${sandboxDetails.id} \t Template: ${templateFolderName}`,
+          );
+          console.error(e);
+          if (i === TRIES - 1) {
+            throw e;
+          }
+
+          await sleep(1000);
+        }
       }
     }),
   );
