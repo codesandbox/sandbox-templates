@@ -2,10 +2,6 @@
   "title": "Angular",
   "description": "The quickest way to get started with Angular!",
   "iconUrl": "https://github.com/codesandbox/sandbox-templates/blob/main/angular/.codesandbox/icon.png?raw=true",
-  "tags": [
-    "angular",
-    "javascript",
-    "typescript"
-  ],
+  "tags": ["angular", "javascript", "typescript", "featured"],
   "published": true
 }
