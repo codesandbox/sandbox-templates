@@ -1,7 +1,7 @@
 {
   "title": "Nuxt",
   "description": "A starter that allows you to quickly get started using Nuxt v3.",
-  "iconUrl": "https://github.com/codesandbox/sandbox-templates/blob/main/nuxt/.codesandbox/icon.png?raw=true",
+  "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/nuxt/.codesandbox/icon.png",
   "tags": ["javascript", "typescript", "vue", "nuxt"],
   "published": true
 }

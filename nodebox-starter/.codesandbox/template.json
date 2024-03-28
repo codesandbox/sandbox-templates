@@ -1,12 +1,7 @@
 {
   "title": "Nodebox Starter",
   "description": "This is a template that shows you how Nodebox works with a sample Node code.",
-  "iconUrl": "https://github.com/codesandbox/sandbox-templates/blob/main/nodebox-starter/.codesandbox/icon.png?raw=true",
-  "tags": [
-    "node",
-    "javascript",
-    "nodebox",
-    "codesandbox"
-  ],
+  "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/nodebox-starter/.codesandbox/icon.png",
+  "tags": ["node", "javascript", "nodebox", "codesandbox"],
   "published": true
 }

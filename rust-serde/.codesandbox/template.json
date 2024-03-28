@@ -1,11 +1,7 @@
 {
   "title": "Rust & Serde",
   "description": "Shows how Rust and Serde are used together to serialize.",
-  "iconUrl": "https://github.com/codesandbox/sandbox-templates/blob/main/rust-serde/.codesandbox/icon.png?raw=true",
-  "tags": [
-    "rust",
-    "cargo",
-    "serde"
-  ],
+  "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/rust-serde/.codesandbox/icon.png",
+  "tags": ["rust", "cargo", "serde"],
   "published": true
 }

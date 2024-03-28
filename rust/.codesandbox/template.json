@@ -1,10 +1,7 @@
 {
   "title": "Rust",
   "description": "This is the perfect place to get started with Rust!",
-  "iconUrl": "https://github.com/codesandbox/sandbox-templates/blob/main/rust/.codesandbox/icon.png?raw=true",
-  "tags": [
-    "rust",
-    "cargo"
-  ],
+  "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/rust/.codesandbox/icon.png",
+  "tags": ["rust", "cargo"],
   "published": true
 }

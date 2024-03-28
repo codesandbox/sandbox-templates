@@ -1,12 +1,7 @@
 {
   "title": "Deno Fresh",
   "description": "Deno template with Fresh",
-  "iconUrl": "https://github.com/codesandbox/sandbox-templates/blob/main/deno-fresh/.codesandbox/icon.png?raw=true",
-  "tags": [
-    "deno",
-    "javascript",
-    "typescript",
-    "fresh"
-  ],
+  "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/deno-fresh/.codesandbox/icon.png",
+  "tags": ["deno", "javascript", "typescript", "fresh"],
   "published": true
 }

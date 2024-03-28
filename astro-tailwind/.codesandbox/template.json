@@ -1,7 +1,7 @@
 {
   "title": "Astro Tailwind Starter",
   "description": "Astro together with Tailwind on CodeSandbox",
-  "iconUrl": "https://github.com/codesandbox/sandbox-templates/blob/main/astro-tailwind/.codesandbox/icon.png?raw=true",
+  "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/astro-tailwind/.codesandbox/icon.png",
   "tags": ["astro", "javascript", "typescript", "tailwind", "tailwindcss"],
   "published": true
 }

@@ -1,10 +1,7 @@
 {
   "title": "Go",
   "description": "Get started with Go in CodeSandbox!",
-  "iconUrl": "https://github.com/codesandbox/sandbox-templates/blob/main/go/.codesandbox/icon.png?raw=true",
-  "tags": [
-    "go",
-    "golang"
-  ],
+  "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/go/.codesandbox/icon.png",
+  "tags": ["go", "golang"],
   "published": true
 }

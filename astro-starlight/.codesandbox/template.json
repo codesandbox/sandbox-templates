@@ -1,7 +1,7 @@
 {
   "title": "Astro Starlight Documentation",
   "description": "Everything you need to build a stellar documentation website. Fast, accessible, and easy-to-use.",
-  "iconUrl": "https://github.com/codesandbox/sandbox-templates/blob/main/astro-tailwind/.codesandbox/icon.png?raw=true",
+  "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/astro-tailwind/.codesandbox/icon.png",
   "tags": ["astro", "javascript", "typescript", "documentation"],
   "published": true
 }
