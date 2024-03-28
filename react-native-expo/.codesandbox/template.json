@@ -1,7 +1,7 @@
 {
   "title": "React Native with Expo",
   "description": "Quickly get started with React Native using Expo in this starter!",
-  "iconUrl": "https://github.com/codesandbox/sandbox-templates/blob/main/react-native-expo/.codesandbox/icon.png?raw=true",
+  "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/react-native-expo/.codesandbox/icon.png",
   "tags": ["react native", "expo", "javascript"],
   "published": true
 }

@@ -1,7 +1,7 @@
 {
   "title": "Pytorch",
   "description": "This is a starter for Pytorch. PyTorch is a machine learning framework based on the Torch library, used for applications such as computer vision and natural language processing, originally developed by Meta AI and now part of the Linux Foundation umbrella.",
-  "iconUrl": "https://github.com/codesandbox/sandbox-templates/blob/main/python-pytorch/.codesandbox/icon.png?raw=true",
+  "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/python-pytorch/.codesandbox/icon.png",
   "tags": [
     "python",
     "pip",

@@ -1,7 +1,7 @@
 {
   "title": "Solid (Vite)",
   "description": "This is a starter template to get started with Solid",
-  "iconUrl": "https://github.com/codesandbox/sandbox-templates/blob/main/solid-vite/.codesandbox/icon.png?raw=true",
+  "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/solid-vite/.codesandbox/icon.png",
   "tags": ["solid", "vite", "javascript", "typescript"],
   "published": true
 }

@@ -1,7 +1,7 @@
 {
   "title": "Hono + Next.js",
   "description": "The default Hono starter, based on Next.js",
-  "iconUrl": "https://github.com/codesandbox/sandbox-templates/blob/main/hono-next/.codesandbox/icon.jpg?raw=true",
+  "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/hono-next/.codesandbox/icon.jpg",
   "tags": ["hono", "react", "starter"],
   "published": true
 }
