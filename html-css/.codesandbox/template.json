@@ -2,6 +2,6 @@
   "title": "HTML + CSS",
   "description": "A template for HTML and CSS",
   "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/html-css/.codesandbox/icon.png",
-  "tags": ["html", "css", "static", "featured"],
+  "tags": ["html", "css", "static", "featured", "playground"],
   "published": true
 }

@@ -2,6 +2,6 @@
   "title": "Gatsby",
   "description": "The official Gatsby Cloud Sandbox Template by the CodeSandbox team",
   "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/gatsby/.codesandbox/icon.png",
-  "tags": ["javascript", "gatsby", "react"],
+  "tags": ["javascript", "gatsby", "react", "starter"],
   "published": true
 }

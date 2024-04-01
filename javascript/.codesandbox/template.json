@@ -2,6 +2,6 @@
   "title": "JavaScript",
   "description": "The JavaScript template",
   "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/javascript/.codesandbox/icon.png",
-  "tags": ["js", "javascript", "vanilla", "featured"],
+  "tags": ["js", "javascript", "vanilla", "featured", "playground"],
   "published": true
 }

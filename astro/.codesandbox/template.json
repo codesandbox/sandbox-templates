@@ -2,6 +2,6 @@
   "title": "Astro",
   "description": "The official Astro template",
   "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/astro/.codesandbox/icon.png",
-  "tags": ["astro", "javascript", "typescript"],
+  "tags": ["astro", "javascript", "typescript", "frontend"],
   "published": true
 }

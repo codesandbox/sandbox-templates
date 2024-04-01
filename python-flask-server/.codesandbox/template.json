@@ -2,6 +2,6 @@
   "title": "Python Flask Server",
   "description": "This is an example of a Flask server running \"hello world\"",
   "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/python-flask-server/.codesandbox/icon.png",
-  "tags": ["python", "pip", "flask", "http-server"],
+  "tags": ["python", "pip", "flask", "http-server", "backend"],
   "published": true
 }

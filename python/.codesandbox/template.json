@@ -2,6 +2,6 @@
   "title": "Python",
   "description": "The starter template of Python for CodeSandbox",
   "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/python/.codesandbox/icon.png",
-  "tags": ["python", "pip", "featured"],
+  "tags": ["python", "pip", "featured", "playground"],
   "published": true
 }

@@ -2,6 +2,6 @@
   "title": "Node HTTP Server",
   "description": "Node.js example server starter project",
   "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/node-http-server/.codesandbox/icon.png",
-  "tags": ["node", "javascript", "http-server"],
+  "tags": ["node", "javascript", "http-server", "backend"],
   "published": true
 }

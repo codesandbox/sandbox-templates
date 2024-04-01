@@ -9,7 +9,8 @@
     "react",
     "postgres",
     "drizzle-orm",
-    "featured"
+    "featured",
+    "starter"
   ],
   "published": true
 }

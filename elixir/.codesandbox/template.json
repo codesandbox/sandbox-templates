@@ -2,6 +2,6 @@
   "title": "Elixir",
   "description": "A quick starter for getting started with Elixir",
   "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/elixir/.codesandbox/icon.png",
-  "tags": ["elixir", "starter"],
+  "tags": ["elixir", "playground"],
   "published": true
 }

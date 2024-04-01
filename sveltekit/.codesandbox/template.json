@@ -6,7 +6,8 @@
     "svelekit",
     "svelekit",
     "javascript",
-    "typescript"
+    "typescript",
+    "frontend", "starter"
   ],
   "published": true
 }
