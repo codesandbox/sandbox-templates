@@ -2,6 +2,6 @@
   "title": "Bun",
   "description": "Quickly get started with Bun using this starter!",
   "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/bun/.codesandbox/icon.png",
-  "tags": ["bun", "javascript", "typescript"],
+  "tags": ["bun", "javascript", "typescript", "playground"],
   "published": true
 }

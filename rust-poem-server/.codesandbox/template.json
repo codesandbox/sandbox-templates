@@ -2,6 +2,6 @@
   "title": "Rust & Poem REST Server",
   "description": "A REST server using Rust and Poem",
   "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/rust-poem-server/.codesandbox/icon.png",
-  "tags": ["rust", "cargo", "poem", "http-server"],
+  "tags": ["rust", "cargo", "poem", "http-server", "backend"],
   "published": true
 }

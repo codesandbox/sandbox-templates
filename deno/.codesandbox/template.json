@@ -2,6 +2,6 @@
   "title": "Deno",
   "description": "Deno starter that uses CodeSandbox native Docker support",
   "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/deno/.codesandbox/icon.png",
-  "tags": ["deno", "javascript", "typescript"],
+  "tags": ["deno", "javascript", "typescript", "playground"],
   "published": true
 }

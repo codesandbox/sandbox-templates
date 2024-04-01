@@ -2,6 +2,13 @@
   "title": "Next.js (App Router)",
   "description": "This is a Next.js project using Next.js 13 `/app` directory.",
   "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/nextjs-app-router/.codesandbox/icon.png",
-  "tags": ["nextjs", "javascript", "typescript", "react", "app-router"],
+  "tags": [
+    "nextjs",
+    "javascript",
+    "typescript",
+    "react",
+    "app-router",
+    "starter"
+  ],
   "published": true
 }
