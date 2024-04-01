@@ -2,6 +2,6 @@
   "title": "Storybook (React)",
   "description": "An example of running Storybook on CodeSandbox",
   "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/storybook-react/.codesandbox/icon.png",
-  "tags": ["react", "storybook", "vite", "javascript", "typescript", "starter"],
+  "tags": ["starter", "react", "storybook", "vite", "javascript", "typescript"],
   "published": true
 }

@@ -2,6 +2,6 @@
   "title": "Jupyter",
   "description": "This is a starter for Jupyter Notebook or Lab. Jupyter is the latest web-based interactive development environment for notebooks, code, and data. Its flexible interface allows users to configure and arrange workflows in data science, scientific computing, computational journalism, and machine learning.",
   "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/jupyter/.codesandbox/icon.png",
-  "tags": ["python", "pip", "jupyter", "ai", "machine learning", "starter"],
+  "tags": ["starter", "python", "pip", "jupyter", "ai", "machine learning"],
   "published": true
 }

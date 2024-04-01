@@ -3,13 +3,13 @@
   "description": "Vue 3 set up using Vite",
   "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/vue-vite/.codesandbox/icon.png",
   "tags": [
+    "featured",
+    "frontend",
     "vue",
     "vue3",
     "vite",
     "javascript",
-    "typescript",
-    "featured",
-    "frontend"
+    "typescript"
   ],
   "published": true
 }
