@@ -2,6 +2,6 @@
   "title": "React (Vite + TS)",
   "description": "React running from the Vite dev server!",
   "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/react-vite-ts/.codesandbox/icon.png",
-  "tags": ["react", "vite", "javascript", "typescript", "featured", "frontend"],
+  "tags": ["featured", "frontend", "react", "vite", "javascript", "typescript"],
   "published": true
 }

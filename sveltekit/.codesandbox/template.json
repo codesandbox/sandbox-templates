@@ -3,11 +3,12 @@
   "description": "The official Svelte Cloud Sandbox Template by the CodeSandbox team",
   "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/sveltekit/.codesandbox/icon.png",
   "tags": [
+    "frontend", 
+    "starter",
     "svelekit",
     "svelekit",
     "javascript",
-    "typescript",
-    "frontend", "starter"
+    "typescript"
   ],
   "published": true
 }

@@ -3,12 +3,12 @@
   "description": "The official Next.js template by the CodeSandbox team",
   "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/nextjs/.codesandbox/icon.png",
   "tags": [
-    "nextjs",
-    "javascript",
-    "typescript",
-    "react",
     "featured",
-    "frontend"
+    "frontend",
+    "nextjs",
+    "react",
+    "javascript",
+    "typescript"
   ],
   "published": true
 }

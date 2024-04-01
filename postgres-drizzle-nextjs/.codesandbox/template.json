@@ -3,14 +3,14 @@
   "description": "The perfect starter for a full-stack application using Next.js, Postgres and Drizzle-ORM.",
   "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/nextjs/.codesandbox/icon.png",
   "tags": [
+    "featured",
+    "starter",
     "nextjs",
     "javascript",
     "typescript",
     "react",
     "postgres",
-    "drizzle-orm",
-    "featured",
-    "starter"
+    "drizzle-orm"
   ],
   "published": true
 }

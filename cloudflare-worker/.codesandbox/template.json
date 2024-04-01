@@ -2,6 +2,6 @@
 	"title": "Cloudflare Workers (Simple)",
 	"description": "A Cloudflare worker template that outputs a simple \"Hello World\"",
 	"iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/cloudflare-worker/.codesandbox/icon.png",
-	"tags": ["cloudflare", "cloudflare workers", "edge", "javascript", "typescript", "backend"],
+	"tags": ["backend", "cloudflare", "cloudflare workers", "edge", "javascript", "typescript"],
 	"published": true
 }
