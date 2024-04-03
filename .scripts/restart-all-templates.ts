@@ -1,7 +1,10 @@
 import { restartTemplate } from "./pitcher-manager.ts";
 import { getTemplates } from "./utils.ts";
+import { chunk } from "npm:lodash";
 
 const template = Deno.args[0];
+
+const CONCURRENT_RESTART_COUNT = 5;
 
 if (template) {
   console.log(`Restarting template: ${template}`);
@@ -10,16 +13,23 @@ if (template) {
   const templates = await getTemplates();
 
   let doneCount = 0;
-  for (const template of templates) {
-    console.log(
-      `Restarting template: ${template} (${doneCount + 1}/${templates.size})`,
-    );
-    try {
-      await restartTemplate(template);
-    } catch (e) {
-      console.error(e);
-      // But continue with other templates
+  const templateChunks = chunk(templates, CONCURRENT_RESTART_COUNT);
+  for (const templateChunk of templateChunks) {
+    const promises = [];
+    for (const template of templateChunk) {
+      console.log(
+        `Restarting template: ${template} (${doneCount + 1}/${templates.size})`,
+      );
+      promises.push(
+        restartTemplate(template).catch((e) => {
+          console.error("Failed to restart " + template);
+          console.error(e);
+        }),
+      );
+
+      doneCount++;
     }
-    doneCount++;
+
+    await Promise.all(promises);
   }
 }
