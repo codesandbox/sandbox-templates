@@ -18,7 +18,8 @@
       "command": "bin/rails s",
       "preview": {
         "port": 3000
-      }
+      },
+      "runAtStart": true
     }
   }
 }
