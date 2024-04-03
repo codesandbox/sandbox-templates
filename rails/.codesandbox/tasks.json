@@ -14,7 +14,7 @@
       "command": "bundle install"
     },
     "dev": {
-      "name": "Start rails server",
+      "name": "Start Rails",
       "command": "bin/rails s",
       "preview": {
         "port": 3000
