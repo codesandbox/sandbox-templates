@@ -39,6 +39,8 @@ const VITE_TEMPLATES = {
   "hono-next": `npm create hono@latest {key}`,
 
   "storybook-react": `npx degit chromaui/intro-storybook-react-template {key}`,
+
+  "rails": "gem install rails && rails new --database=postgresql {key}",
 };
 
 const templatesToUpdate = process.argv.slice(3);
