@@ -41,6 +41,8 @@ const VITE_TEMPLATES = {
   "storybook-react": `npx degit chromaui/intro-storybook-react-template {key}`,
 
   "rails": "gem install rails && rails new --database=postgresql {key}",
+
+  "nest": "npx @nestjs/cli new {key}",
 };
 
 const templatesToUpdate = process.argv.slice(3);
