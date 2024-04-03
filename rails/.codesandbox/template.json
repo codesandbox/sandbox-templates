@@ -1,0 +1,7 @@
+{
+  "title": "Ruby on Rails",
+  "description": "Ruby on Rails starter using Postgres",
+  "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/rails/.codesandbox/icon.png",
+  "tags": ["ruby", "rails", "starter"],
+  "published": true
+}
