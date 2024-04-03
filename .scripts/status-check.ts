@@ -16,7 +16,7 @@ const templateInfo: TemplateInfo[] = await Promise.all(
   [...templates].map(async (folder) => {
     try {
       const codeSandboxConfig = await Deno.readTextFile(
-        path.join(basePath, folder, ".codesandbox", "tasks.json")
+        path.join(basePath, folder, ".codesandbox", "tasks.json"),
       );
       const { tasks } = JSON5.parse(codeSandboxConfig);
       const ports = Object.values(tasks)
@@ -31,7 +31,7 @@ const templateInfo: TemplateInfo[] = await Promise.all(
     } catch (_e) {
       return { folder, ports: [] };
     }
-  })
+  }),
 );
 
 console.log(templateInfo);
@@ -68,7 +68,7 @@ for (const { folder, ports } of templateInfo) {
       owner,
       repo,
       branch,
-      folder
+      folder,
     );
     const previewUrls = getClusterPreviewUrls(syncedTemplateInfo.id, port);
 
@@ -77,23 +77,22 @@ for (const { folder, ports } of templateInfo) {
         try {
           const response = await fetch(url);
 
-          const status: PortStatus =
-            response.status === 200
-              ? {
-                  url,
-                  status: "succeeded",
-                }
-              : {
-                  url,
-                  status: "failed",
-                  error: response.statusText,
-                };
+          const status: PortStatus = response.status >= 500
+            ? {
+              url,
+              status: "failed",
+              error: response.statusText,
+            }
+            : {
+              url,
+              status: "succeeded",
+            };
 
           return status;
         } catch (_e) {
           return { url, status: "failed" };
         }
-      })
+      }),
     );
   }
   statuses.push(status);
