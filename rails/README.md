@@ -1,24 +1,7 @@
-# README
+# Ruby on Rails + Postgres
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is Ruby on Rails, running on CodeSandbox. Additional to Ruby on Rails, we've configured both Postgres and Redis so you can build a full-stack Rails app on CodeSandbox.
 
-Things you may want to cover:
+You can check out the [devcontainer configuration](./.devcontainer/devcontainer.json) to see how we configured everything.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+You can check out our [task configuration](./.codesandbox/tasks.json) to know what we run on VM start.
