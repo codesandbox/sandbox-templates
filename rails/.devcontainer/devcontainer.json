@@ -1,7 +1,7 @@
 {
   "name": "Ruby on Rails",
   "dockerComposeFile": "docker-compose.yml",
-  "workspaceFolder": "/workspace/sandbox",
+  "workspaceFolder": "/workspaces/sandbox",
   "service": "app",
   "features": {
     "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
