@@ -2,7 +2,6 @@
   "name": "Ruby on Rails",
   "dockerComposeFile": "docker-compose.yml",
   "service": "app",
-  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
   "features": {
     "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
       "packages": "libpq-dev, libvips, postgresql-client-15"
@@ -16,21 +15,8 @@
     "ghcr.io/devcontainers/features/node:1": {
       "version": 20
     },
-    "ghcr.io/devcontainers/features/common-utils:2": {
-      "username": "vscode",
-      "userUid": 1000,
-      "userGid": 1000,
-      "installZsh": true,
-      "installOhMyZsh": true,
-      "configureZshAsDefaultShell": true,
-      "upgradePackages": true
-    },
     "ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {
-      "username": "vscode",
       "plugins": "bundler rails ruby yarn"
-    },
-    "ghcr.io/devcontainers/features/sshd:1": {
-      "version": "latest"
     }
   },
 
@@ -43,7 +29,7 @@
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   // This can be used to network with other containers or the host.
-  "forwardPorts": [5433],
+  "forwardPorts": [5432],
 
   // Use 'postCreateCommand' to run commands after the container is created.
   "postCreateCommand": ".devcontainer/boot.sh"

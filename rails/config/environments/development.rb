@@ -17,6 +17,12 @@ Rails.application.configure do
   # Enable server timing
   config.server_timing = true
 
+  # CodeSandbox changes
+  # Allow accessing the console from any IP, previews are protected by CSB
+  config.web_console.permissions = "0.0.0.0/0"
+  # Allow showing inside the devtool
+  config.action_dispatch.default_headers.delete("X-Frame-Options")
+
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
   if Rails.root.join("tmp/caching-dev.txt").exist?
