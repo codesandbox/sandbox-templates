@@ -1,0 +1,7 @@
+{
+  "title": "Nest",
+  "description": "The official Nest template by the CodeSandbox team",
+  "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/nest/.codesandbox/icon.png",
+  "tags": ["frontend", "nest", "react", "javascript", "typescript"],
+  "published": true
+}

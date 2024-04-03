@@ -11,7 +11,7 @@
   "tasks": {
     "dev": {
       "name": "Start Dev Server",
-      "command": "pnpm run dev",
+      "command": "pnpm run start:dev",
       "runAtStart": true,
       "preview": {
         "port": 3000
@@ -20,19 +20,37 @@
         "files": ["./pnpm-lock.yaml"]
       }
     },
+    "start-app": {
+      "name": "Start App",
+      "command": "pnpm run start"
+    },
+    "start-prod": {
+      "name": "Start Production",
+      "command": "pnpm run start:prod"
+    },
     "build": {
       "name": "Build",
       "command": "pnpm run build",
       "runAtStart": false
     },
-    "start": {
-      "name": "Start Server",
-      "command": "pnpm run start",
-      "runAtStart": false
-    },
     "lint": {
       "name": "Lint",
       "command": "pnpm run lint",
+      "runAtStart": false
+    },
+    "test": {
+      "name": "Run Tests",
+      "command": "pnpm run test",
+      "runAtStart": false
+    },
+    "test-watch": {
+      "name": "Run Tests in Watch Mode",
+      "command": "pnpm run test:watch",
+      "runAtStart": false
+    },
+    "test-e2e": {
+      "name": "Run E2E Tests",
+      "command": "pnpm run test:e2e",
       "runAtStart": false
     },
     "install": {
