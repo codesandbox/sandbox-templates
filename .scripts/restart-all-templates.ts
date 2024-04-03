@@ -1,6 +1,6 @@
 import { restartTemplate } from "./pitcher-manager.ts";
 import { getTemplates } from "./utils.ts";
-import { chunk } from "npm:lodash";
+import { chunk } from "https://deno.land/std@0.221.0/collections/chunk.ts";
 
 const template = Deno.args[0];
 
@@ -13,7 +13,8 @@ if (template) {
   const templates = await getTemplates();
 
   let doneCount = 0;
-  const templateChunks = chunk(templates, CONCURRENT_RESTART_COUNT);
+  const templateChunks = chunk([...templates], CONCURRENT_RESTART_COUNT);
+
   for (const templateChunk of templateChunks) {
     const promises = [];
     for (const template of templateChunk) {
