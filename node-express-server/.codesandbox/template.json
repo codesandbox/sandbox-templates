@@ -1,7 +1,14 @@
 {
   "title": "Node Express Server",
   "description": "Node.js Express starter project",
-  "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/node-http-server/.codesandbox/icon.png",
-  "tags": ["node", "javascript", "http-server", "starter", "backend"],
+  "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/node-express-server/.codesandbox/icon.png",
+  "tags": [
+    "node",
+    "typescript",
+    "http-server",
+    "starter",
+    "express",
+    "backend"
+  ],
   "published": true
 }
