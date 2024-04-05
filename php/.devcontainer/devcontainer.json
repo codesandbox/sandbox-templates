@@ -9,5 +9,10 @@
       "nodeGypDependencies": true,
       "version": "lts"
     }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": ["DEVSENSE.phptools-vscode"]
+    }
   }
 }

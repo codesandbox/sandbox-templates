@@ -3,5 +3,10 @@
   "build": {
     "dockerfile": "./Dockerfile"
   },
-  "containerUser": "root"
+  "containerUser": "root",
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-python.python"]
+    }
+  }
 }
