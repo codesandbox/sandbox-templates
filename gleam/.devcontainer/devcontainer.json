@@ -1,0 +1,12 @@
+{
+  "name": "Devcontainer",
+  "image": "erlang:26",
+  "features": {
+    "ghcr.io/devcontainers-contrib/features/gleam:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": ["Gleam.gleam"]
+    }
+  }
+}
