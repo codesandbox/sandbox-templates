@@ -3,5 +3,15 @@
   "setupTasks": [],
 
   // These tasks can be run from CodeSandbox. Running one will open a log in the app.
-  "tasks": {}
+  "tasks": {
+    "test": {
+      "name": "Run Tests",
+      "command": "gleam test"
+    },
+    "run": {
+      "name": "Run App",
+      "command": "gleam run",
+      "runAtStart": true
+    }
+  }
 }
