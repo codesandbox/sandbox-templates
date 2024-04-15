@@ -2,6 +2,6 @@
   "title": "Gleam",
   "description": "A quick starter for getting started with Gleam",
   "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/gleam/.codesandbox/icon.png",
-  "tags": ["gleam", "playground", "starter"],
+  "tags": ["gleam", "playground"],
   "published": true
 }
