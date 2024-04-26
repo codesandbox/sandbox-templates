@@ -1,6 +1,6 @@
 {
   "name": "Devcontainer",
-  "image": "ghcr.io/gleam-lang/gleam:v1.0.0-erlang",
+  "image": "ghcr.io/gleam-lang/gleam:v1.1.0-erlang",
   "customizations": {
     "vscode": {
       "extensions": ["Gleam.gleam"]
