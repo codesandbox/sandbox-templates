@@ -14,8 +14,7 @@ We have 4 official Sandbox templates:
 
 - **[React](https://codesandbox.io/p/sandbox/react-new)**
 - **[React Typescript](https://codesandbox.io/p/sandbox/react-typescript-react-ts)**
-- **[Vanilla Typescript](https://codesandbox.io/p/sandbox/vanilla-typescript-vanilla-ts
-)**
+- **[Vanilla Typescript](https://codesandbox.io/p/sandbox/vanilla-typescript-vanilla-ts)**
 - **HTML + CSS** ([GitHub](https://github.com/codesandbox-app/static-template))
 
 When converting a Sandbox to a Devbox we use the [Sandbox Migration](./sandbox-migration/) template, which has all dependencies of our Sandbox templates installed.
