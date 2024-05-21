@@ -1,0 +1,13 @@
+{
+    "title": "AI Code Completion (Codeium)",
+    "description": "Write code faster using our built-in code completion, powered by Codeium.",
+    "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/codeium/.codesandbox/icon.png",
+    "tags": [
+      "frontend",
+      "nextjs",
+      "react",
+      "typescript"
+    ],
+    "published": true
+  }
+  
