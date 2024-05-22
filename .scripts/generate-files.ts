@@ -12,8 +12,7 @@ const templates = await getTemplates(true);
 
 const templateInfos = await Promise.all(
   [...templates].map(async (template) => {
-    const url =
-      `https://codesandbox.io/api/v1/sandboxes/github/codesandbox/sandbox-templates/tree/main/${template}`;
+    const url = `https://codesandbox.io/api/v1/sandboxes/github/codesandbox/sandbox-templates/tree/main/${template}`;
 
     const { data } = await fetch(url).then((x) => x.json());
 
@@ -23,20 +22,19 @@ const templateInfos = await Promise.all(
       description: data.description as string,
       iconUrl: data.custom_template.icon_url as string,
       tags: data.tags as string[],
-      editorUrl:
-        `https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/${template}`,
+      editorUrl: `https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/${template}`,
       forkCount: data.fork_count as number,
       viewCount: data.view_count as number,
       likeCount: data.like_count as number,
       author: data.author,
       git: data.git,
+      insertedAt: data.inserted_at as string,
     };
-  }),
+  })
 );
 
-const sortedTemplates = sortBy(
-  templateInfos,
-  (t) => t.title.toLocaleLowerCase(),
+const sortedTemplates = sortBy(templateInfos, (t) =>
+  t.title.toLocaleLowerCase()
 );
 
 const markdown = new Markdown();
@@ -52,12 +50,12 @@ markdown.table(
       templateInfo.description,
     ]),
   ],
-  {},
+  {}
 );
 
 const newReadme = readmeContents.replace(
   /<!--TEMPLATES_START-->[\s\S]*<!--TEMPLATES_END-->/,
-  `<!--TEMPLATES_START-->\n${markdown.content}\n<!--TEMPLATES_END-->`,
+  `<!--TEMPLATES_START-->\n${markdown.content}\n<!--TEMPLATES_END-->`
 );
 
 await Deno.writeFile(readmeLocation, new TextEncoder().encode(newReadme));
@@ -75,9 +73,10 @@ const dataJson = JSON.stringify(
     likeCount: templateInfo.likeCount,
     author: templateInfo.author,
     git: templateInfo.git,
+    insertedAt: templateInfo.insertedAt,
   })),
   null,
-  2,
+  2
 );
 
 await Deno.writeTextFile(templateLocation, dataJson);
