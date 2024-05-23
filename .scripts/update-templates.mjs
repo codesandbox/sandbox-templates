@@ -2,7 +2,7 @@
 
 const VITE_TEMPLATES = {
   // Astro
-  "astro":
+  astro:
     "npm create astro@latest {key} -- --template minimal --typescript strict --no-install --no-git --skip-houston",
   "astro-starlight":
     "npm create astro@latest {key} -- --template starlight --typescript strict --no-install --no-git --skip-houston",
@@ -16,33 +16,31 @@ const VITE_TEMPLATES = {
   "vite-ts": "npm create vite@latest {key} -- --template vanilla-ts",
   "vue-vite": "npm create vite@latest {key} -- --template vue-ts",
 
-  // // Next.js
-  "nextjs":
-    `npx create-next-app {key} --ts --eslint --tailwind --no-src-dir --app --import-alias "@/*" --use-pnpm`,
-  "nextjs-app-router":
-    `npx create-next-app {key} --ts --eslint --no-tailwind --no-src-dir --app --import-alias "@/*" --use-pnpm`,
+  // Next.js
+  nextjs: `npx create-next-app {key} --ts --eslint --tailwind --no-src-dir --app --import-alias "@/*" --use-pnpm`,
+  "nextjs-app-router": `npx create-next-app {key} --ts --eslint --no-tailwind --no-src-dir --app --import-alias "@/*" --use-pnpm`,
+  "nextjs-15": `npx create-next-app@rc {key}`,
 
   // Nuxt.js
-  "nuxt": `npx nuxi@latest init {key}`,
+  nuxt: `npx nuxi@latest init {key}`,
 
   // Nuxt.js on Edge + Drizzle
   "nuxt-todos-edge":
     "npx degit https://github.com/Atinux/nuxt-todos-edge.git {key}",
 
   // Remix
-  "remix": `npx create-remix@latest {key}`,
+  remix: `npx create-remix@latest {key}`,
 
   // Rust + Axum
-  "rust-axum":
-    `npx degit https://github.com/tokio-rs/axum.git/examples/hello-world {key}`,
+  "rust-axum": `npx degit https://github.com/tokio-rs/axum.git/examples/hello-world {key}`,
 
   "hono-next": `npm create hono@latest {key}`,
 
   "storybook-react": `npx degit chromaui/intro-storybook-react-template {key}`,
 
-  "rails": "gem install rails && rails new --database=postgresql {key}",
+  rails: "gem install rails && rails new --database=postgresql {key}",
 
-  "nest": "npx @nestjs/cli new {key}",
+  nest: "npx @nestjs/cli new {key}",
 };
 
 const templatesToUpdate = process.argv.slice(3);
@@ -57,28 +55,22 @@ for (const [key, value] of Object.entries(VITE_TEMPLATES)) {
   if (!fs.existsSync(key)) {
     echo(
       chalk.yellow(`[0/${maxSteps}] ${key}:`),
-      chalk.green(`Creating folder`),
+      chalk.green(`Creating folder`)
     );
     await $`mkdir ${key}`;
   }
 
   echo(
     chalk.yellow(`[1/${maxSteps}] ${key}:`),
-    chalk.green(`Deleting folder content`),
+    chalk.green(`Deleting folder content`)
   );
   await $`find ${key} -mindepth 1 -maxdepth 1 ! -wholename '${key}/.devcontainer*' ! -wholename '${key}/.codesandbox*' -exec rm -r {} +`;
 
-  echo(
-    chalk.yellow(`[2/${maxSteps}] ${key}:`),
-    chalk.green(`Running command`),
-  );
+  echo(chalk.yellow(`[2/${maxSteps}] ${key}:`), chalk.green(`Running command`));
   const command = value.replace("{key}", key + "/tmp");
   await $([command]);
 
-  echo(
-    chalk.yellow(`[2/${maxSteps}] ${key}:`),
-    chalk.green(`Move files`),
-  );
+  echo(chalk.yellow(`[2/${maxSteps}] ${key}:`), chalk.green(`Move files`));
   await $`find ${key}/tmp/ -mindepth 1 -maxdepth 1 -exec mv -t ${key}/ {} +`;
   // await $`mv ${key}/tmp/.gitignore ${key} `;
   await $`rm -rf ${key}/tmp`;
@@ -87,20 +79,17 @@ for (const [key, value] of Object.entries(VITE_TEMPLATES)) {
   if (isJavaScript) {
     echo(
       chalk.yellow(`[3/${maxSteps}] ${key}:`),
-      chalk.green(`Installing dependencies`),
+      chalk.green(`Installing dependencies`)
     );
     cd(key);
     await $`pnpm i`;
 
-    echo(
-      chalk.yellow(`[4/${maxSteps}] ${key}:`),
-      chalk.green(`Prettier`),
-    );
+    echo(chalk.yellow(`[4/${maxSteps}] ${key}:`), chalk.green(`Prettier`));
     await $`prettier . --write`;
 
     echo(
       chalk.yellow(`[5/${maxSteps}] ${key}:`),
-      chalk.green(`Rename package.json#name`),
+      chalk.green(`Rename package.json#name`)
     );
     await $`npm pkg set 'name'=${key}`;
   }

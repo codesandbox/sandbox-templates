@@ -1,0 +1,13 @@
+{
+  "title": "Next.js 15",
+  "description": "Next.js 15 beta starter",
+  "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/nextjs/.codesandbox/icon.png",
+  "tags": [
+    "frontend",
+    "nextjs",
+    "react",
+    "javascript",
+    "typescript"
+  ],
+  "published": true
+}
