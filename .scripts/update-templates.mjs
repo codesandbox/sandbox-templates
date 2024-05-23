@@ -19,7 +19,6 @@ const VITE_TEMPLATES = {
   // Next.js
   nextjs: `npx create-next-app {key} --ts --eslint --tailwind --no-src-dir --app --import-alias "@/*" --use-pnpm`,
   "nextjs-app-router": `npx create-next-app {key} --ts --eslint --no-tailwind --no-src-dir --app --import-alias "@/*" --use-pnpm`,
-  "nextjs-15": `npx create-next-app@rc {key}`,
 
   // Nuxt.js
   nuxt: `npx nuxi@latest init {key}`,
