@@ -1,0 +1,7 @@
+{
+  "title": "Solid Start",
+  "description": "A fullstack framework for building applications with Solid.js",
+  "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/solid-start/.codesandbox/icon.png",
+  "tags": ["solid", "starter", "javascript", "typescript", "frontend"],
+  "published": true
+}
