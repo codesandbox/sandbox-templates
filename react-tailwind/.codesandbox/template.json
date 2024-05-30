@@ -1,0 +1,8 @@
+{
+  "title": "React + Tailwind",
+  "description": "React running on Vite with Tailwind integrated for styling",
+  "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/react-tailwind/.codesandbox/icon.png",
+  "tags": ["frontend", "react", "vite", "tailwind"],
+  "published": true
+}
+  
