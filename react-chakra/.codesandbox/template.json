@@ -1,0 +1,8 @@
+{
+  "title": "React + Chakra",
+  "description": "React running on Vite with the Chakra component system integrated for styling",
+  "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/react-chakra/.codesandbox/icon.png",
+  "tags": ["frontend", "react", "vite", "chakra"],
+  "published": true
+}
+  
