@@ -1,0 +1,7 @@
+{
+  "title": "React (Rsbuild + TS)",
+  "description": "React running with Rsbuild, the Rspack-based build tool",
+  "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/react-rsbuild-ts/.codesandbox/icon.png",
+  "tags": ["frontend", "react", "rsbuild", "javascript", "typescript"],
+  "published": true
+}
