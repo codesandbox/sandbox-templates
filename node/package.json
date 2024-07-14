@@ -2,21 +2,13 @@
   "name": "nodejs-sandbox",
   "version": "1.0.0",
   "description": "",
-  "main": "index.html",
+  "main": "index.js",
   "scripts": {
     "start": "nodemon index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/codesandbox-app/static-template.git"
   },
   "keywords": [],
   "author": "Ives van Hoorne",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/codesandbox-app/static-template/issues"
-  },
-  "homepage": "https://github.com/codesandbox-app/static-template#readme",
   "devDependencies": {
     "nodemon": "^3.0.1"
   },
