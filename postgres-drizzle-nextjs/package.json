@@ -10,23 +10,23 @@
     "generate": "drizzle-kit generate:pg"
   },
   "dependencies": {
-    "@types/node": "20.11.17",
-    "@types/react": "18.2.55",
-    "@types/react-dom": "18.2.19",
-    "autoprefixer": "10.4.17",
-    "drizzle-orm": "^0.29.3",
-    "eslint": "8.56.0",
-    "eslint-config-next": "^14.1.0",
-    "next": "^14.1.0",
-    "postcss": "8.4.35",
-    "postgres": "^3.4.3",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "tailwindcss": "3.4.1",
-    "typescript": "5.3.3"
+    "@types/node": "22.1.0",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "autoprefixer": "10.4.20",
+    "drizzle-orm": "^0.32.1",
+    "eslint": "9.8.0",
+    "eslint-config-next": "^14.2.5",
+    "next": "^14.2.5",
+    "postcss": "8.4.40",
+    "postgres": "^3.4.4",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "tailwindcss": "3.4.7",
+    "typescript": "5.5.4"
   },
   "devDependencies": {
-    "drizzle-kit": "^0.20.14",
-    "pg": "^8.11.3"
+    "drizzle-kit": "^0.23.1",
+    "pg": "^8.12.0"
   }
 }
