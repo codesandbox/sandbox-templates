@@ -16,6 +16,8 @@ const templateInfos = await Promise.all(
 
     const { data } = await fetch(url).then((x) => x.json());
 
+    console.log(data.title)
+
     return {
       id: data.id as string,
       title: data.title as string,
