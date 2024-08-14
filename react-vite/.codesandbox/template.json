@@ -1,0 +1,7 @@
+{
+  "title": "React (JS)",
+  "description": "Quickest way to get started with a React application! Uses Vite on the server, and create-react-app in the browser.",
+  "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/react-vite/.codesandbox/icon.png",
+  "tags": ["featured", "frontend", "react", "vite", "javascript"],
+  "published": true
+}
