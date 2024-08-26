@@ -9,20 +9,20 @@
     "web": "expo start --web"
   },
   "dependencies": {
-    "@expo/cli": "^0.10.14",
-    "expo": "~49.0.16",
-    "expo-status-bar": "~1.7.1",
-    "react": "18.2.0",
-    "react-native": "0.72.6",
-    "react-native-web": "~0.19.9",
-    "react-dom": "18.2.0"
+    "@expo/cli": "^0.18.29",
+    "expo": "~51.0.31",
+    "expo-status-bar": "~1.12.1",
+    "react": "18.3.1",
+    "react-native": "0.75.2",
+    "react-native-web": "~0.19.12",
+    "react-dom": "18.3.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.2",
+    "@babel/core": "^7.25.2",
     "body-parser": "^1.18.3",
-    "express": "^4.16.3",
-    "http-proxy-middleware": "^2.0.6",
-    "qs": "^6.11.2",
+    "express": "^4.19.2",
+    "http-proxy-middleware": "^3.0.0",
+    "qs": "^6.13.0",
     "xdl": "^60.0.12"
   },
   "private": true
