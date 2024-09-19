@@ -9,7 +9,7 @@
         "command": "python main.py",
         "runAtStart": true,
         "preview": {
-          "port": 5000
+          "port": 5001
         }
       }
     }
