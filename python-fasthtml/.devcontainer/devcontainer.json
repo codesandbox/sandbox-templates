@@ -1,0 +1,9 @@
+{
+    "name": "Devcontainer",
+    "image": "mcr.microsoft.com/devcontainers/python:3.10-bookworm",
+    "customizations": {
+      "vscode": {
+        "extensions": ["ms-python.python"]
+      }
+    }
+}
