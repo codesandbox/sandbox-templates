@@ -1,0 +1,7 @@
+{
+  "title": "TanStack Start",
+  "description": "Full-stack React framework powered by TanStack Router",
+  "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/tanstack-start/.codesandbox/icon.png",
+  "tags": ["tanstack", "starter", "javascript", "typescript"],
+  "published": true
+}
