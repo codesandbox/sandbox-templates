@@ -1,17 +1,18 @@
-
-
 <style>
   :host {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 14px;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-size: 14px;
     text-align: center;
   }
 </style>
 
 <div class="content" role="main">
-  <h1>Welcome to {{title}}!</h1>
+  <h1>Welcome to {{ title }}!</h1>
   <h2>Start editing to see some magic happen</h2>
 </div>
+<router-outlet/>
