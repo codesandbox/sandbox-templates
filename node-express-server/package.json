@@ -10,13 +10,13 @@
   "keywords": [],
   "author": "Ives van Hoorne",
   "devDependencies": {
-    "@types/express": "^4.17.21",
-    "@types/node": "^20.11.16",
-    "nodemon": "^3.0.3",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.0",
+    "nodemon": "^3.1.7",
     "ts-node": "^10.9.2",
-    "typescript": "^5.4.3"
+    "typescript": "^5.7.2"
   },
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.21.1"
   }
 }
