@@ -101,7 +101,6 @@ if (testSandbox) {
         .filter((port) => port.port !== 2222);
 
       let promise;
-      let disposable;
       if (openedPorts.length > 0) {
         promise = Promise.resolve(openedPorts[0]);
       } else {
@@ -110,10 +109,11 @@ if (testSandbox) {
           resolve = r;
         });
 
-        disposable = sandbox.ports.onDidPortOpen((ports) => {
+        const disposable = sandbox.ports.onDidPortOpen((ports) => {
           const port = ports.find((port) => port.port !== 2222);
           if (port && resolve) {
             resolve();
+            disposable.dispose();
           }
         });
       }
@@ -124,9 +124,6 @@ if (testSandbox) {
           setTimeout(() => resolve(null), 120000)
         ) as Promise<null>,
       ]);
-      if (disposable) {
-        disposable.dispose();
-      }
 
       console.log(
         "Generated " + example.name + ", now generating screenshot..."
@@ -139,15 +136,17 @@ if (testSandbox) {
 
             // Prefetch the screenshot url, so it's generated when the user accesses
             // the issue screenshot
-            fetch(example.screenshotUrl, { redirect: "follow" });
+            fetch(example.screenshotUrl, { redirect: "follow" }).then(() => {
+              sandbox.shutdown();
+            });
 
             example.status = Status.SUCCEEDED;
           } else {
             console.log("Timed out while generating screenshot");
             example.status = Status.SCREENSHOT_FAILED;
-          }
 
-          sandbox.shutdown();
+            sandbox.shutdown();
+          }
         })
       );
     } catch (e) {
