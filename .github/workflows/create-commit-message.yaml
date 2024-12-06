@@ -7,6 +7,9 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
 
+env:
+  CSB_API_KEY: ${{ secrets.CSB_API_KEY }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -27,7 +30,7 @@ jobs:
         deno-version: v1.x
       
     - name: Run Deno Script
-      run: deno run --allow-read --allow-write --unstable --allow-run .scripts/generate-commit-message.ts ${{ github.base_ref }} ${{ github.head_ref }}
+      run: deno run --allow-env --allow-read --allow-write --unstable --allow-run .scripts/generate-commit-message.ts ${{ github.base_ref }} ${{ github.head_ref }}
 
     - name: PR comment with file
       uses: thollander/actions-comment-pull-request@v2
@@ -37,7 +40,7 @@ jobs:
         create_if_not_exists: true
 
     - name: Run Deno Script
-      run: deno run --allow-read --allow-write --unstable --allow-net --allow-run .scripts/generate-commit-message.ts ${{ github.base_ref }} ${{ github.head_ref }} true
+      run: deno run --allow-env --allow-read --allow-write --unstable --allow-net --allow-run .scripts/generate-commit-message.ts ${{ github.base_ref }} ${{ github.head_ref }} true
 
     - name: PR comment with file
       uses: thollander/actions-comment-pull-request@v2
