@@ -1,6 +1,13 @@
 import * as path from "https://deno.land/std@0.196.0/path/mod.ts";
 import { CodeSandbox } from "npm:@codesandbox/sdk";
 
+// Hack to make Deno work. It does not want a different client type.
+globalThis.Request = class R extends Request {
+  constructor(args, arg2) {
+    super(args, { ...arg2, client: undefined });
+  }
+};
+
 const targetBranch = Deno.args[0];
 const currentBranch = Deno.args[1];
 const testSandbox = Deno.args[2] === "true";
