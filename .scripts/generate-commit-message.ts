@@ -1,5 +1,5 @@
 import * as path from "https://deno.land/std@0.196.0/path/mod.ts";
-import { CodeSandbox } from "npm:@codesandbox/sdk";
+import { CodeSandbox } from "npm:@codesandbox/sdk@0.0.0-alpha.27";
 
 // Hack to make Deno work. It does not want a different client type.
 globalThis.Request = class R extends Request {
@@ -96,16 +96,27 @@ if (testSandbox) {
       console.log("Started sandbox " + sandboxId);
       example.id = sandbox.id;
 
-      let resolve: () => void | undefined;
-      const promise = new Promise<void>((r) => {
-        resolve = r;
-      });
-      const disposable = sandbox.ports.onDidPortOpen((ports) => {
-        const port = ports.find((port) => port.port !== 2222);
-        if (port && resolve) {
-          resolve();
-        }
-      });
+      const openedPorts = sandbox.ports
+        .getOpenedPorts()
+        .filter((port) => port.port !== 2222);
+
+      let promise;
+      let disposable;
+      if (openedPorts.length > 0) {
+        promise = Promise.resolve();
+      } else {
+        let resolve: () => void | undefined;
+        promise = new Promise<void>((r) => {
+          resolve = r;
+        });
+
+        disposable = sandbox.ports.onDidPortOpen((ports) => {
+          const port = ports.find((port) => port.port !== 2222);
+          if (port && resolve) {
+            resolve();
+          }
+        });
+      }
 
       const portResponseWithTimeout = Promise.race([
         promise,
@@ -113,7 +124,9 @@ if (testSandbox) {
           setTimeout(() => resolve(null), 120000)
         ) as Promise<null>,
       ]);
-      disposable.dispose();
+      if (disposable) {
+        disposable.dispose();
+      }
 
       console.log(
         "Generated " + example.name + ", now generating screenshot..."
