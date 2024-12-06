@@ -96,6 +96,20 @@ if (testSandbox) {
       console.log("Started sandbox " + sandboxId);
       example.id = sandbox.id;
 
+      let resolve: () => void | undefined;
+      const promise = new Promise<void>((r) => {
+        resolve = r;
+      });
+      const disposable = sandbox.ports.onDidPortOpen((ports) => {
+        const port = ports.find((port) => port.port !== 2222);
+        if (port && resolve) {
+          resolve();
+        }
+      });
+
+      await promise;
+      disposable.dispose();
+
       const portResponseWithTimeout = Promise.race([
         sandbox.ports.waitForPort(51423),
         new Promise((resolve) =>
