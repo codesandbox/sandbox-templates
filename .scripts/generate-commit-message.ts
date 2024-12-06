@@ -107,15 +107,13 @@ if (testSandbox) {
         }
       });
 
-      await promise;
-      disposable.dispose();
-
       const portResponseWithTimeout = Promise.race([
-        sandbox.ports.waitForPort(51423),
+        promise,
         new Promise((resolve) =>
           setTimeout(() => resolve(null), 120000)
         ) as Promise<null>,
       ]);
+      disposable.dispose();
 
       console.log(
         "Generated " + example.name + ", now generating screenshot..."
