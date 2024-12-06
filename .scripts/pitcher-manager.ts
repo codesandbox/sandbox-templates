@@ -42,7 +42,7 @@ export async function shutdownSandbox(clusterName: string, sandboxId: string) {
   }
 }
 
-const clusters = ["fc-eu-0", "fc-eu-2", "fc-us-0"];
+const clusters = ["fc-eu-0", "fc-eu-2", "fc-us-0", "fc-us-1"];
 
 export function getClusterPreviewUrls(
   templateName: string,
