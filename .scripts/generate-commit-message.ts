@@ -129,8 +129,11 @@ if (testSandbox) {
 
             example.status = Status.SUCCEEDED;
           } else {
+            console.log("Timed out while generating screenshot");
             example.status = Status.SCREENSHOT_FAILED;
           }
+
+          sandbox.shutdown();
         })
       );
     } catch (e) {
