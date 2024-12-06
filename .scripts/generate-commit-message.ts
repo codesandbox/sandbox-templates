@@ -103,7 +103,7 @@ if (testSandbox) {
       let promise;
       let disposable;
       if (openedPorts.length > 0) {
-        promise = Promise.resolve();
+        promise = Promise.resolve(openedPorts[0]);
       } else {
         let resolve: () => void | undefined;
         promise = new Promise<void>((r) => {
