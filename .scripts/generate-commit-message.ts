@@ -1,4 +1,5 @@
 import * as path from "https://deno.land/std@0.196.0/path/mod.ts";
+import { CodeSandbox } from "npm:@codesandbox/sdk";
 
 const targetBranch = Deno.args[0];
 const currentBranch = Deno.args[1];
@@ -41,6 +42,7 @@ enum Status {
 const examples: Array<{
   name: string;
   status: Status;
+  id?: string;
   screenshotUrl?: string;
 }> = [];
 for (const dir of directories) {
@@ -57,6 +59,12 @@ for (const dir of directories) {
   }
 }
 
+const CSB_API_KEY = Deno.env.get("CSB_API_KEY");
+if (!CSB_API_KEY) {
+  throw new Error("CSB_API_KEY is not set");
+}
+
+const sdk = new CodeSandbox(CSB_API_KEY);
 const screenshotPromises: Array<Promise<void>> = [];
 
 if (testSandbox) {
@@ -75,22 +83,26 @@ if (testSandbox) {
 
       const sandboxId: string = result.data.id;
 
+      console.log("Starting sandbox " + sandboxId);
       // Start the VM backing the sandbox
-      const editorResponse = await fetch(
-        generateEditorUrl(example.name, currentBranch)
-      );
-      if (!editorResponse.ok) {
-        throw new Error("Editor request failed: " + editorResponse.status);
-      }
+      const sandbox = await sdk.sandbox.create({ template: sandboxId });
+      console.log("Started sandbox " + sandboxId);
+      example.id = sandbox.id;
 
-      const previewUrl = generateExamplePreviewUrl(sandboxId);
+      const portResponseWithTimeout = Promise.race([
+        sandbox.ports.waitForPort(51423),
+        new Promise((resolve) =>
+          setTimeout(() => resolve(null), 120000)
+        ) as Promise<null>,
+      ]);
+
       console.log(
         "Generated " + example.name + ", now generating screenshot..."
       );
       screenshotPromises.push(
-        waitForUrlToRespond(previewUrl, 120).then((succeeded) => {
-          if (succeeded) {
-            example.screenshotUrl = `https://codesandbox.io/api/v1/sandboxes/${sandboxId}/screenshot.png`;
+        portResponseWithTimeout.then((portInfo) => {
+          if (portInfo) {
+            example.screenshotUrl = `https://codesandbox.io/api/v1/sandboxes/${sandbox.id}/screenshot.png`;
 
             // Prefetch the screenshot url, so it's generated when the user accesses
             // the issue screenshot
@@ -112,7 +124,9 @@ if (testSandbox) {
 await Promise.all(screenshotPromises);
 
 examples.forEach((example) => {
-  const url = generateUrl(example.name, currentBranch);
+  const url = example.id
+    ? `https://codesandbox.io/p/devbox/${example.id}`
+    : generateUrl(example.name, currentBranch);
   MESSAGE_TEMPLATE += `<details>
   <summary><a href="${url}"><code>/${example.name}</code></a> ${getStatusEmoji(
     example.status
@@ -151,45 +165,8 @@ function getStatusEmoji(status: Status) {
 function generateUrl(exampleName: string, branch: string) {
   return `https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/${branch}/${exampleName}`;
 }
-function generateEditorUrl(exampleName: string, branch: string) {
-  return `https://codesandbox.io/p/sandbox/github/codesandbox/sandbox-templates/tree/${branch}/${exampleName}`;
-}
 function generateApiUrl(exampleName: string, branch: string) {
   return `https://codesandbox.io/api/v1/sandboxes/github/codesandbox/sandbox-templates/tree/${branch}/${exampleName}`;
-}
-function generateExamplePreviewUrl(sandboxId: string) {
-  return `https://${sandboxId}-51423.csb.app`;
-}
-
-function sleep(ms: number): Promise<void> {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve();
-    }, ms);
-  });
-}
-
-async function waitForUrlToRespond(
-  url: string,
-  maxTimeSeconds: number
-): Promise<boolean> {
-  for (let i = 0; i < maxTimeSeconds; i++) {
-    try {
-      const response = await fetch(url, {
-        redirect: "follow",
-      });
-
-      if (response.ok && response.status >= 200 && response.status < 400) {
-        return true;
-      }
-    } catch (_e) {
-      // Ignore if the request fails
-    }
-
-    await sleep(1000);
-  }
-
-  return false;
 }
 
 console.log(MESSAGE_TEMPLATE);
