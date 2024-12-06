@@ -134,6 +134,7 @@ if (testSandbox) {
       screenshotPromises.push(
         portResponseWithTimeout.then((portInfo) => {
           if (portInfo) {
+            console.log("Opened port, ", portInfo);
             example.screenshotUrl = `https://codesandbox.io/api/v1/sandboxes/${sandbox.id}/screenshot.png`;
 
             // Prefetch the screenshot url, so it's generated when the user accesses
