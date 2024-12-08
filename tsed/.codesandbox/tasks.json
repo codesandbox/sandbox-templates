@@ -1,0 +1,30 @@
+{
+  "setupTasks": [
+    {
+      "name": "Install Ts.ED project",
+      "command": ""
+    }
+  ],
+  "tasks": {
+    "start": {
+      "name": "start",
+      "command": "npm run start",
+      "runAtStart": true,
+      "preview": {
+        "port": 8083
+      }
+    },
+    "install": {
+      "name": "install dependencies",
+      "command": "npm run install"
+    },
+    "init": {
+      "name": "Regenerate project",
+      "command": "npx --yes -p @tsed/cli tsed init . --features=swagger,testing,vitest,linter,lintstaged,prettier --arch=default --convention=conv_default --platform=express --package-manager=npm --skip-prompt ."
+    },
+    "init_interactive": {
+      "name": "Regenerate project using prompt",
+      "command": "npx --yes -p @tsed/cli tsed init ."
+    }
+  }
+}
