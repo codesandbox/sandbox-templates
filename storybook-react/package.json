@@ -14,8 +14,8 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "scripts": {
     "dev": "vite",
@@ -26,21 +26,21 @@
     "init-msw": "msw init public/"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "^7.6.6",
-    "@storybook/addon-interactions": "^7.6.6",
-    "@storybook/addon-links": "^7.6.6",
-    "@storybook/blocks": "^7.6.6",
-    "@storybook/react": "^7.6.6",
-    "@storybook/react-vite": "^7.6.6",
-    "@storybook/test": "^7.6.6",
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
-    "@vitejs/plugin-react": "^3.1.0",
-    "msw": "^1.2.1",
-    "msw-storybook-addon": "^1.10.0",
+    "@storybook/addon-essentials": "^8.4.7",
+    "@storybook/addon-interactions": "^8.4.7",
+    "@storybook/addon-links": "^8.4.7",
+    "@storybook/blocks": "^8.4.7",
+    "@storybook/react": "^8.4.7",
+    "@storybook/react-vite": "^8.4.7",
+    "@storybook/test": "^8.4.7",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.2",
+    "@vitejs/plugin-react": "^4.3.4",
+    "msw": "^2.6.9",
+    "msw-storybook-addon": "^2.0.4",
     "prop-types": "^15.8.1",
-    "storybook": "^7.6.6",
-    "vite": "^4.2.0"
+    "storybook": "^8.4.7",
+    "vite": "^6.0.3"
   },
   "resolutions": {
     "jackspeak": "2.1.1"
