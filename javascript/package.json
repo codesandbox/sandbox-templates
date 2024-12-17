@@ -8,8 +8,8 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.2.0",
-    "parcel": "^2.0.0"
+    "eslint": "^9.17.0",
+    "parcel": "^2.13.3"
   },
   "keywords": [
     "css",
