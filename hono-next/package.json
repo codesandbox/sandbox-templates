@@ -7,15 +7,15 @@
   },
   "dependencies": {
     "hono": "^4.0.7",
-    "next": "^15.0.4",
+    "next": "^15.1.4",
     "react": "19.0.0",
     "react-dom": "19.0.0"
   },
   "devDependencies": {
-    "@types/node": "22.10.1",
-    "@types/react": "19.0.0",
-    "@types/react-dom": "19.0.0",
-    "typescript": "5.7.2"
+    "@types/node": "22.10.5",
+    "@types/react": "19.0.6",
+    "@types/react-dom": "19.0.3",
+    "typescript": "5.7.3"
   },
   "name": "hono"
 }
