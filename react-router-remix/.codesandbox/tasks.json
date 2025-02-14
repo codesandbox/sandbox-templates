@@ -23,8 +23,13 @@
       "runAtStart": false
     },
     "preview": {
-      "name": "preview",
-      "command": "pnpm preview",
+      "name": "start",
+      "command": "pnpm start",
+      "runAtStart": false
+    },
+    "typecheck": {
+      "name": "typecheck",
+      "command": "pnpm typecheck",
       "runAtStart": false
     },
     "install": {
