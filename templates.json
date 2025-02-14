@@ -13,7 +13,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/codeium",
     "forkCount": 3747,
-    "viewCount": 115732,
+    "viewCount": 115736,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -39,7 +39,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/angular",
     "forkCount": 275975,
-    "viewCount": 3318518,
+    "viewCount": 3318520,
     "likeCount": 195,
     "author": null,
     "git": {
@@ -64,7 +64,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/astro",
     "forkCount": 6457,
-    "viewCount": 187191,
+    "viewCount": 187197,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -90,7 +90,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/astro-starlight",
     "forkCount": 90,
-    "viewCount": 79132,
+    "viewCount": 79134,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -116,7 +116,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/astro-tailwind",
     "forkCount": 2486,
-    "viewCount": 126387,
+    "viewCount": 126389,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -141,7 +141,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/bun",
     "forkCount": 4225,
-    "viewCount": 126388,
+    "viewCount": 126391,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -167,7 +167,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/cloudflare-worker",
     "forkCount": 2623,
-    "viewCount": 1258399,
+    "viewCount": 1258401,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -193,7 +193,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/create-t3-app",
     "forkCount": 2936,
-    "viewCount": 125223,
+    "viewCount": 125225,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -218,7 +218,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/deno",
     "forkCount": 2162,
-    "viewCount": 110435,
+    "viewCount": 110437,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -243,7 +243,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/deno-fresh",
     "forkCount": 817,
-    "viewCount": 54618,
+    "viewCount": 54620,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -267,7 +267,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/docker",
     "forkCount": 80695,
-    "viewCount": 604077,
+    "viewCount": 604078,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -293,7 +293,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/docusaurus",
     "forkCount": 1104,
-    "viewCount": 174441,
+    "viewCount": 174442,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -316,7 +316,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/elixir",
     "forkCount": 393,
-    "viewCount": 34162,
+    "viewCount": 34163,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -339,7 +339,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/python-fasthtml",
     "forkCount": 124,
-    "viewCount": 16559,
+    "viewCount": 16561,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -364,7 +364,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/gatsby",
     "forkCount": 1441,
-    "viewCount": 163798,
+    "viewCount": 163800,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -387,7 +387,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/gleam",
     "forkCount": 64,
-    "viewCount": 21109,
+    "viewCount": 21110,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -410,7 +410,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/go",
     "forkCount": 5737,
-    "viewCount": 132526,
+    "viewCount": 132527,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -428,14 +428,14 @@
     "description": "A starter that runs a headless Chromium browser",
     "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/headless-chromium/.codesandbox/icon.png",
     "tags": [
-      "containers",
       "headless",
       "chromium",
-      "browser"
+      "browser",
+      "containers"
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/headless-chromium",
     "forkCount": 0,
-    "viewCount": 10,
+    "viewCount": 27,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -443,7 +443,7 @@
       "branch": "main",
       "repo": "sandbox-templates",
       "username": "codesandbox",
-      "commit_sha": "f226f073b0f6466194ff06c93119826e6d68402c"
+      "commit_sha": "9af14a9bbbd780650fe421bfc08c5516edb3514e"
     },
     "insertedAt": "2025-02-14T19:13:12"
   },
@@ -459,7 +459,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/hono-next",
     "forkCount": 186,
-    "viewCount": 51979,
+    "viewCount": 51981,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -484,8 +484,8 @@
       "static"
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/html-css",
-    "forkCount": 27117,
-    "viewCount": 576460,
+    "forkCount": 27118,
+    "viewCount": 576462,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -510,7 +510,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/javascript",
     "forkCount": 21561,
-    "viewCount": 559982,
+    "viewCount": 559984,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -536,7 +536,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/jupyter",
     "forkCount": 1307,
-    "viewCount": 45414,
+    "viewCount": 45415,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -562,7 +562,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/nest",
     "forkCount": 911,
-    "viewCount": 55453,
+    "viewCount": 55455,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -589,7 +589,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/nextjs",
     "forkCount": 100151,
-    "viewCount": 1810230,
+    "viewCount": 1810234,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -616,7 +616,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/nextjs-app-router",
     "forkCount": 12116,
-    "viewCount": 275531,
+    "viewCount": 275533,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -642,7 +642,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/postgres-drizzle-nextjs",
     "forkCount": 1433,
-    "viewCount": 144059,
+    "viewCount": 144060,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -668,7 +668,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/nextjs-15",
     "forkCount": 1445,
-    "viewCount": 65042,
+    "viewCount": 65044,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -693,8 +693,8 @@
       "http-server"
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/node-express-server",
-    "forkCount": 7592,
-    "viewCount": 130423,
+    "forkCount": 7593,
+    "viewCount": 130425,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -719,7 +719,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/node-http-server",
     "forkCount": 238767,
-    "viewCount": 1093069,
+    "viewCount": 1093071,
     "likeCount": 186,
     "author": null,
     "git": {
@@ -743,7 +743,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/node",
     "forkCount": 148506,
-    "viewCount": 1331255,
+    "viewCount": 1331258,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -768,7 +768,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/nodebox-starter",
     "forkCount": 7123,
-    "viewCount": 158341,
+    "viewCount": 158342,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -794,7 +794,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/nuxt",
     "forkCount": 4758,
-    "viewCount": 93409,
+    "viewCount": 93410,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -820,7 +820,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/nuxt-todos-edge",
     "forkCount": 125,
-    "viewCount": 68711,
+    "viewCount": 68713,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -843,7 +843,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/php",
     "forkCount": 16022,
-    "viewCount": 422343,
+    "viewCount": 422345,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -867,8 +867,8 @@
       "featured"
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/python",
-    "forkCount": 129086,
-    "viewCount": 1697587,
+    "forkCount": 129087,
+    "viewCount": 1697592,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -894,7 +894,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/python-flask-server",
     "forkCount": 4064,
-    "viewCount": 149995,
+    "viewCount": 149997,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -920,7 +920,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/python-openai",
     "forkCount": 558,
-    "viewCount": 52805,
+    "viewCount": 52806,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -944,7 +944,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/python-selenium",
     "forkCount": 460,
-    "viewCount": 40650,
+    "viewCount": 40651,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -970,7 +970,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/python-pytorch",
     "forkCount": 100,
-    "viewCount": 28918,
+    "viewCount": 28919,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -996,7 +996,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/qwik-vite",
     "forkCount": 1221,
-    "viewCount": 54078,
+    "viewCount": 54080,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -1021,7 +1021,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/react-farm-fe-ts",
     "forkCount": 57,
-    "viewCount": 57255,
+    "viewCount": 57257,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -1047,7 +1047,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/react-vite",
     "forkCount": 9325,
-    "viewCount": 259800,
+    "viewCount": 259802,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -1073,7 +1073,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/react-rsbuild-ts",
     "forkCount": 137,
-    "viewCount": 25072,
+    "viewCount": 25074,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -1100,7 +1100,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/react-vite-ts",
     "forkCount": 232587,
-    "viewCount": 2214303,
+    "viewCount": 2214307,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -1125,7 +1125,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/react-chakra",
     "forkCount": 304,
-    "viewCount": 52506,
+    "viewCount": 52508,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -1150,7 +1150,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/react-tailwind",
     "forkCount": 10608,
-    "viewCount": 141803,
+    "viewCount": 141805,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -1174,7 +1174,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/react-native-expo",
     "forkCount": 7975,
-    "viewCount": 261004,
+    "viewCount": 261006,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -1201,7 +1201,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/react-router-remix",
     "forkCount": 1,
-    "viewCount": 257,
+    "viewCount": 258,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -1226,7 +1226,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/rails",
     "forkCount": 624,
-    "viewCount": 53970,
+    "viewCount": 53972,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -1250,7 +1250,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/rust",
     "forkCount": 6109,
-    "viewCount": 302857,
+    "viewCount": 302858,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -1274,7 +1274,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/rust-axum",
     "forkCount": 64,
-    "viewCount": 49397,
+    "viewCount": 49399,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -1300,7 +1300,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/rust-poem-server",
     "forkCount": 675,
-    "viewCount": 51816,
+    "viewCount": 51817,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -1324,7 +1324,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/rust-serde",
     "forkCount": 483,
-    "viewCount": 30309,
+    "viewCount": 30310,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -1350,7 +1350,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/solid-vite",
     "forkCount": 2144,
-    "viewCount": 73990,
+    "viewCount": 73992,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -1375,7 +1375,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/solid-start",
     "forkCount": 165,
-    "viewCount": 34020,
+    "viewCount": 34022,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -1402,7 +1402,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/storybook-react",
     "forkCount": 362,
-    "viewCount": 61420,
+    "viewCount": 61423,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -1428,7 +1428,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/sveltekit",
     "forkCount": 6202,
-    "viewCount": 159114,
+    "viewCount": 159115,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -1453,7 +1453,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/tanstack-start",
     "forkCount": 40,
-    "viewCount": 20502,
+    "viewCount": 20504,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -1479,7 +1479,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/python-tensorflow",
     "forkCount": 113,
-    "viewCount": 24171,
+    "viewCount": 24172,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -1502,7 +1502,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/universal",
     "forkCount": 8021,
-    "viewCount": 24261,
+    "viewCount": 24283,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -1526,7 +1526,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/vite",
     "forkCount": 1181,
-    "viewCount": 29588,
+    "viewCount": 29590,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -1551,7 +1551,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/vite-ts",
     "forkCount": 3558,
-    "viewCount": 91074,
+    "viewCount": 91076,
     "likeCount": 0,
     "author": null,
     "git": {
@@ -1579,7 +1579,7 @@
     ],
     "editorUrl": "https://codesandbox.io/s/github/codesandbox/sandbox-templates/tree/main/vue-vite",
     "forkCount": 32007,
-    "viewCount": 979614,
+    "viewCount": 979616,
     "likeCount": 0,
     "author": null,
     "git": {
