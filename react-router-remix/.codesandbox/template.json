@@ -1,0 +1,14 @@
+{
+  "title": "React Router (Remix)",
+  "description": "Quickest way to get started with React Router 7!",
+  "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/react-router-remix/.codesandbox/icon.png",
+  "tags": [
+    "featured",
+    "frontend",
+    "react",
+    "react-router",
+    "javascript",
+    "typescript"
+  ],
+  "published": true
+}
