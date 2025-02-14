@@ -22,7 +22,7 @@
       "command": "pnpm build",
       "runAtStart": false
     },
-    "preview": {
+    "start": {
       "name": "start",
       "command": "pnpm start",
       "runAtStart": false
