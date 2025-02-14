@@ -1,0 +1,7 @@
+{
+  "title": "Headless Browser (Chromium)",
+  "description": "A starter that runs a headless Chromium browser",
+  "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/headless-chromium/.codesandbox/icon.png",
+  "tags": ["containers", "headless", "chromium", "browser"],
+  "published": true
+}

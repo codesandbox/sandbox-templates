@@ -1,8 +1,9 @@
 # CodeSandbox supports debian & ubuntu based images
-FROM mcr.microsoft.com/devcontainers/base:ubuntu-22.04
+# This universal image contains almost all languages and tools
+FROM ghcr.io/codesandbox/devcontainers/universal:latest
 
-# Example; install htop by default
-RUN apt update -y && apt install -y htop
+# Example: install htop by default
+# RUN apt update -y && apt install -y htop
 
 # The project will be mounted in /workspace by default
 
