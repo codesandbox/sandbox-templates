@@ -9,27 +9,22 @@
 
   // These tasks can be run from CodeSandbox. Running one will open a log in the app.
   "tasks": {
-    "build": {
-      "name": "build",
-      "command": "pnpm run build",
-      "runAtStart": false
-    },
     "dev": {
       "name": "dev",
-      "command": "pnpm run dev",
+      "command": "pnpm dev",
       "runAtStart": true,
       "preview": {
-        "port": 3000
+        "port": 5173
       }
     },
-    "start": {
-      "name": "start",
-      "command": "pnpm run start",
+    "build": {
+      "name": "build",
+      "command": "pnpm build",
       "runAtStart": false
     },
-    "typecheck": {
-      "name": "typecheck",
-      "command": "pnpm run typecheck",
+    "preview": {
+      "name": "preview",
+      "command": "pnpm preview",
       "runAtStart": false
     },
     "install": {

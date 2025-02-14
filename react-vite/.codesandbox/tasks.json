@@ -3,7 +3,7 @@
   "setupTasks": [
     {
       "name": "Install Dependencies",
-      "command": "pnpm install --force"
+      "command": "pnpm install"
     }
   ],
 
@@ -33,4 +33,3 @@
     }
   }
 }
-  
