@@ -5,9 +5,9 @@
   },
   "devDependencies": {
     "serve": "14.2.4",
-    "@types/react": "19.0.0",
-    "@types/react-dom": "19.0.0",
-    "typescript": "5.7.2",
+    "@types/react": "19.0.10",
+    "@types/react-dom": "19.0.4",
+    "typescript": "5.7.3",
     "parcel-bundler": "1.12.5",
     "vite": "^6.0.0",
     "@vitejs/plugin-react": "^4.2.1"
