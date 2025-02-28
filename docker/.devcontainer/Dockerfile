@@ -1,5 +1,5 @@
 # CodeSandbox supports debian & ubuntu based images
-FROM mcr.microsoft.com/devcontainers/base:ubuntu-22.04
+FROM mcr.microsoft.com/devcontainers/base:ubuntu-24.04
 
 # Example; install htop by default
 RUN apt update -y && apt install -y htop
