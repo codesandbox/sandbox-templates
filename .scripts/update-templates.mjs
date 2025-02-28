@@ -17,7 +17,7 @@ const VITE_TEMPLATES = {
   "vue-vite": "npm create vite@latest {key} -- --template vue-ts",
 
   // Next.js
-  nextjs: `npx --yes create-next-app {key} --ts --eslint --tailwind --no-src-dir --app --import-alias "@/*" --use-pnpm`,
+  nextjs: `npx --yes create-next-app {key} --ts --eslint --tailwind --no-src-dir --app --import-alias "@/*" --turbopack --use-pnpm`,
   "nextjs-app-router": `npx --yes create-next-app {key} --ts --eslint --no-tailwind --no-src-dir --app --import-alias "@/*" --use-pnpm`,
 
   // Nuxt.js
