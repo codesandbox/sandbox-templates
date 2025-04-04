@@ -22,7 +22,7 @@
       "name": "Build NGINX image that's compatible with CodeSandbox"
     },
     {
-      "command": "sed -i s/443:443/4443:443/g assemblyline/common/nginx.yaml",
+      "command": "sed -i 's/\"443:443\"/\"4443:443\"/g' assemblyline/common/nginx.yaml",
       "name": "Swap port forwarding to be compatible with CodeSandbox"
     },
     {
