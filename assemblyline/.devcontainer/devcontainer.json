@@ -1,0 +1,4 @@
+{
+    "image": "ghcr.io/codesandbox/devcontainers/universal:latest",
+    "name": "Devcontainer"
+}

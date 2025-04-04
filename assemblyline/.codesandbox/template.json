@@ -1,0 +1,7 @@
+{
+    "title": "Assemblyline4",
+    "description": "An open-source, scalable file triage and malware analysis system by the Canadian Centre for Cyber Security.",
+    "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/assemblyline/.codesandbox/icon.png",
+    "tags": ["docker", "malware-analysis", "demo"],
+    "published": true
+  }
