@@ -2,15 +2,19 @@
     // These tasks will run in order when initializing your CodeSandbox project.
     "setupTasks": [
       {
-        "command": "git clone https://github.com/CybercentreCanada/assemblyline-docker-compose assemblyline",
+        "command": "if [ -d \"assemblyline\" ]; then git clone https://github.com/CybercentreCanada/assemblyline-docker-compose --depth 1 assemblyline; else cd fi",
         "name": "Clone the latest release of the Docker appliance"
       },
       {
-        "command": "cd assemblyline && source .env && openssl req -nodes -x509 -newkey rsa:4096 -keyout ./config/nginx.key -out ./config/nginx.crt -days 365 -subj \"/C=CA/ST=Ontario/L=Ottawa/O=CCCS/CN=$DOMAIN\"",
+        "command": "ln -s assemblyline/.env",
+        "name": "Link environment file to local workspace"
+      },
+      {
+        "command": "source .env && openssl req -nodes -x509 -newkey rsa:4096 -keyout ./assemblyline/config/nginx.key -out ./assemblyline/config/nginx.crt -days 365 -subj \"/C=CA/ST=Ontario/L=Ottawa/O=CCCS/CN=$DOMAIN\"",
         "name": "Generate self-signed certificates"
       },
       {
-        "command": "cd assemblyline && docker compose pull elasticsearch_minimal redis minio ui_minimal frontend",
+        "command": "docker compose --project-directory assemblyline pull elasticsearch_minimal redis minio ui_minimal frontend",
         "name": "Pull required images"
       },
       {
@@ -23,11 +27,11 @@
       },
       {
         "name": "Start up minimal appliance",
-        "command": "cd assemblyline && cp .env /project/sandbox/.env && docker compose up -d elasticsearch_minimal redis minio ui_minimal frontend nginx_minimal"
+        "command": "docker compose --project-directory assemblyline up -d elasticsearch_minimal redis minio ui_minimal frontend nginx_minimal"
       },
       {
         "name": "Bootstrap local user accounts",
-        "command": "cd assemblyline && docker compose -f bootstrap-compose.yaml up -d first_time_setup"
+        "command": "docker compose --project-directory assemblyline -f bootstrap-compose.yaml up -d first_time_setup"
       },
       {
         "name": "Generate mock data",
