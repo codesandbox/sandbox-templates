@@ -1,0 +1,7 @@
+{
+  "title": "Ts.ED",
+  "description": "Ts.ED example server starter project",
+  "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/tsed/.codesandbox/icon.png",
+  "tags": ["tsed", "node", "typescript", "http-server", "backend", "decorators"],
+  "published": true
+}
