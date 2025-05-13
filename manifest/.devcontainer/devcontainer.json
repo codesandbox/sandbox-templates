@@ -1,0 +1,5 @@
+{
+  "name": "Manifest Demo for CodeSandbox",
+  "image": "node:20",
+  "postCreateCommand": "npm install && npm run manifest"
+}
