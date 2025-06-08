@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/vscode/devcontainers/base:ubuntu-22.04
+FROM mcr.microsoft.com/vscode/devcontainers/base:ubuntu-24.04
 
 ENV RAILS_DEVELOPMENT_HOSTS=".csb.app"
 
