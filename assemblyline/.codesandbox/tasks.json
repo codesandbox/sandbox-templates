@@ -2,7 +2,7 @@
   // These tasks will run in order when initializing your CodeSandbox project.
   "setupTasks": [
     {
-      "command": "git clone https://github.com/CybercentreCanada/assemblyline-docker-compose assemblyline",
+      "command": "git -C assemblyline pull || git clone https://github.com/CybercentreCanada/assemblyline-docker-compose assemblyline",
       "name": "Clone the latest release of the Docker appliance"
     },
     {
