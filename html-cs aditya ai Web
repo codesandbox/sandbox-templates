@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aditya AI Web</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f0f0f;
+      color: white;
+      text-align: center;
+    }
+    header {
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #1f1f1f, #3a3a3a);
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.2rem;
+      opacity: 0.8;
+    }
+    .tools {
+      margin: 40px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      padding: 20px;
+    }
+    .card {
+      background: #1c1c1c;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      background: #2a2a2a;
+    }
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Aditya AI Web</h1>
+    <p>Free AI Tools for Video, Audio & Image Generation</p>
+  </header>
+
+  <!-- Navigation Bar -->
+  <button onclick="toggleMode()" style="position:fixed; top:20px; right:20px; padding:10px 18px; border:none; border-radius:10px; background:#4a4a4a; color:white; cursor:pointer; z-index:999;">🌓 Mode</button>
+
+  <nav style="background:#141414; padding:15px; display:flex; justify-content:center; gap:30px; font-size:1.1rem; border-bottom:1px solid #333;">
+    <a href="#image" style="color:white; text-decoration:none; opacity:0.9;">Image AI</a>
+    <a href="#audio" style="color:white; text-decoration:none; opacity:0.9;">Audio AI</a>
+    <a href="#video" style="color:white; text-decoration:none; opacity:0.9;">Video AI</a>
+    <a href="#chat" style="color:white; text-decoration:none; opacity:0.9;">AI Chat</a>
+  </nav>
+
+  <section class="tools">
+    <div class="card">AI Image Generator</div>
+    <div class="card">AI Audio Creator</div>
+    <div class="card">AI Video Maker</div>
+    <div class="card">AI Chat Assistant</div>
+  </section>
+
+  <!-- AI Tools Sections -->
+  <section id="image" style="padding:40px;">
+    <h2>AI Image Generator</h2>
+    <input type="text" placeholder="Enter prompt to generate image" style="padding:10px; width:60%; border-radius:8px; border:none; margin-top:20px;">
+    <br><br>
+    <button style="padding:12px 25px; border:none; border-radius:10px; background:#4a4a4a; color:white; font-size:1rem; cursor:pointer;">Generate Image</button>
+    <div id="image-output" style="margin-top:25px;"></div>
+  </section>
+
+  <section id="audio" style="padding:40px; background:#111;">
+    <h2>AI Audio Creator</h2>
+    <input type="text" placeholder="Enter text for audio" style="padding:10px; width:60%; border-radius:8px; border:none; margin-top:20px;">
+    <br><br>
+    <button style="padding:12px 25px; border:none; border-radius:10px; background:#4a4a4a; color:white; font-size:1rem; cursor:pointer;">Generate Audio</button>
+    <div id="audio-output" style="margin-top:25px; color:#ccc;"></div>
+  </section>
+
+  <section id="video" style="padding:40px;">
+    <h2>AI Video Maker</h2>
+    <input type="text" placeholder="Enter prompt for video" style="padding:10px; width:60%; border-radius:8px; border:none; margin-top:20px;">
+    <br><br>
+    <button style="padding:12px 25px; border:none; border-radius:10px; background:#4a4a4a; color:white; font-size:1rem; cursor:pointer;">Generate Video</button>
+    <div id="video-output" style="margin-top:25px;"></div>
+  </section>
+
+  <section id="chat" style="padding:40px; background:#111;">
+    <h2>AI Chat Assistant</h2>
+    <textarea placeholder="Chat with AI..." style="padding:10px; width:60%; height:120px; border-radius:8px; border:none; margin-top:20px;"></textarea>
+    <br><br>
+    <button style="padding:12px 25px; border:none; border-radius:10px; background:#4a4a4a; color:white; font-size:1rem; cursor:pointer;">Send</button>
+    <div id="chat-output" style="margin-top:25px; color:#ccc; text-align:left; width:60%; margin:auto;"></div>
+  </section>
+
+  <footer>© 2025 Aditya AI Web — Private Use Only</footer>
+  <script>
+    // Dark/Light Mode Toggle
+    function toggleMode() {
+      const body = document.body;
+      body.classList.toggle('light');
+    }
+
+    // Output handling
+    function display(id, content) {
+      document.getElementById(id).innerHTML = content;
+    }
+
+    // ----------------------------
+    // 🌐 REAL AI API INTEGRATION
+    // ----------------------------
+
+    // 1️⃣ OPENAI IMAGE / AUDIO / CHAT
+    async function openAIRequest(endpoint, body) {
+      const res = await fetch(endpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": "Bearer YOUR_OPENAI_API_KEY"
+        },
+        body: JSON.stringify(body)
+      });
+      return await res.json();
+    }
+
+    // 2️⃣ STABILITY AI – IMAGE GENERATION
+    async function stabilityImage(prompt) {
+      const res = await fetch("https://api.stability.ai/v2beta/stable-image/generate/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+          "Authorization": "Bearer YOUR_STABILITY_API_KEY"
+        },
+        body: JSON.stringify({ prompt })
+      });
+      return await res.json();
+    }
+
+    // 3️⃣ HUGGINGFACE FREE MODELS
+    async function huggingFace(model, inputs) {
+      const res = await fetch(`https://api-inference.huggingface.co/models/${model}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": "Bearer YOUR_HF_TOKEN"
+        },
+        body: JSON.stringify({ inputs })
+      });
+      return await res.json();
+    }
+
+    // ----------------------------
+    // AI TOOL FUNCTIONS
+    // ----------------------------
+
+    async function generateImage() {
+      display("image-output", "⏳ Generating image...");
+
+      const prompt = document.querySelector('#image input').value;
+
+      // OpenAI Example
+      const data = await openAIRequest("https://api.openai.com/v1/images/generations", {
+        model: "gpt-image-1",
+        prompt: prompt
+      });
+
+      if (data?.data?.[0]?.url) {
+        display("image-output", `<img src='${data.data[0].url}' style='width:300px;border-radius:10px;'>`);
+        return;
+      }
+
+      // Stability fallback
+      const stable = await stabilityImage(prompt);
+      if (stable?.image) display("image-output", `<img src='${stable.image}' style='width:300px;border-radius:10px;'>`);
+    }
+
+    async function generateAudio() {
+      display("audio-output", "⏳ Generating audio...");
+
+      const text = document.querySelector('#audio input').value;
+
+      const data = await openAIRequest("https://api.openai.com/v1/audio/speech", {
+        model: "gpt-4o-mini-tts",
+        input: text
+      });
+
+      if (data?.audio) display("audio-output", "Audio ready (base64)");
+    }
+
+    async function generateVideo() {
+      display("video-output", "⏳ Generating video...");
+
+      const prompt = document.querySelector('#video input').value;
+
+      const result = await huggingFace("damo-vilab/text-to-video-ms-1.7b", prompt);
+
+      if (result?.video) display("video-output", `<video controls width='300'><source src='data:video/mp4;base64,${result.video}'></video>`);
+    }
+
+    async function sendChat() {
+      display("chat-output", "⏳ Generating reply...");
+
+      const text = document.querySelector('#chat textarea').value;
+
+      const data = await openAIRequest("https://api.openai.com/v1/chat/completions", {
+        model: "gpt-4o-mini",
+        messages: [{ role: "user", content: text }]
+      });
+
+      display("chat-output", `<p>${data.choices[0].message.content}</p>`);
+    } (Future Integration)
+    async function generateImage() {
+      alert('Image API integration coming soon!');
+    }
+
+    async function generateAudio() {
+      alert('Audio API integration coming soon!');
+    }
+
+    async function generateVideo() {
+      alert('Video API integration coming soon!');
+    }
+
+    async function sendChat() {
+      alert('Chat API integration coming soon!');
+    }
+  </script>
+</body>
+</html>
