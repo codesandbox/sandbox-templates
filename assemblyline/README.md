@@ -8,14 +8,14 @@ For more information on how to deploy the full version of Assemblyline (which al
 
 ## Getting Started in CodeSandbox
 ### Accessing the UI
-CodeSandbox should already startup an instance of Assemblyline via the [.tasks](./.codesandbox/tasks.json) and you should see a preview exposed on port 4443. You can click on the "Open Preview in a new window" icon to access Assemblyline's UI within your browser.
+CodeSandbox should already startup an instance of Assemblyline via the [.tasks](./.codesandbox/tasks.json) and you should see a preview exposed on port 4443. You can click on the "Open Preview in a new window" icon to access Assemblyline's UI within your browser (viewing the application in CodeSandbox's Preview tab doesn't work).
 
-![Open preview in a new tab](./images/open_preview.png)
+![Open preview in a new tab](https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/assemblyline/images/open_preview.png)
 
 ### Logging In
 You can sign into the local account using `admin` for both the username and password field.
 
-![Default login credentials](./images/default_login.png)
+![Default login credentials](https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/assemblyline/images/default_login.png)
 
 ### What's Next?
 That's about it from me! You can explore the system to your heart's content 🤓.

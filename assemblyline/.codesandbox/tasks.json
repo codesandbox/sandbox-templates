@@ -1,40 +1,44 @@
 {
-    // These tasks will run in order when initializing your CodeSandbox project.
-    "setupTasks": [
-      {
-        "command": "git clone https://github.com/CybercentreCanada/assemblyline-docker-compose assemblyline",
-        "name": "Clone the latest release of the Docker appliance"
-      },
-      {
-        "command": "cd assemblyline && source .env && openssl req -nodes -x509 -newkey rsa:4096 -keyout ./config/nginx.key -out ./config/nginx.crt -days 365 -subj \"/C=CA/ST=Ontario/L=Ottawa/O=CCCS/CN=$DOMAIN\"",
-        "name": "Generate self-signed certificates"
-      },
-      {
-        "command": "cd assemblyline && docker compose pull elasticsearch_minimal redis minio ui_minimal frontend",
-        "name": "Pull required images"
-      },
-      {
-        "command": "docker build nginx-ssl-frontend -t cccs/nginx-ssl-frontend",
-        "name": "Build NGINX image that's compatible with CodeSandbox"
-      },
-      {
-        "command": "sed -i s/443:443/4443:443/g assemblyline/common/nginx.yaml",
-        "name": "Swap port forwarding to be compatible with CodeSandbox"
-      },
-      {
-        "name": "Start up minimal appliance",
-        "command": "cd assemblyline && cp .env /project/sandbox/.env && docker compose up -d elasticsearch_minimal redis minio ui_minimal frontend nginx_minimal"
-      },
-      {
-        "name": "Bootstrap local user accounts",
-        "command": "cd assemblyline && docker compose -f bootstrap-compose.yaml up -d first_time_setup"
-      },
-      {
-        "name": "Generate mock data",
-        "command": "docker exec ui python3 -m assemblyline.odm.random_data.create_test_data full"
-      }
-    ],
+  // These tasks will run in order when initializing your CodeSandbox project.
+  "setupTasks": [
+    {
+      "command": "git -C assemblyline pull || git clone https://github.com/CybercentreCanada/assemblyline-docker-compose assemblyline",
+      "name": "Clone the latest release of the Docker appliance"
+    },
+    {
+      "command": "cd assemblyline && source .env && touch /project/sandbox/.env && openssl req -nodes -x509 -newkey rsa:4096 -keyout ./config/nginx.key -out ./config/nginx.crt -days 365 -subj \"/C=CA/ST=Ontario/L=Ottawa/O=CCCS/CN=$DOMAIN\"",
+      "name": "Generate self-signed certificates"
+    },
+    {
+      "command": "cd assemblyline && docker compose pull elasticsearch_minimal redis minio ui_minimal frontend",
+      "name": "Pull required images"
+    },
+    {
+      "command": "docker build nginx-ssl-frontend -t cccs/nginx-ssl-frontend",
+      "name": "Build NGINX image that's compatible with CodeSandbox"
+    },
+    {
+      "command": "bash -c \"if [ $(grep -L '4443' assemblyline/common/nginx.yaml) ]; then sed -i s/443:443/4443:443/g assemblyline/common/nginx.yaml; fi\"",
+      "name": "Swap port forwarding to be compatible with CodeSandbox"
+    },
+    {
+      "command": "bash -c \"if [ $(grep -L 'validate_session_ip' assemblyline/config/config.yml) ]; then echo 'ui:\n  validate_session_ip: false' >> assemblyline/config/config.yml; fi\"",
+      "name": "Add configuration to disable session IP verification with CodeSandbox"
+    },
+    {
+      "name": "Start up minimal appliance",
+      "command": "cd assemblyline && cp .env /project/sandbox/.env && docker compose up -d elasticsearch_minimal redis minio ui_minimal frontend nginx_minimal"
+    },
+    {
+      "name": "Bootstrap local user accounts",
+      "command": "cd assemblyline && docker compose -f bootstrap-compose.yaml up -d first_time_setup"
+    },
+    {
+      "name": "Generate mock data",
+      "command": "docker exec ui python3 -m assemblyline.odm.random_data.create_test_data full"
+    }
+  ],
 
-    // These tasks can be run from CodeSandbox. Running one will open a log in the app.
-    "tasks": {}
-  }
+  // These tasks can be run from CodeSandbox. Running one will open a log in the app.
+  "tasks": {}
+}
